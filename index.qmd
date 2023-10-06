@@ -213,9 +213,9 @@ for directory in corpus_directories:
 
 #### Why
 
-    - Key Word in Context: Know a word by the company it keeps: facilitaate understadning of key word
-        - e.g. "olive", "oil"--> "olive oil"
-    - Better understand re- words by learning their immediate contexts and associations via frequently co-occuring terms
+- Key Word in Context: Know a word by the company it keeps: facilitaate understadning of key word
+    - e.g. "olive", "oil"--> "olive oil"
+- Better understand re- words by learning their immediate contexts and associations via frequently co-occuring terms
     - Fundamental method of text mining (TM)
 
 ## Which Words Adjoin "Re-" Words?: Code
