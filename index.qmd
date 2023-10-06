@@ -1,4 +1,3 @@
-
 ## Rationale / Significance
 
 - Analyzing "Re-" is apt for text mining
