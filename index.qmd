@@ -1,3 +1,10 @@
+---
+title: Thirteen* Digital Ways of Looking at -re- in Victorian Poetry
+date: 11 November 2023
+author: Adam Mazel, Digital Publishing Librarian
+institute: Scholarly Communication Department, IUB Libraries
+---
+
 ## Rationale / Significance
 
 - Analyzing "Re-" is apt for text mining
