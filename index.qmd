@@ -410,7 +410,7 @@ for alias, frequencies in bigram_frequencies.items():
 #### Why
 
 - ID trend within trend
-    - Does Hardy juxtapose "re-" words and "re" words? Do "re-" words and "re" words co-occur in Hardy's poetry
+    - Does Hardy juxtapose "re-" words and "re" words? Do "re-" words and "re" words co-occur in Hardy's poetry?
 
 ## "Re-" Words in Context: Code
 
@@ -425,6 +425,9 @@ nltk.download("punkt")
 # Define regular expressions
 re_pattern = r'\b(re)[a-zA-Z]+\b'  # Matches "re" followed by one or more letters
 re_hyphen_pattern = r'\b(re-)\w+\b'  # Matches "re-" followed by one or more word characters
+
+def matches_pattern(word, pattern):
+    return re.search(pattern, word, re.IGNORECASE) is not None
 
 # Function to replace matched words with bolded HTML tags
 def bold_matched_words(match, pattern):
@@ -451,7 +454,6 @@ for filename in os.listdir(text_directory):
                     print(sentence_with_bold)
                     print("\n" * 2)
 ```
-
 
 ## Results: Take Aways
 
