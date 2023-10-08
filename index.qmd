@@ -61,12 +61,12 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Late Lyrics and Earlier with Many Other Verses* (1922)
     - *Human Shows, Far Phantasies, Songs and Trifles* (1925)
 
-## Data: Which Authors / Texts + Why?
-
 - Where Acquired
     - [Project Gutenberg](https://www.gutenberg.org/)
     - [HathiTrust](https://www.hathitrust.org/)
     - [COVE (Collaborative Organization for Virtual Education)](https://editions.covecollective.org/)
+
+## Data: Cleaning / Quality
 
 - Data Cleaning
     - Removed noise: Boilerplate, Title Pages, Tables of Contents, Advertisments, Endorsements, Headers + Footers (most), Unusual Characters
