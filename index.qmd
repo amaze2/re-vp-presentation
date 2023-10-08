@@ -15,11 +15,11 @@ institute: Scholarly Communication Department, IUB Libraries
 
 ## Method
 
-- Exploratory Data Analysis (EDA)
+- **Tool:** Python
+- **Approach:** Exploratory Data Analysis (EDA)
     - early research: explore data to discover trends and generate hypotheses / basic insights
-- (simple) Count-based methods, rather than (complex) machine-  / deep-learning methods
-    - Apt for EDA / early research, feature ("re-") analysis, smaller datasets
-- Python (Natural Language ToolKit (NLTK), Matplotlib)
+- **Methods:** count based, rather than machine learning 
+    - Apt for feature ("re-") analysis, smaller datasets
 
 ## Data: Which Authors / Texts + Why?
 
@@ -61,16 +61,18 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Late Lyrics and Earlier with Many Other Verses* (1922)
     - *Human Shows, Far Phantasies, Songs and Trifles* (1925)
 
+## Data: Which Authors / Texts + Why?
+
 - Where Acquired
     - [Project Gutenberg](https://www.gutenberg.org/)
     - [HathiTrust](https://www.hathitrust.org/)
     - [COVE (Collaborative Organization for Virtual Education)](https://editions.covecollective.org/)
 
 - Data Cleaning
-    - Removed noise: Boilerplate, Title Pages, Tables of Contents, Advertisments, Endorsements, Headers + Foorters (most), Unusual Characters
+    - Removed noise: Boilerplate, Title Pages, Tables of Contents, Advertisments, Endorsements, Headers + Footers (most), Unusual Characters
 - Data Quality 
     - OCR: Errors
-    - Noise (headers + footers, etc.)
+    - Pub info: headers + footers, introductions / conclusions, dedications, etc.
 
 ## Who Uses "Re-" Words the Most / Least?: Theory
 
