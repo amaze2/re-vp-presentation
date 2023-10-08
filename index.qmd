@@ -259,13 +259,17 @@ for directory in corpus_directories:
     - Swinburne: "Re-Risen: 12" (80% of S's "Re-" Words)
         - "re-risen": content: interested in ressurection?
         - "re-risen: form: alliterative (more echoic than "ressurect")
-    - Hardy: "Re-Enact: 4" (20% of H's "Re-" Words)
+
+## Results: Take Aways
+
 - Comparison of "Re-" Use
 
 |                    | Low Vocabulary | High Vocabulary |
 |------------------- | ---------------| ----------------|
 | **High Frequency** | Swinburne      |                 |
 | **Low Frequency**  | Rossetti       | Hardy, Field    |
+
+## Results: Take Aways
 
 - Rossetti's "Re-Born"
     - Hapax Legomenon
@@ -274,6 +278,8 @@ for directory in corpus_directories:
         - But hyphenated prefixes (e.g. "a-heap", "to-night") and compound words (e.g. "cukoo-throb", "forest-boughs") are common (1.22%) in DGR
         - "ressurect*" appears only once, "born: 48" and "birth: 46" 
         - Hypotheses: uninterested in signifying repetition through "re-", more interested in birth than rebirth?
+
+## Results: Take Aways
 
 - Hardy  and Field: "Re-Illume" in Context
     - Extremely rare (OED Band 1)
@@ -313,9 +319,6 @@ for directory in corpus_directories:
 - remove stopwords (meaningless function words) to reveal associated concepts
 
 ```{python}
-#| echo: true
-#| output-location: slide
-
 # import software dependencies / libraries
 import nltk
 import os
@@ -398,21 +401,66 @@ for alias, frequencies in bigram_frequencies.items():
     - "re-appear": "fade", "re-light": "tarnished"
         - re- used with opposites
 
-## "Re-" Words in Context: Theory
+## "Re-" Words in Context: "Re-" and "Re" Theory
 
 #### How
 
-
+- Return sentences that contain both a word(s) that start with "re-" and a word(s) that start with "re"
 
 #### Why
 
+- ID trend within trend
+    - Does Hardy juxtapose "re-" words and "re" words? Do "re-" words and "re" words co-occur in Hardy's poetry
 
 ## "Re-" Words in Context: Code
+
+```{python}
+import os
+import nltk
+import re
+from nltk.tokenize import sent_tokenize, word_tokenize
+
+nltk.download("punkt")
+
+# Define regular expressions
+re_pattern = r'\b(re)[a-zA-Z]+\b'  # Matches "re" followed by one or more letters
+re_hyphen_pattern = r'\b(re-)\w+\b'  # Matches "re-" followed by one or more word characters
+
+# Function to replace matched words with bolded HTML tags
+def bold_matched_words(match, pattern):
+    return f'<b>{match.group()}</b>'
+
+# Directory containing text files
+text_directory = "/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP"
+
+# Iterate through text files in the directory
+for filename in os.listdir(text_directory):
+    if filename.endswith(".txt"):
+        with open(os.path.join(text_directory, filename), "r", encoding="utf-8") as file:
+            text = file.read()
+            sentences = sent_tokenize(text)
+            
+            for sentence in sentences:
+                words = word_tokenize(sentence)
+                has_re = any(matches_pattern(word, re_pattern) for word in words)
+                has_re_hyphen = any(matches_pattern(word, re_hyphen_pattern) for word in words)
+                
+                if has_re and has_re_hyphen:
+                    sentence_with_bold = re.sub(re_pattern, lambda x: bold_matched_words(x, re_pattern), sentence)
+                    sentence_with_bold = re.sub(re_hyphen_pattern, lambda x: bold_matched_words(x, re_hyphen_pattern), sentence_with_bold)
+                    print(sentence_with_bold)
+                    print("\n" * 2)
+```
 
 
 ## Results: Take Aways
 
-- "re-" words often juxtaposed with "re" words
+- 30% (6 / 20) of sentences containing "re-" words in Hardy's poetry also contain "re" words
+- Hardy: "re-" words often juxtaposed with "re" words / "re-" words and "re" words co-occur in Hardy's poetry
+    - "re" words derived from hyphenated "re-" prefix
+- echo in form: visual and audial rhyme; echo in content: re(-) returns
+- Hardy's style (microelement)
+
 
 ## When Were "Re-" Words More / Less Frequent: Theory
 
