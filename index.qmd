@@ -1,5 +1,5 @@
 ---
-title: Thirteen* Digital Ways of Looking at -re- in Victorian Poetry
+title: Thirteen* Digital Ways of Looking at Re- in Victorian Poetry
 date: 11 November 2023
 author: Adam Mazel, Digital Publishing Librarian
 institute: Scholarly Communication Department, IUB Libraries
@@ -17,9 +17,9 @@ institute: Scholarly Communication Department, IUB Libraries
 
 - Exploratory Data Analysis (EDA)
     - early research: explore data to discover trends and generate hypotheses / basic insights
+- (simple) Count-based methods, rather than (complex) machine-  / deep-learning methods
+    - Apt for EDA / early research, feature ("re-") analysis, smaller datasets
 - Python (Natural Language ToolKit (NLTK), Matplotlib)
-    - (simple) Count-based methods, rather than (complex) machine-  / deep-learning
-        - Apt for EDA / early research, feature ("re-") analysis, smaller datasets
 
 ## Data: Which Authors / Texts + Why?
 
@@ -72,22 +72,115 @@ institute: Scholarly Communication Department, IUB Libraries
     - OCR: Errors
     - Noise (headers + footers, etc.)
 
+## Who Uses "Re-" Words the Most / Least?: Theory
+
+#### How
+
+- Comparative Keyword Frequencies
+    - Count re- words in each poet's corpus 
+    - Normalize counts (percentage of whole) to enable comparison
+        - divide # of re-words by # of words of each poet's corpus
+    - Visualize each poet's percentage in bar chart
+
+#### Why
+
+- Who is (not) interested in "re-" words?
+
+## Who Uses "Re-" Words the Most / Least?: Code
+```{python}
+import nltk
+import os
+import string
+import matplotlib.pyplot as plt
+
+nltk.download('punkt')  # Download NLTK tokenizer data
+
+
+# Define a function to remove all punctuation except hyphens
+def remove_punctuation_except_hyphens(text):
+    translator = str.maketrans('', '', string.punctuation.replace('-', ''))
+    return text.translate(translator)
+
+# Define a function to count "re-" words in a given text
+def count_re_words(text):
+    words = nltk.word_tokenize(text)
+    return sum(1 for word in words if word.lower().startswith("re-"))
+
+# Specify the directory paths for the two poets' corpora
+corpus_directories = {
+    'swinburne': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP',
+    'hardy': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP',
+    'michael field': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP',
+    'dg rossetti': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP',
+    # Add more directories here
+}
+
+# Initialize dictionaries to store the results
+percentage_re_words = {}
+
+# Read, tokenize, and calculate for each poet's corpus
+for poet, corpus_directory in corpus_directories.items():
+    corpus = []
+    
+    # Read and tokenize the text files in the poet's corpus
+    for filename in os.listdir(corpus_directory):
+        with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
+            text = file.read()
+            text = remove_punctuation_except_hyphens(text)
+            corpus.append(text)
+
+    # Count the "re-" words in the poet's corpus
+    re_word_count = sum(count_re_words(text) for text in corpus)
+
+    # Calculate the percentage of "re-" words in the poet's corpus
+    total_words = sum(len(nltk.word_tokenize(text)) for text in corpus)
+    percentage_re_words[poet] = (re_word_count / total_words) * 100
+
+# Sort the results from largest to smallest
+sorted_results = sorted(percentage_re_words.items(), key=lambda x: x[1], reverse=True)
+
+# Extract poets and percentages for plotting
+poets, percentages = zip(*sorted_results)
+
+# Step 4: Create a bar chart to visualize the results with dynamic y-axis limit and sorted labels
+plt.figure(figsize=(8, 6))
+plt.bar(poets, percentages, color=['blue', 'orange'])
+plt.ylabel('Percentage (%)')
+plt.title('Whose Poetry is More Composed of Words that Start with "Re-"?')
+
+# Set the y-axis limit based on the largest percentage
+ylim_percentage = max(percentages) * 2  # Adjusted for better visualization
+plt.ylim(0, ylim_percentage)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Display the bar chart
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+```
+
+## Results: Take Aways
+
+- Hardy: Uses "Re-" Words more
+- Rossetti: Uses "Re-" Words less
+
+
 ## Which "Re-" Words Are Most Frequent: Theory
 
 #### How
+
 - Keyword Frequency
     - ID which re- words are used and count how often
-    - Fundamental method of text mining (TM)
 
 #### Why
+
 - Uncover meaningful patterns in language use
     - Significant terms
     - Style
     - Aboutness: Themes / Topics
-- TM starting point
-- Apt for analyses of specific details / features
 
 ## Which "Re-" Words Are Most Frequent: Code
+
 - Have computer count all words that start with "re-" in poet's corpus + visualize results in bar chart
 - Stemming
     - Remove inflected endings to condense different versions of same term to a common stem
@@ -95,8 +188,6 @@ institute: Scholarly Communication Department, IUB Libraries
     - Improves IDing significant concepts
 
 ```{python}
-#| echo: true
-#| output-location: slide
  
 # import software libraries / dependencies
 import nltk
@@ -163,6 +254,7 @@ for directory in corpus_directories:
 ```
 
 ## Results: Take Aways
+
 - Keywords
     - Swinburne: "Re-Risen: 12" (80% of S's "Re-" Words)
         - "re-risen": content: interested in ressurection?
@@ -183,26 +275,23 @@ for directory in corpus_directories:
         - "ressurect*" appears only once, "born: 48" and "birth: 46" 
         - Hypotheses: uninterested in signifying repetition through "re-", more interested in birth than rebirth?
 
-- Hardy and Field: "Re-Illume"
-    - Chiefly poetic
+- Hardy  and Field: "Re-Illume" in Context
     - Extremely rare (OED Band 1)
+    - Chiefly poetic
     - 1758 - present
-    - Hardy (2)
-        - "Two Rosalinds": __Time's Laughingstocks and Other Verses__ (1909)
-            - "But the well-known numbers needed not for me a text or teacher / To **revive** and **re-illume.**"
-            - "re-" relatively frequent in poem; poem about nostalgia for an actress
-        - "For Life I had never cared greatly": __Moments of Vision and Miscellaneous Verses__ (1917)
-            - Concludes with "re" words: "I pace hill and dale / **Regarding** the sky, / **Regarding** the vision on high, / And thus **re-illumed** have no humour for letting / My pilgrimage fail."
-        - "re-" words often juxtaposed with "re" words ("The Flirt's Tragedy" etc.)
-    - Field (1)
-        - ["XXII: Sleeping together: Sleep"](https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22) __Whym Chow: Flame of Love__ (1914)
-            - "We with all our deeds and dreams / Re-illumed, as were the gleams / Of thy savouring body"
-            - "re-" relatively frequent in book
-    - rare word declining in use and becoming obsolete: perpetuate, revive and re-illume a declining word
+    - Hardy: 2x
+        - "Two Rosalinds": __Time's Laughingstocks and Other Verses__ (1909), "For Life I had never cared greatly": __Moments of Vision and Miscellaneous Verses__ (1917)
+    - Field: 1x
+        - ["XXII: Sleeping together: Sleep"](https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22): __Whym Chow: Flame of Love__ (1906, 1914)
 
-## {background-iframe="https://books.google.com/ngrams/interactive_chart?content=reillume_INF,(reillumed+++reillume+++reilluming+++reillumes)&year_start=1800&year_end=2019&corpus=en-GB-2019&smoothing=3" background-interactive="true"}
+## {background-iframe="https://books.google.com/ngrams/graph?content=reillumed%2Breillume%2Breilluming%2Breillumes&year_start=1779&year_end=2019&corpus=en-GB-2019&smoothing=3" background-interactive="true"}
 
-## Which Words Adjoin "Re-" Words?: Theory
+## Results: Take Aways
+
+    - rare word becoming obsolete
+    - "re-illume" a word declining in use
+
+## "Re-" Words in Context: Theory
 
 #### How
 
@@ -301,13 +390,29 @@ for alias, frequencies in bigram_frequencies.items():
     - "re-__" : "life", "dead" (2x), "dust", "mortal"
         - re- associated with life + death, mortality, etc.
     - "re-risen": "prison"
-        - re-risen as internal rhyme: "re" "ri" "pri"
+        - re-risen as internal rhyme: "re-" "-ri-" "pri-"
 - Hardy
     - "re-____": "time" (2x), "semipiternal" (everlasting), "killing", "death", "lives" "new", "olden"
         - re- associated with time, eternal / mortal, etc.
 - Field
     - "re-appear": "fade", "re-light": "tarnished"
         - re- used with opposites
+
+## "Re-" Words in Context: Theory
+
+#### How
+
+
+
+#### Why
+
+
+## "Re-" Words in Context: Code
+
+
+## Results: Take Aways
+
+- "re-" words often juxtaposed with "re" words
 
 ## When Were "Re-" Words More / Less Frequent: Theory
 
