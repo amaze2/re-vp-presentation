@@ -61,7 +61,6 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Late Lyrics and Earlier with Many Other Verses* (1922)
     - *Human Shows, Far Phantasies, Songs and Trifles* (1925)
 
-
 - Where Acquired
     - [Project Gutenberg](https://www.gutenberg.org/)
     - [HathiTrust](https://www.hathitrust.org/)
@@ -75,34 +74,34 @@ institute: Scholarly Communication Department, IUB Libraries
     - OCR: Errors
     - Pub info: headers + footers, introductions / conclusions, dedications, etc.
 
-## Who Uses "Re-" Words the Most / Least?: Theory
+## Who Uses "Re-" Words the Most / Least?
 
-#### How
+- What percent of each poet’s corpus is composed of words that start with the prefix "re-"?
 
-- Comparative Keyword Frequencies
-    - Count re- words in each poet's corpus 
-    - Normalize counts (percentage of whole) to enable comparison
-        - divide # of re-words by # of words of each poet's corpus
-    - Visualize each poet's percentage in bar chart
+- Whose poetry is most / least composed of “re-” words? 
+- Who uses "re-" words more / less? 
 
-#### Why
+## Who Uses "Re-" Words the Most / Least?
 
-- Who is (not) interested in "re-" words?
+- Compare Keyword Percentages
+    - Count "re-"" words in each poet's corpus 
+    - Normalize counts to enable comparison
+        - Divide # of "re-" words by # of words of each poet's corpus
+    - Visualize each poet's percentage of "re-" words in bar chart
 
-## Who Uses "Re-" Words the Most / Least?: Code
 ```{python}
 import nltk
 import os
-import string
+# import string
 import matplotlib.pyplot as plt
 
 nltk.download('punkt')  # Download NLTK tokenizer data
 
 
 # Define a function to remove all punctuation except hyphens
-def remove_punctuation_except_hyphens(text):
-    translator = str.maketrans('', '', string.punctuation.replace('-', ''))
-    return text.translate(translator)
+# def remove_punctuation_except_hyphens(text):
+    # translator = str.maketrans('', '', string.punctuation.replace('-', ''))
+    # return text.translate(translator)
 
 # Define a function to count "re-" words in a given text
 def count_re_words(text):
@@ -129,7 +128,7 @@ for poet, corpus_directory in corpus_directories.items():
     for filename in os.listdir(corpus_directory):
         with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
             text = file.read()
-            text = remove_punctuation_except_hyphens(text)
+            # text = remove_punctuation_except_hyphens(text)
             corpus.append(text)
 
     # Count the "re-" words in the poet's corpus
@@ -164,31 +163,28 @@ plt.show()
 
 ## Results: Take Aways
 
-- Hardy: Uses "Re-" Words more
-- Rossetti: Uses "Re-" Words less
+- Hardy: Uses "Re-" Words Most
+- Rossetti: Uses "Re-" Words Least
 
+## Which "Re-" Words Are Most Frequent?
 
-## Which "Re-" Words Are Most Frequent: Theory
+- Which "re-" words are used and how often? 
 
-#### How
-
-- Keyword Frequency
-    - ID which re- words are used and count how often
-
-#### Why
-
-- Uncover meaningful patterns in language use
-    - Significant terms
-    - Style
-    - Aboutness: Themes / Topics
+- ID trends in "re-" use: 
+    - Which "re-" words are keywords? 
+        - Themes 
+    - One word many times? Many words one time?
+        - Style
 
 ## Which "Re-" Words Are Most Frequent: Code
 
-- Have computer count all words that start with "re-" in poet's corpus + visualize results in bar chart
-- Stemming
-    - Remove inflected endings to condense different versions of same term to a common stem
-    - "re-enter: 1", "re-entering: 1", "re-entered: 1" --> "re-ent: 3"
-    - Improves IDing significant concepts
+- Keyword Frequency
+    - Have computer count all words that start with "re-" in poet's corpus 
+    - Stemming
+        - Remove inflected endings to condense different versions of same term to a common stem
+        - "re-enter: 1", "re-entering: 1", "re-entered: 1" --> "re-ent: 3"
+        - Improves IDing significant concepts
+    - Visualize results in bar chart
 
 ```{python}
  
@@ -258,13 +254,6 @@ for directory in corpus_directories:
 
 ## Results: Take Aways
 
-- Keywords
-    - Swinburne: "Re-Risen: 12" (80% of S's "Re-" Words)
-        - "re-risen": content: interested in ressurection?
-        - "re-risen: form: alliterative (more echoic than "ressurect")
-
-## Results: Take Aways
-
 - Comparison of "Re-" Use
 
 |                    | Low Vocabulary | High Vocabulary |
@@ -274,52 +263,50 @@ for directory in corpus_directories:
 
 ## Results: Take Aways
 
-- Rossetti's "Re-Born"
-    - Hapax Legomenon
-        - ["Ardour & Memory"](http://www.rossettiarchive.org/docs/4-1873.tinkerms.rad.html) (1879), Sonnet LXIV, *House of Life* __Ballads and Sonnets__ (1881)
-            - "The furtive flickering streams to light re-born / 'Mid airs new-fledged & valorous lusts of morn,"
-        - But hyphenated prefixes (e.g. "a-heap", "to-night") and compound words (e.g. "cukoo-throb", "forest-boughs") are common (1.22%) in DGR
-        - "ressurect*" appears only once, "born: 48" and "birth: 46" 
-        - Hypotheses: uninterested in signifying repetition through "re-", more interested in birth than rebirth?
+- Swinburne: "Re-Risen"
+    - 12x (80% of S's "Re-" Words)
+        - "re-risen: form: alliterative 
+        - "re-risen": content: interested in ressurection?
+
 
 ## Results: Take Aways
 
-- Hardy  and Field: "Re-Illume" in Context
-    - Extremely rare (OED Band 1)
+- DG Rossetti's "Re-Born"
+    - Hapax Legomenon
+    - But hyphenated prefixes (e.g. "a-heap", "to-night") and compound words (e.g. "cukoo-throb", "forest-boughs") are common (1.22%) in DGR's poetry
+    - "born": 48x and "birth": 46x 
+        - "ressurect*", like "re-born," appears only once
+ 
+    - Hypotheses:
+        - uninterested in signifying repetition through "re-"
+        - more interested in birth than rebirth?
+
+## Results: Take Aways
+
+- Hardy and Field: "Re-Illume" in Context
+    - Extremely rare
     - Chiefly poetic
     - 1758 - present
     - Hardy: 2x
-        - "Two Rosalinds": __Time's Laughingstocks and Other Verses__ (1909), "For Life I had never cared greatly": __Moments of Vision and Miscellaneous Verses__ (1917)
+        - "Two Rosalinds": *Time's Laughingstocks and Other Verses* (1909)
+        - "For Life I had never cared greatly": *Moments of Vision and Miscellaneous Verses* (1917)
     - Field: 1x
-        - ["XXII: Sleeping together: Sleep"](https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22): __Whym Chow: Flame of Love__ (1906, 1914)
+        - ["XXII: Sleeping together: Sleep"](https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22): *Whym Chow: Flame of Love* (1906, 1914)
 
 ## {background-iframe="https://books.google.com/ngrams/graph?content=reillumed%2Breillume%2Breilluming%2Breillumes&year_start=1779&year_end=2019&corpus=en-GB-2019&smoothing=3" background-interactive="true"}
 
-## Results: Take Aways
+## Which Words Adjoin "Re-" Words?
 
-    - rare word becoming obsolete
-    - "re-illume" a word declining in use
+- J. R. Firth (Linguist): "You shall know a word by the company it keeps" (1957)
+- "re-" words: IDing (frequently) co-occuring terms can better clarify their meaning
 
-## "Re-" Words in Context: Theory
+## Which Words Adjoin "Re-" Words?
 
-#### How
-
-- Bigrams (n-grams)
-    - Bigrams: two consecutive words (Trigram: three consecutive words) 
-        - e.g. "She used the olive oil.": "She used", "used the", "the olive", "olive oil"
-    - ID / count bigrams of re- words: re- word + consecutive word
-
-#### Why
-
-- Key Word in Context: Know a word by the company it keeps: facilitaate understadning of key word
-    - e.g. "olive", "oil"--> "olive oil"
-- Better understand re- words by learning their immediate contexts and associations via frequently co-occuring terms
-    - Fundamental method of text mining (TM)
-
-## Which Words Adjoin "Re-" Words?: Code
-
-- Have computer ID all the bigrams of each poet's works and then filter everything but bigrams of words that start with re- 
-- remove stopwords (meaningless function words) to reveal associated concepts
+- Bigrams
+    - Bigrams: two consecutive words
+        - e.g. "She used the olive oil.": "She used": 1, "used the": 1, "the olive": 1, "olive oil": 1
+    - Have computer ID / count bigrams of re- words: re- word + consecutive word
+    - remove stopwords (meaningless function words) to better reveal associated concepts
 
 ```{python}
 # import software dependencies / libraries
@@ -395,27 +382,21 @@ for alias, frequencies in bigram_frequencies.items():
 - Swinburne
     - "re-__" : "life", "dead" (2x), "dust", "mortal"
         - re- associated with life + death, mortality, etc.
-    - "re-risen": "prison"
-        - re-risen as internal rhyme: "re-" "-ri-" "pri-"
+    - "re-risen": "prison": rhyme
 - Hardy
     - "re-____": "time" (2x), "semipiternal" (everlasting), "killing", "death", "lives" "new", "olden"
-        - re- associated with time, eternal / mortal, etc.
+        - re- associated with time, eternity / mortality, etc.
 - Field
     - "re-appear": "fade", "re-light": "tarnished"
         - re- used with opposites
 
-## "Re-" Words in Context: "Re-" and "Re" Theory
+## Do "re-" words and "re" words co-occur in Hardy's poetry?
 
-#### How
+- Does Hardy juxtapose "re-" words and "re" words? 
 
-- Return sentences that contain both a word(s) that start with "re-" and a word(s) that start with "re"
+## Do "re-" words and "re" words co-occur in Hardy's poetry?
 
-#### Why
-
-- ID trend within trend
-    - Does Hardy juxtapose "re-" words and "re" words? Do "re-" words and "re" words co-occur in Hardy's poetry?
-
-## "Re-" Words in Context: Code
+- Have Python return Hardy's sentences that contain both a word(s) that start with "re-" and a word(s) that start with "re"
 
 ```{python}
 import os
@@ -423,18 +404,20 @@ import nltk
 import re
 from nltk.tokenize import sent_tokenize, word_tokenize
 
-nltk.download("punkt")
-
 # Define regular expressions
-re_pattern = r'\b(re)[a-zA-Z]+\b'  # Matches "re" followed by one or more letters
-re_hyphen_pattern = r'\b(re-)\w+\b'  # Matches "re-" followed by one or more word characters
+re_pattern = r'\b(?:[Rr]e|[Rr]E)\w+\b'  # Matches "re" followed by one or more letters
+re_hyphen_pattern = r'\b(?:[Rr]e-|[Rr]E-)\w+\b'  # Matches "re-" followed by one or more word characters
+
+# \b matches a word boundary.
+# (?:[Rr]e|[Rr]E) is a non-capturing group that matches either "re" or "RE," regardless of case.
+# \w+ matches one or more word characters following "re-" or "RE-."
 
 def matches_pattern(word, pattern):
     return re.search(pattern, word, re.IGNORECASE) is not None
 
 # Function to replace matched words with bolded HTML tags
 def bold_matched_words(match, pattern):
-    return f'<b>{match.group()}</b>'
+    return f'**{match.group()}**'
 
 # Directory containing text files
 text_directory = "/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP"
@@ -461,35 +444,25 @@ for filename in os.listdir(text_directory):
 ## Results: Take Aways
 
 - 30% (6 / 20) of sentences containing "re-" words in Hardy's poetry also contain "re" words
-- Hardy: "re-" words often juxtaposed with "re" words / "re-" words and "re" words co-occur in Hardy's poetry
-    - "re" words derived from hyphenated "re-" prefix
-- echo in form: visual and audial rhyme; echo in content: re(-) returns
+- Hardy: "re-" words co-occur with "re" words
+
 - Hardy's style (microelement)
+    - echo in form: visual and audial rhyme
+    - echo in content: re(-) returns
 
+## When Were "Re-" Words More / Less Frequent
 
-## When Were "Re-" Words More / Less Frequent: Theory
-
-#### How
-
-- Time Series / Term Frequency over Time
-- ID when (in poet's career) "Re-" words were used more / less often
-
-### Why
-
-- When in poet's career did "re-" become more / less frequent
+- ID when (in poet's career) "re-" words were used more / less often
     - Why did "re-" wax / wane then?
 - In which book(s) is re- frequent / infrequent? Why?
 
-## When Were "Re-" Words More / Less Frequent: Code
+## When Were "Re-" Words More / Less Frequent
 
-- Computer counts what percent each book of poetry is "re-" words (total number of re- words divided by total number of words)
-    - nomalizing the data enables comparison
-- Y axis: re- word percentage of book; X axis: publication year of book
+- Time Series / Term Frequency over Time
+    - Y axis: re- word percentage of book
+    - X axis: publication year of book
 
 ```{python}
-#| echo: true
-#| output-location: slide
-
 # Import software libraries / dependencies
 import nltk
 import os
@@ -608,13 +581,13 @@ plt.show()
 ## Results: Take Aways
 
 - Swinburne
-    - "Re-": of interest in mid career, especially in __A Century of Roundels__ (1883)
-        - "Re-" as theme of repetition apt for Roundel form: repetitive
+    - "Re-": of interest in mid career, especially in *A Century of Roundels* (1883)
+        - "Re-": theme of repetition apt for Roundel's repetitive form
 - Field
-    - "Re-": of very strong interest in __Whym Chow: Flame of Love__ (1914)
+    - "Re-": of very strong interest in *Whym Chow: Flame of Love* (1914)
         - "Re-": intimates "again-ness", return, and memory: apt for an elegy (dog) 
 
-## Are "Re-" Words Used Positively or Negatively? Theory
+## Are "Re-" Words Used Positively or Negatively?
 
 #### How
 
@@ -641,15 +614,11 @@ plt.show()
     - limitations: sarcasm, irony, or tone
 - Sentiment Scores of Sentences with "Re-" Words
     - aggregate sentiment scores of all sentences with re- words
-- Setiment Scores of each Corpus and
+- Sentiment Scores of each Corpus and
     - aggregate sentiment scores of entire corpus
     - serve as a norm against which to compare / contrast Sentiment Scores of Sentences with "Re-" Words
 
 ```{python}
-#| echo: true
-#| output-location: slide
-
-# Import software libraries / dependencies
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
@@ -835,21 +804,8 @@ for corpus_directory, alias in corpus_directories.items():
 - Swinburne: "Re-" tends to be in negative contexts / have negative connotations
     - ressurection / life after death: negative connotations for Swinburne?
 
-## Conclusion
+## Wrap Up + Thank You!
 
-- Take Aways
-    - small details (re-) <--> large data / methods / trends
-    - No conclusions: EDA
-
-- Next Steps
-    - "re-" context / patterns in surrounding language
-        - collocates
-    - "re-" omissions
-        - Why so rare in DGR?
-    - Re-familiarize myself with poetry
-    - Expand data / scope (other poets)
-
-- **Thank You!**
 - Contact Info
     - Adam Mazel
     - Digital Publishing Librarian

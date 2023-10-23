@@ -10,12 +10,13 @@ institute: Scholarly Communication Department, IUB Libraries
 format: 
   revealjs:
     scrollable: true
+    chalkboard: true
     overview: true
     touch: true
     progress: true
     slide-number: true
     preview-links: true
-    embed-resources: true
+    # embed-resources: true
     fig-responsive: true
     transition: slide
     lang: en-US
