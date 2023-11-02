@@ -27,6 +27,9 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Poems* (1870)
     - *Poems: A New Edition* (1881)
     - *Ballads and Sonnets* (1881)
+
+## Data: Which Authors / Texts + Why? {.smaller}
+
 - AC Swinburne
     - *Atalanta in Calydon* (1865)
     - *Poems and Ballads* (1866)
@@ -44,6 +47,9 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Astrophel and Other Poems* (1894)
     - *The Tale of Balen* (1896)
     - *A Channel Passage and Other Poems* (1904)
+
+## Data: Which Authors / Texts + Why?
+
 - Michael Field
     - *Long Ago* (1889)
     - *Sight and Song* (1892)
@@ -52,6 +58,9 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Poems of Adoration* (1912)
     - *Mystic Trees* (1913)
     - *Whym Chow: Flame of Love* (1914)
+
+## Data: Which Authors / Texts + Why?
+
 - Thomas Hardy
     - *Wessex Poems and Other Verses* (1898)
     - *Poems of the Past and the Present* (1901)
@@ -60,6 +69,8 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Moments of Vision* (1917)
     - *Late Lyrics and Earlier with Many Other Verses* (1922)
     - *Human Shows, Far Phantasies, Songs and Trifles* (1925)
+
+## Data: Which Authors / Texts + Why?
 
 - Where Acquired
     - [Project Gutenberg](https://www.gutenberg.org/)
@@ -77,14 +88,13 @@ institute: Scholarly Communication Department, IUB Libraries
 ## Who Uses "Re-" Words the Most / Least?
 
 - What percent of each poet’s corpus is composed of words that start with the prefix "re-"?
-
 - Whose poetry is most / least composed of “re-” words? 
 - Who uses "re-" words more / less? 
 
 ## Who Uses "Re-" Words the Most / Least?
 
 - Compare Keyword Percentages
-    - Count "re-"" words in each poet's corpus 
+    - Count "re-" words in each poet's corpus 
     - Normalize counts to enable comparison
         - Divide # of "re-" words by # of words of each poet's corpus
     - Visualize each poet's percentage of "re-" words in bar chart
@@ -161,7 +171,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-## Results: Take Aways
+## Results: Take Aways {visibility="hidden"}
 
 - Hardy: Uses "Re-" Words Most
 - Rossetti: Uses "Re-" Words Least
@@ -169,12 +179,9 @@ plt.show()
 ## Which "Re-" Words Are Most Frequent?
 
 - Which "re-" words are used and how often? 
-
 - ID trends in "re-" use: 
-    - Which "re-" words are keywords? 
-        - Themes 
-    - One word many times? Many words one time?
-        - Style
+    - Thematics: Which "re-" words are keywords? 
+    - Style: One word many times? Many words one time?
 
 ## Which "Re-" Words Are Most Frequent: Code
 
@@ -265,17 +272,16 @@ for directory in corpus_directories:
 
 - Swinburne: "Re-Risen"
     - 12x (80% of S's "Re-" Words)
-        - "re-risen: form: alliterative 
-        - "re-risen": content: interested in ressurection?
+        - form: alliterative 
+        - content: interested in ressurection?
 
 
 ## Results: Take Aways
 
 - DG Rossetti's "Re-Born"
     - Hapax Legomenon
-    - But hyphenated prefixes (e.g. "a-heap", "to-night") and compound words (e.g. "cukoo-throb", "forest-boughs") are common (1.22%) in DGR's poetry
-    - "born": 48x and "birth": 46x 
-        - "ressurect*", like "re-born," appears only once
+    - Hyphenated prefixes and compound words are common in DGR's poetry
+    - "born": 48x and "birth": 46x | "ressurect-": 1x and "re-born": 1x 
  
     - Hypotheses:
         - uninterested in signifying repetition through "re-"
@@ -285,8 +291,6 @@ for directory in corpus_directories:
 
 - Hardy and Field: "Re-Illume" in Context
     - Extremely rare
-    - Chiefly poetic
-    - 1758 - present
     - Hardy: 2x
         - "Two Rosalinds": *Time's Laughingstocks and Other Verses* (1909)
         - "For Life I had never cared greatly": *Moments of Vision and Miscellaneous Verses* (1917)
@@ -446,7 +450,7 @@ for filename in os.listdir(text_directory):
 - 30% (6 / 20) of sentences containing "re-" words in Hardy's poetry also contain "re" words
 - Hardy: "re-" words co-occur with "re" words
 
-- Hardy's style (microelement)
+- Hardy's style
     - echo in form: visual and audial rhyme
     - echo in content: re(-) returns
 
@@ -590,7 +594,7 @@ plt.show()
 ## Are "Re-" Words Used Positively or Negatively?
 
 - Do "re-" words appear more often in contexts that are positive or negative?
-- Thematics: "re-" words + "repetition" have what connotations?
+- Thematics: what do "re-" words + repetition connote?
 - Stylistics: poet's emotional associations of "re-" words
 
 ## Are "Re-" Words Used Positively or Negatively?
