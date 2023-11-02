@@ -1305,59 +1305,42 @@ THE **RE-ENACTMENT**
 <ul>
 <li>“Re-”: of interest in mid career, especially in <em>A Century of Roundels</em> (1883)
 <ul>
-<li>“Re-”: theme of repetition apt for Roundel’s repetitive form</li>
+<li>“Re-”: prefix (repetition) apt for Roundel’s repetitive form</li>
 </ul></li>
 </ul></li>
 <li>Field
 <ul>
-<li>“Re-”: of very strong interest in <em>Whym Chow: Flame of Love</em> (1914)
+<li>“Re-”: of interest in <em>Whym Chow: Flame of Love</em> (1914)
 <ul>
-<li>“Re-”: intimates “again-ness”, return, and memory: apt for an elegy (dog)</li>
+<li>“Re-”: prefix (“again-ness,” return, and memory) apt for an elegy</li>
 </ul></li>
 </ul></li>
 </ul>
 </section>
 <section id="are-re--words-used-positively-or-negatively" class="slide level2">
 <h2>Are “Re-” Words Used Positively or Negatively?</h2>
-<h4 id="how">How</h4>
 <ul>
-<li>Sentiment Analysis</li>
-<li>determines (part of) a text’s emotional tone (positive / negative / neutral)</li>
-</ul>
-<h4 id="why">Why</h4>
-<ul>
-<li>Opinion mining / reception</li>
-<li>Characters’ sentiments / emotional arcs</li>
-<li>Sentiment of plot: ID emotional highs / lows</li>
-<li>Emotional valences / connotations of keywords (“Re-” words)
-<ul>
-<li>Stylistics: Author’s tonal / emotional preferences</li>
-<li>Comparison: compare how poets treat emotional associations of “Re-” words</li>
-</ul></li>
+<li>Do “re-” words appear more often in contexts that are positive or negative?</li>
+<li>Thematics: “re-” words + “repetition” have what connotations?</li>
+<li>Stylistics: poet’s emotional associations of “re-” words</li>
 </ul>
 </section>
-<section id="are-re--words-used-positively-or-negatively-code" class="slide level2">
-<h2>Are “Re-” Words Used Positively or Negatively? Code</h2>
+<section id="are-re--words-used-positively-or-negatively-1" class="slide level2">
+<h2>Are “Re-” Words Used Positively or Negatively?</h2>
 <ul>
+<li>Sentiment Analysis
+<ul>
+<li>determines (part of) a text’s emotional tone (positive / negative / neutral)</li>
+<li>aggregate sentiment scores of all sentences with re- words</li>
+<li>compare to sentiment score of poet’s corpus (norm)</li>
+</ul></li>
 <li>Sentiment Analyzer: VADER (Valence Aware Dictionary and sEntiment Reasoner)
 <ul>
 <li>lexicon-based approach
 <ul>
-<li>VADER employs a lexicon that contains thousands of words and their polarity scores, indicating whether the word is positive, negative, or neutral.</li>
-<li>VADER also considers intensifiers (e.g., “very” or “extremely”) that modify the sentiment of adjacent words.</li>
-<li>VADER also considers punctuation, such as exclamation marks and question marks, which can influence sentiment.</li>
-<li>VADER considers capitalization, giving more weight to fully capitalized words (e.g., “HAPPY”) and less weight to words in all lowercase.</li>
+<li>considers intensifiers, valence shifting, &amp; punctuation</li>
+<li>struggles with sarcasm</li>
 </ul></li>
-<li>limitations: sarcasm, irony, or tone</li>
-</ul></li>
-<li>Sentiment Scores of Sentences with “Re-” Words
-<ul>
-<li>aggregate sentiment scores of all sentences with re- words</li>
-</ul></li>
-<li>Sentiment Scores of each Corpus and
-<ul>
-<li>aggregate sentiment scores of entire corpus</li>
-<li>serve as a norm against which to compare / contrast Sentiment Scores of Sentences with “Re-” Words</li>
 </ul></li>
 </ul>
 <div class="cell" data-execution_count="6">
@@ -1538,7 +1521,7 @@ THE **RE-ENACTMENT**
 </div>
 
 </section>
-<section id="are-re--words-used-positively-or-negatively-code-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively? Code</h2><div class="cell output-location-slide" data-execution_count="7">
+<section id="are-re--words-used-positively-or-negatively-1-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>AC Swinburne
 Total Sentences Analyzed: 15
@@ -1569,7 +1552,7 @@ Average Neutral Score: 0.9
 Overall Sentiment: Positive
 </code></pre>
 </div>
-</div></section><section id="are-re--words-used-positively-or-negatively-code-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively? Code</h2><div class="cell output-location-slide" data-execution_count="6">
+</div></section><section id="are-re--words-used-positively-or-negatively-1-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-7-output-1.png" width="821" height="588"></p>
 </div>
@@ -1601,14 +1584,6 @@ Overall Sentiment: Positive
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Field: Consistently Positive</li>
-<li>Hardy: Consistently Negative</li>
-<li>Swinburne: “Re-” tends to be in negative contexts / have negative connotations
-<ul>
-<li>ressurection / life after death: negative connotations for Swinburne?</li>
-</ul></li>
-</ul>
 </section>
 <section id="wrap-up-thank-you" class="slide level2">
 <h2>Wrap Up + Thank You!</h2>
