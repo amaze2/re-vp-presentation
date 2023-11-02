@@ -582,42 +582,27 @@ plt.show()
 
 - Swinburne
     - "Re-": of interest in mid career, especially in *A Century of Roundels* (1883)
-        - "Re-": theme of repetition apt for Roundel's repetitive form
+        - "Re-": prefix (repetition) apt for Roundel's repetitive form
 - Field
-    - "Re-": of very strong interest in *Whym Chow: Flame of Love* (1914)
-        - "Re-": intimates "again-ness", return, and memory: apt for an elegy (dog) 
+    - "Re-": of interest in *Whym Chow: Flame of Love* (1914)
+        - "Re-": prefix ("again-ness," return, and memory) apt for an elegy 
 
 ## Are "Re-" Words Used Positively or Negatively?
 
-#### How
+- Do "re-" words appear more often in contexts that are positive or negative?
+- Thematics: "re-" words + "repetition" have what connotations?
+- Stylistics: poet's emotional associations of "re-" words
+
+## Are "Re-" Words Used Positively or Negatively?
 
 - Sentiment Analysis
-- determines (part of) a text's emotional tone (positive / negative / neutral)
-
-#### Why
-
-- Opinion mining / reception
-- Characters' sentiments / emotional arcs
-- Sentiment of plot: ID emotional highs / lows
-- Emotional valences / connotations of keywords ("Re-" words)
-    - Stylistics: Author's tonal / emotional preferences
-    - Comparison: compare how poets treat emotional associations of "Re-" words
-
-## Are "Re-" Words Used Positively or Negatively? Code
-
+    - determines (part of) a text's emotional tone (positive / negative / neutral)
+    - aggregate sentiment scores of all sentences with re- words
+    - compare to sentiment score of poet's corpus (norm)
 - Sentiment Analyzer: VADER (Valence Aware Dictionary and sEntiment Reasoner)
     - lexicon-based approach
-        - VADER employs a lexicon that contains thousands of words and their polarity scores, indicating whether the word is positive, negative, or neutral.
-        - VADER also considers intensifiers (e.g., "very" or "extremely") that modify the sentiment of adjacent words.
-        - VADER also considers punctuation, such as exclamation marks and question marks, which can influence sentiment.
-        - VADER considers capitalization, giving more weight to fully capitalized words (e.g., "HAPPY") and less weight to words in all lowercase.
-    - limitations: sarcasm, irony, or tone
-- Sentiment Scores of Sentences with "Re-" Words
-    - aggregate sentiment scores of all sentences with re- words
-- Sentiment Scores of each Corpus and
-    - aggregate sentiment scores of entire corpus
-    - serve as a norm against which to compare / contrast Sentiment Scores of Sentences with "Re-" Words
-
+        - considers intensifiers, valence shifting, & punctuation
+        - struggles with sarcasm
 ```{python}
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -798,11 +783,6 @@ for corpus_directory, alias in corpus_directories.items():
 |--------------------------| ----------------------| ----------------------|
 | **"Re-": More Positive** | Field                 | Rossetti              |
 | **"Re-": More Negative** | Swinburne             | Hardy                 |
-
-- Field: Consistently Positive
-- Hardy: Consistently Negative
-- Swinburne: "Re-" tends to be in negative contexts / have negative connotations
-    - ressurection / life after death: negative connotations for Swinburne?
 
 ## Wrap Up + Thank You!
 
