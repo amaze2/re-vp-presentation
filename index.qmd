@@ -1,19 +1,41 @@
 ---
 title: Thirteen* Digital Ways of Looking at Re- in Victorian Poetry
-date: 11 November 2023
+date: 8 November 2023
 author: Adam Mazel, Digital Publishing Librarian
 institute: Scholarly Communication Department, IUB Libraries
 ---
 
-## Rationale / Significance
+## Outline {.smaller}
 
-- Analyzing "Re-" is apt for text mining
+- Intro
+    - Why "Re-"?
+    - Why / How Text Mining?
+    - Which Poetry? / How Cleaned?
+- Who Uses "Re-" Most / Least?
+- Which "Re-" Words Are Most Frequent?
+- Which Words Accompany "Re-" Words?
+- When Are "Re-" Words Most / Least Frequent?
+- Are "Re-" Words Used Positively / Negatively?
+- Conclusion
+
+## Why "Re-" in VP?
+
+- NAVSA Conference 2023: "**Re**vision, **Re**turn, **Re**form"
+    - Panel: "Re: Re: Victorian Poetry"
+        - Adela Pinch, Professor of English, University of Michigan
+        - Emily Harrington, Assoc. Prof. of English, UC Boulder
+        - (Naomi Levine, Asst. Prof. of English, Yale University)
+        - Me!
+
+## Methodology
+
+- "Re-" :handshake: text mining 	
     - small details: hard to notice with one's eyes, but easy to notice with computer "vision"
     - play with focus of analytic lens
         - (too-)close reading: microscopic aspects of language
         - distant reading: macroscopic methods of analysis
 
-## Method
+## Methodology
 
 - **Tool:** Python
 - **Approach:** Exploratory Data Analysis (EDA)
@@ -21,14 +43,12 @@ institute: Scholarly Communication Department, IUB Libraries
 - **Methods:** count based, rather than machine learning 
     - Apt for feature ("re-") analysis, smaller datasets
 
-## Data: Which Authors / Texts + Why?
+## Data: Which Authors / Texts + Why? {.smaller}
 
 - DG Rossetti
     - *Poems* (1870)
     - *Poems: A New Edition* (1881)
     - *Ballads and Sonnets* (1881)
-
-## Data: Which Authors / Texts + Why? {.smaller}
 
 - AC Swinburne
     - *Atalanta in Calydon* (1865)
@@ -48,8 +68,6 @@ institute: Scholarly Communication Department, IUB Libraries
     - *The Tale of Balen* (1896)
     - *A Channel Passage and Other Poems* (1904)
 
-## Data: Which Authors / Texts + Why?
-
 - Michael Field
     - *Long Ago* (1889)
     - *Sight and Song* (1892)
@@ -59,8 +77,6 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Mystic Trees* (1913)
     - *Whym Chow: Flame of Love* (1914)
 
-## Data: Which Authors / Texts + Why?
-
 - Thomas Hardy
     - *Wessex Poems and Other Verses* (1898)
     - *Poems of the Past and the Present* (1901)
@@ -69,8 +85,6 @@ institute: Scholarly Communication Department, IUB Libraries
     - *Moments of Vision* (1917)
     - *Late Lyrics and Earlier with Many Other Verses* (1922)
     - *Human Shows, Far Phantasies, Songs and Trifles* (1925)
-
-## Data: Which Authors / Texts + Why?
 
 - Where Acquired
     - [Project Gutenberg](https://www.gutenberg.org/)
@@ -181,9 +195,9 @@ plt.show()
 - Which "re-" words are used and how often? 
 - ID trends in "re-" use: 
     - Thematics: Which "re-" words are keywords? 
-    - Style: One word many times? Many words one time?
+    - Stylistics: One word many times? Many words one time?
 
-## Which "Re-" Words Are Most Frequent: Code
+## Which "Re-" Words Are Most Frequent?
 
 - Keyword Frequency
     - Have computer count all words that start with "re-" in poet's corpus 
@@ -289,8 +303,11 @@ for directory in corpus_directories:
 
 ## Results: Take Aways
 
-- Hardy and Field: "Re-Illume" in Context
+- "Re-Illume" in Context (Hardy and Field)
     - Extremely rare
+    - Chiefly poetic
+    - 1758 &ndash; present
+
     - Hardy: 2x
         - "Two Rosalinds": *Time's Laughingstocks and Other Verses* (1909)
         - "For Life I had never cared greatly": *Moments of Vision and Miscellaneous Verses* (1917)
@@ -301,8 +318,8 @@ for directory in corpus_directories:
 
 ## Which Words Adjoin "Re-" Words?
 
-- J. R. Firth (Linguist): "You shall know a word by the company it keeps" (1957)
-- "re-" words: IDing (frequently) co-occuring terms can better clarify their meaning
+- J. R. Firth (Linguist): "You shall know a word by the company it keeps." (1957)
+- IDing (frequently) co-occuring terms can clarify their meaning
 
 ## Which Words Adjoin "Re-" Words?
 
@@ -384,11 +401,11 @@ for alias, frequencies in bigram_frequencies.items():
 ## Results: Take Aways
 
 - Swinburne
-    - "re-__" : "life", "dead" (2x), "dust", "mortal"
+    - "re-": "life", "dead" (2x), "dust", "mortal"
         - re- associated with life + death, mortality, etc.
-    - "re-risen": "prison": rhyme
+    - "re-risen" + "prison": rhyme
 - Hardy
-    - "re-____": "time" (2x), "semipiternal" (everlasting), "killing", "death", "lives" "new", "olden"
+    - "re-": "time" (2x), "semipiternal" (everlasting), "killing", "death", "lives" "new", "olden"
         - re- associated with time, eternity / mortality, etc.
 - Field
     - "re-appear": "fade", "re-light": "tarnished"

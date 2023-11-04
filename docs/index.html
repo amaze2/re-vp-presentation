@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Adam Mazel, Digital Publishing Librarian">
-  <meta name="dcterms.date" content="2023-11-11">
+  <meta name="dcterms.date" content="2023-11-08">
   <meta name="keywords" content="Digital Humanities, Text Mining, Victorian Poetry, re">
   <title>Thirteen* Digital Ways of Looking at Re- in Victorian Poetry</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -408,12 +408,44 @@ Adam Mazel, Digital Publishing Librarian
     </div>
 </div>
 
-  <p class="date">2023-11-11</p>
+  <p class="date">2023-11-08</p>
 </section>
-<section id="rationale-significance" class="slide level2">
-<h2>Rationale / Significance</h2>
+<section id="outline" class="slide level2 smaller">
+<h2>Outline</h2>
 <ul>
-<li>Analyzing “Re-” is apt for text mining
+<li>Intro
+<ul>
+<li>Why “Re-”?</li>
+<li>Why / How Text Mining?</li>
+<li>Which Poetry? / How Cleaned?</li>
+</ul></li>
+<li>Who Uses “Re-” Most / Least?</li>
+<li>Which “Re-” Words Are Most Frequent?</li>
+<li>Which Words Accompany “Re-” Words?</li>
+<li>When Are “Re-” Words Most / Least Frequent?</li>
+<li>Are “Re-” Words Used Positively / Negatively?</li>
+<li>Conclusion</li>
+</ul>
+</section>
+<section id="why-re--in-vp" class="slide level2">
+<h2>Why “Re-” in VP?</h2>
+<ul>
+<li>NAVSA Conference 2023: “<strong>Re</strong>vision, <strong>Re</strong>turn, <strong>Re</strong>form”
+<ul>
+<li>Panel: “Re: Re: Victorian Poetry”
+<ul>
+<li>Adela Pinch, Professor of English, University of Michigan</li>
+<li>Emily Harrington, Assoc. Prof.&nbsp;of English, UC Boulder</li>
+<li>(Naomi Levine, Asst. Prof.&nbsp;of English, Yale University)</li>
+<li>Me!</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="methodology" class="slide level2">
+<h2>Methodology</h2>
+<ul>
+<li>“Re-” <span class="emoji" data-emoji="handshake">🤝</span> text mining
 <ul>
 <li>small details: hard to notice with one’s eyes, but easy to notice with computer “vision”</li>
 <li>play with focus of analytic lens
@@ -424,8 +456,8 @@ Adam Mazel, Digital Publishing Librarian
 </ul></li>
 </ul>
 </section>
-<section id="method" class="slide level2">
-<h2>Method</h2>
+<section id="methodology-1" class="slide level2">
+<h2>Methodology</h2>
 <ul>
 <li><strong>Tool:</strong> Python</li>
 <li><strong>Approach:</strong> Exploratory Data Analysis (EDA)
@@ -438,7 +470,7 @@ Adam Mazel, Digital Publishing Librarian
 </ul></li>
 </ul>
 </section>
-<section id="data-which-authors-texts-why" class="slide level2">
+<section id="data-which-authors-texts-why" class="slide level2 smaller">
 <h2>Data: Which Authors / Texts + Why?</h2>
 <ul>
 <li>DG Rossetti
@@ -447,11 +479,6 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Poems: A New Edition</em> (1881)</li>
 <li><em>Ballads and Sonnets</em> (1881)</li>
 </ul></li>
-</ul>
-</section>
-<section id="data-which-authors-texts-why-1" class="slide level2 smaller">
-<h2>Data: Which Authors / Texts + Why?</h2>
-<ul>
 <li>AC Swinburne
 <ul>
 <li><em>Atalanta in Calydon</em> (1865)</li>
@@ -471,11 +498,6 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>The Tale of Balen</em> (1896)</li>
 <li><em>A Channel Passage and Other Poems</em> (1904)</li>
 </ul></li>
-</ul>
-</section>
-<section id="data-which-authors-texts-why-2" class="slide level2">
-<h2>Data: Which Authors / Texts + Why?</h2>
-<ul>
 <li>Michael Field
 <ul>
 <li><em>Long Ago</em> (1889)</li>
@@ -486,11 +508,6 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Mystic Trees</em> (1913)</li>
 <li><em>Whym Chow: Flame of Love</em> (1914)</li>
 </ul></li>
-</ul>
-</section>
-<section id="data-which-authors-texts-why-3" class="slide level2">
-<h2>Data: Which Authors / Texts + Why?</h2>
-<ul>
 <li>Thomas Hardy
 <ul>
 <li><em>Wessex Poems and Other Verses</em> (1898)</li>
@@ -501,11 +518,6 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Late Lyrics and Earlier with Many Other Verses</em> (1922)</li>
 <li><em>Human Shows, Far Phantasies, Songs and Trifles</em> (1925)</li>
 </ul></li>
-</ul>
-</section>
-<section id="data-which-authors-texts-why-4" class="slide level2">
-<h2>Data: Which Authors / Texts + Why?</h2>
-<ul>
 <li>Where Acquired
 <ul>
 <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
@@ -637,12 +649,12 @@ Adam Mazel, Digital Publishing Librarian
 <li>ID trends in “re-” use:
 <ul>
 <li>Thematics: Which “re-” words are keywords?</li>
-<li>Style: One word many times? Many words one time?</li>
+<li>Stylistics: One word many times? Many words one time?</li>
 </ul></li>
 </ul>
 </section>
-<section id="which-re--words-are-most-frequent-code" class="slide level2">
-<h2>Which “Re-” Words Are Most Frequent: Code</h2>
+<section id="which-re--words-are-most-frequent-1" class="slide level2">
+<h2>Which “Re-” Words Are Most Frequent?</h2>
 <ul>
 <li>Keyword Frequency
 <ul>
@@ -725,7 +737,7 @@ Adam Mazel, Digital Publishing Librarian
 </div>
 
 </section>
-<section id="which-re--words-are-most-frequent-code-output" class="slide level2 output-location-slide"><h2>Which “Re-” Words Are Most Frequent: Code</h2><div class="cell output-location-slide" data-execution_count="2">
+<section id="which-re--words-are-most-frequent-1-output" class="slide level2 output-location-slide"><h2>Which “Re-” Words Are Most Frequent?</h2><div class="cell output-location-slide" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-3-output-1.png" width="790" height="473"></p>
 </div>
@@ -797,15 +809,17 @@ Adam Mazel, Digital Publishing Librarian
 <section id="results-take-aways-4" class="slide level2">
 <h2>Results: Take Aways</h2>
 <ul>
-<li>Hardy and Field: “Re-Illume” in Context
+<li>“Re-Illume” in Context (Hardy and Field)
 <ul>
-<li>Extremely rare</li>
-<li>Hardy: 2x
+<li><p>Extremely rare</p></li>
+<li><p>Chiefly poetic</p></li>
+<li><p>1758 – present</p></li>
+<li><p>Hardy: 2x</p>
 <ul>
 <li>“Two Rosalinds”: <em>Time’s Laughingstocks and Other Verses</em> (1909)</li>
 <li>“For Life I had never cared greatly”: <em>Moments of Vision and Miscellaneous Verses</em> (1917)</li>
 </ul></li>
-<li>Field: 1x
+<li><p>Field: 1x</p>
 <ul>
 <li><a href="https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22">“XXII: Sleeping together: Sleep”</a>: <em>Whym Chow: Flame of Love</em> (1906, 1914)</li>
 </ul></li>
@@ -818,8 +832,8 @@ Adam Mazel, Digital Publishing Librarian
 <section id="which-words-adjoin-re--words" class="slide level2">
 <h2>Which Words Adjoin “Re-” Words?</h2>
 <ul>
-<li>J. R. Firth (Linguist): “You shall know a word by the company it keeps” (1957)</li>
-<li>“re-” words: IDing (frequently) co-occuring terms can better clarify their meaning</li>
+<li>J. R. Firth (Linguist): “You shall know a word by the company it keeps.” (1957)</li>
+<li>IDing (frequently) co-occuring terms can clarify their meaning</li>
 </ul>
 </section>
 <section id="which-words-adjoin-re--words-1" class="slide level2">
@@ -968,15 +982,15 @@ DG Rossetti:
 <ul>
 <li>Swinburne
 <ul>
-<li>“re-__” : “life”, “dead” (2x), “dust”, “mortal”
+<li>“re-”: “life”, “dead” (2x), “dust”, “mortal”
 <ul>
 <li>re- associated with life + death, mortality, etc.</li>
 </ul></li>
-<li>“re-risen”: “prison”: rhyme</li>
+<li>“re-risen” + “prison”: rhyme</li>
 </ul></li>
 <li>Hardy
 <ul>
-<li>“re-____”: “time” (2x), “semipiternal” (everlasting), “killing”, “death”, “lives” “new”, “olden”
+<li>“re-”: “time” (2x), “semipiternal” (everlasting), “killing”, “death”, “lives” “new”, “olden”
 <ul>
 <li>re- associated with time, eternity / mortality, etc.</li>
 </ul></li>

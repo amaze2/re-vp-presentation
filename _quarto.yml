@@ -22,6 +22,7 @@ format:
     lang: en-US
     code-fold: show
     keywords: ["Digital Humanities", "Text Mining", "Victorian Poetry", "re"]
+    from: markdown+emoji
 preload-iframes: true
 execute: 
   echo: true
