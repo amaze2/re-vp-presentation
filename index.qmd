@@ -5,19 +5,6 @@ author: Adam Mazel, Digital Publishing Librarian
 institute: Scholarly Communication Department, IUB Libraries
 ---
 
-## Outline {.smaller}
-
-- Intro
-    - Why "Re-"?
-    - Why / How Text Mining?
-    - Which Poetry? / How Cleaned?
-- Who Uses "Re-" Most / Least?
-- Which "Re-" Words Are Most Frequent?
-- Which Words Accompany "Re-" Words?
-- When Are "Re-" Words Most / Least Frequent?
-- Are "Re-" Words Used Positively / Negatively?
-- Conclusion
-
 ## Why "Re-" in VP?
 
 - NAVSA Conference 2023: "**Re**vision, **Re**turn, **Re**form"
@@ -30,20 +17,16 @@ institute: Scholarly Communication Department, IUB Libraries
 ## Methodology
 
 - "Re-" :handshake: text mining 	
-    - small details: hard to notice with one's eyes, but easy to notice with computer "vision"
+    - small details: hard to notice with one's eyes, but easy to notice with computer
     - play with focus of analytic lens
-        - (too-)close reading: microscopic aspects of language
-        - distant reading: macroscopic methods of analysis
 
 ## Methodology
 
 - **Tool:** Python
 - **Approach:** Exploratory Data Analysis (EDA)
-    - early research: explore data to discover trends and generate hypotheses / basic insights
 - **Methods:** count based, rather than machine learning 
-    - Apt for feature ("re-") analysis, smaller datasets
 
-## Data: Which Authors / Texts + Why? {.smaller}
+## Data: Which Poets / Poetry? {.smaller}
 
 - DG Rossetti
     - *Poems* (1870)
@@ -94,18 +77,13 @@ institute: Scholarly Communication Department, IUB Libraries
 ## Data: Cleaning / Quality
 
 - Data Cleaning
-    - Removed noise: Boilerplate, Title Pages, Tables of Contents, Advertisments, Endorsements, Headers + Footers (most), Unusual Characters
-- Data Quality 
-    - OCR: Errors
-    - Pub info: headers + footers, introductions / conclusions, dedications, etc.
+    - Removed *most* noise
+- Data Quality
+    - Good, but not perfect
 
 ## Who Uses "Re-" Words the Most / Least?
 
 - What percent of each poet’s corpus is composed of words that start with the prefix "re-"?
-- Whose poetry is most / least composed of “re-” words? 
-- Who uses "re-" words more / less? 
-
-## Who Uses "Re-" Words the Most / Least?
 
 - Compare Keyword Percentages
     - Count "re-" words in each poet's corpus 
@@ -199,13 +177,12 @@ plt.show()
 
 ## Which "Re-" Words Are Most Frequent?
 
-- Keyword Frequency
-    - Have computer count all words that start with "re-" in poet's corpus 
-    - Stemming
-        - Remove inflected endings to condense different versions of same term to a common stem
+- Count "re-" words
+- Stem "re-" words
+    - Remove inflected endings to condense different versions of same term to a common stem
         - "re-enter: 1", "re-entering: 1", "re-entered: 1" --> "re-ent: 3"
-        - Improves IDing significant concepts
-    - Visualize results in bar chart
+    - Improves IDing significant concepts
+- Visualize results in bar chart
 
 ```{python}
  
@@ -275,59 +252,57 @@ for directory in corpus_directories:
 
 ## Results: Take Aways
 
-- Comparison of "Re-" Use
-
 |                    | Low Vocabulary | High Vocabulary |
 |------------------- | ---------------| ----------------|
 | **High Frequency** | Swinburne      |                 |
 | **Low Frequency**  | Rossetti       | Hardy, Field    |
 
+: Comparison of "Re-" Use
+
 ## Results: Take Aways
 
-- Swinburne: "Re-Risen"
-    - 12x (80% of S's "Re-" Words)
-        - form: alliterative 
-        - content: interested in ressurection?
-
+- Swinburne's "Re-Risen": 12x: 80% of "Re-" Words
+    - form: alliterative 
+    - content: ressurection
 
 ## Results: Take Aways
 
 - DG Rossetti's "Re-Born"
-    - Hapax Legomenon
+    - *Hapax Legomenon*
     - Hyphenated prefixes and compound words are common in DGR's poetry
+        - “a-heap,” “cukoo-throb,” etc.
     - "born": 48x and "birth": 46x | "ressurect-": 1x and "re-born": 1x 
  
     - Hypotheses:
         - uninterested in signifying repetition through "re-"
         - more interested in birth than rebirth?
 
-## Results: Take Aways
+## Results: Take Aways {.smaller}
 
 - "Re-Illume" in Context (Hardy and Field)
     - Extremely rare
     - Chiefly poetic
     - 1758 &ndash; present
 
-    - Hardy: 2x
-        - "Two Rosalinds": *Time's Laughingstocks and Other Verses* (1909)
-        - "For Life I had never cared greatly": *Moments of Vision and Miscellaneous Verses* (1917)
-    - Field: 1x
-        - ["XXII: Sleeping together: Sleep"](https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22): *Whym Chow: Flame of Love* (1906, 1914)
+- Field: 1x
+    - ["XXII: Sleeping together: Sleep"](https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22): *Whym Chow: Flame of Love* (1906, 1914)
+- Hardy: 2x
+    - "Two Rosalinds": *Time's Laughingstocks and Other Verses* (1909)
+    - "For Life I had never cared greatly": *Moments of Vision and Miscellaneous Verses* (1917)
 
 ## {background-iframe="https://books.google.com/ngrams/graph?content=reillumed%2Breillume%2Breilluming%2Breillumes&year_start=1779&year_end=2019&corpus=en-GB-2019&smoothing=3" background-interactive="true"}
 
-## Which Words Adjoin "Re-" Words?
+## Which Words Accompany "Re-" Words?
 
 - J. R. Firth (Linguist): "You shall know a word by the company it keeps." (1957)
 - IDing (frequently) co-occuring terms can clarify their meaning
 
-## Which Words Adjoin "Re-" Words?
+## Which Words Accompany "Re-" Words?
 
-- Bigrams
-    - Bigrams: two consecutive words
-        - e.g. "She used the olive oil.": "She used": 1, "used the": 1, "the olive": 1, "olive oil": 1
-    - Have computer ID / count bigrams of re- words: re- word + consecutive word
-    - remove stopwords (meaningless function words) to better reveal associated concepts
+- Bigrams: two consecutive words
+    - e.g. "She used the olive oil.": "She used": 1, "used the": 1, "the olive": 1, "olive oil": 1
+- Have computer ID / count bigrams of re- words: re- word + consecutive word
+- remove stopwords (meaningless function words) to better reveal associated concepts
 
 ```{python}
 # import software dependencies / libraries
@@ -398,7 +373,7 @@ for alias, frequencies in bigram_frequencies.items():
     print()
 ```
 
-## Results: Take Aways
+## Results: Take Aways {visibility="hidden"}
 
 - Swinburne
     - "re-": "life", "dead" (2x), "dust", "mortal"
@@ -411,12 +386,9 @@ for alias, frequencies in bigram_frequencies.items():
     - "re-appear": "fade", "re-light": "tarnished"
         - re- used with opposites
 
-## Do "re-" words and "re" words co-occur in Hardy's poetry?
+## Do "Re-" Words and "Re" Words Co-occur in Hardy's Poetry?
 
 - Does Hardy juxtapose "re-" words and "re" words? 
-
-## Do "re-" words and "re" words co-occur in Hardy's poetry?
-
 - Have Python return Hardy's sentences that contain both a word(s) that start with "re-" and a word(s) that start with "re"
 
 ```{python}
@@ -471,13 +443,13 @@ for filename in os.listdir(text_directory):
     - echo in form: visual and audial rhyme
     - echo in content: re(-) returns
 
-## When Were "Re-" Words More / Less Frequent
+## When Are "Re-" Words More / Less Frequent?
 
 - ID when (in poet's career) "re-" words were used more / less often
     - Why did "re-" wax / wane then?
 - In which book(s) is re- frequent / infrequent? Why?
 
-## When Were "Re-" Words More / Less Frequent
+## When Are "Re-" Words More / Less Frequent?
 
 - Time Series / Term Frequency over Time
     - Y axis: re- word percentage of book
@@ -610,16 +582,10 @@ plt.show()
 
 ## Are "Re-" Words Used Positively or Negatively?
 
-- Do "re-" words appear more often in contexts that are positive or negative?
-- Thematics: what do "re-" words + repetition connote?
-- Stylistics: poet's emotional associations of "re-" words
-
-## Are "Re-" Words Used Positively or Negatively?
-
+- Are "re-" words in positive or negative contexts?
 - Sentiment Analysis
     - determines (part of) a text's emotional tone (positive / negative / neutral)
-    - aggregate sentiment scores of all sentences with re- words
-    - compare to sentiment score of poet's corpus (norm)
+
 - Sentiment Analyzer: VADER (Valence Aware Dictionary and sEntiment Reasoner)
     - lexicon-based approach
         - considers intensifiers, valence shifting, & punctuation
@@ -805,7 +771,9 @@ for corpus_directory, alias in corpus_directories.items():
 | **"Re-": More Positive** | Field                 | Rossetti              |
 | **"Re-": More Negative** | Swinburne             | Hardy                 |
 
-## Wrap Up + Thank You!
+## Conclusion
+
+- Thank You!
 
 - Contact Info
     - Adam Mazel

@@ -410,23 +410,6 @@ Adam Mazel, Digital Publishing Librarian
 
   <p class="date">2023-11-08</p>
 </section>
-<section id="outline" class="slide level2 smaller">
-<h2>Outline</h2>
-<ul>
-<li>Intro
-<ul>
-<li>Why “Re-”?</li>
-<li>Why / How Text Mining?</li>
-<li>Which Poetry? / How Cleaned?</li>
-</ul></li>
-<li>Who Uses “Re-” Most / Least?</li>
-<li>Which “Re-” Words Are Most Frequent?</li>
-<li>Which Words Accompany “Re-” Words?</li>
-<li>When Are “Re-” Words Most / Least Frequent?</li>
-<li>Are “Re-” Words Used Positively / Negatively?</li>
-<li>Conclusion</li>
-</ul>
-</section>
 <section id="why-re--in-vp" class="slide level2">
 <h2>Why “Re-” in VP?</h2>
 <ul>
@@ -447,12 +430,8 @@ Adam Mazel, Digital Publishing Librarian
 <ul>
 <li>“Re-” <span class="emoji" data-emoji="handshake">🤝</span> text mining
 <ul>
-<li>small details: hard to notice with one’s eyes, but easy to notice with computer “vision”</li>
-<li>play with focus of analytic lens
-<ul>
-<li>(too-)close reading: microscopic aspects of language</li>
-<li>distant reading: macroscopic methods of analysis</li>
-</ul></li>
+<li>small details: hard to notice with one’s eyes, but easy to notice with computer</li>
+<li>play with focus of analytic lens</li>
 </ul></li>
 </ul>
 </section>
@@ -460,18 +439,12 @@ Adam Mazel, Digital Publishing Librarian
 <h2>Methodology</h2>
 <ul>
 <li><strong>Tool:</strong> Python</li>
-<li><strong>Approach:</strong> Exploratory Data Analysis (EDA)
-<ul>
-<li>early research: explore data to discover trends and generate hypotheses / basic insights</li>
-</ul></li>
-<li><strong>Methods:</strong> count based, rather than machine learning
-<ul>
-<li>Apt for feature (“re-”) analysis, smaller datasets</li>
-</ul></li>
+<li><strong>Approach:</strong> Exploratory Data Analysis (EDA)</li>
+<li><strong>Methods:</strong> count based, rather than machine learning</li>
 </ul>
 </section>
-<section id="data-which-authors-texts-why" class="slide level2 smaller">
-<h2>Data: Which Authors / Texts + Why?</h2>
+<section id="data-which-poets-poetry" class="slide level2 smaller">
+<h2>Data: Which Poets / Poetry?</h2>
 <ul>
 <li>DG Rossetti
 <ul>
@@ -531,27 +504,19 @@ Adam Mazel, Digital Publishing Librarian
 <ul>
 <li>Data Cleaning
 <ul>
-<li>Removed noise: Boilerplate, Title Pages, Tables of Contents, Advertisments, Endorsements, Headers + Footers (most), Unusual Characters</li>
+<li>Removed <em>most</em> noise</li>
 </ul></li>
 <li>Data Quality
 <ul>
-<li>OCR: Errors</li>
-<li>Pub info: headers + footers, introductions / conclusions, dedications, etc.</li>
+<li>Good, but not perfect</li>
 </ul></li>
 </ul>
 </section>
 <section id="who-uses-re--words-the-most-least" class="slide level2">
 <h2>Who Uses “Re-” Words the Most / Least?</h2>
 <ul>
-<li>What percent of each poet’s corpus is composed of words that start with the prefix “re-”?</li>
-<li>Whose poetry is most / least composed of “re-” words?</li>
-<li>Who uses “re-” words more / less?</li>
-</ul>
-</section>
-<section id="who-uses-re--words-the-most-least-1" class="slide level2">
-<h2>Who Uses “Re-” Words the Most / Least?</h2>
-<ul>
-<li>Compare Keyword Percentages
+<li><p>What percent of each poet’s corpus is composed of words that start with the prefix “re-”?</p></li>
+<li><p>Compare Keyword Percentages</p>
 <ul>
 <li>Count “re-” words in each poet’s corpus</li>
 <li>Normalize counts to enable comparison
@@ -637,7 +602,7 @@ Adam Mazel, Digital Publishing Librarian
 </div>
 
 </section>
-<section id="who-uses-re--words-the-most-least-1-output" class="slide level2 output-location-slide"><h2>Who Uses “Re-” Words the Most / Least?</h2><div class="cell output-location-slide" data-execution_count="1">
+<section id="who-uses-re--words-the-most-least-output" class="slide level2 output-location-slide"><h2>Who Uses “Re-” Words the Most / Least?</h2><div class="cell output-location-slide" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-2-output-1.png" width="757" height="565"></p>
 </div>
@@ -656,17 +621,16 @@ Adam Mazel, Digital Publishing Librarian
 <section id="which-re--words-are-most-frequent-1" class="slide level2">
 <h2>Which “Re-” Words Are Most Frequent?</h2>
 <ul>
-<li>Keyword Frequency
+<li>Count “re-” words</li>
+<li>Stem “re-” words
 <ul>
-<li>Have computer count all words that start with “re-” in poet’s corpus</li>
-<li>Stemming
+<li>Remove inflected endings to condense different versions of same term to a common stem
 <ul>
-<li>Remove inflected endings to condense different versions of same term to a common stem</li>
 <li>“re-enter: 1”, “re-entering: 1”, “re-entered: 1” –&gt; “re-ent: 3”</li>
+</ul></li>
 <li>Improves IDing significant concepts</li>
 </ul></li>
 <li>Visualize results in bar chart</li>
-</ul></li>
 </ul>
 <div class="cell" data-execution_count="2">
 <details open="">
@@ -752,10 +716,8 @@ Adam Mazel, Digital Publishing Librarian
 </div>
 </div></section><section id="results-take-aways-1" class="slide level2">
 <h2>Results: Take Aways</h2>
-<ul>
-<li>Comparison of “Re-” Use</li>
-</ul>
 <table>
+<caption>Comparison of “Re-” Use</caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -780,13 +742,10 @@ Adam Mazel, Digital Publishing Librarian
 <section id="results-take-aways-2" class="slide level2">
 <h2>Results: Take Aways</h2>
 <ul>
-<li>Swinburne: “Re-Risen”
-<ul>
-<li>12x (80% of S’s “Re-” Words)
+<li>Swinburne’s “Re-Risen”: 12x: 80% of “Re-” Words
 <ul>
 <li>form: alliterative</li>
-<li>content: interested in ressurection?</li>
-</ul></li>
+<li>content: ressurection</li>
 </ul></li>
 </ul>
 </section>
@@ -795,8 +754,11 @@ Adam Mazel, Digital Publishing Librarian
 <ul>
 <li>DG Rossetti’s “Re-Born”
 <ul>
-<li><p>Hapax Legomenon</p></li>
-<li><p>Hyphenated prefixes and compound words are common in DGR’s poetry</p></li>
+<li><p><em>Hapax Legomenon</em></p></li>
+<li><p>Hyphenated prefixes and compound words are common in DGR’s poetry</p>
+<ul>
+<li>“a-heap,” “cukoo-throb,” etc.</li>
+</ul></li>
 <li><p>“born”: 48x and “birth”: 46x | “ressurect-”: 1x and “re-born”: 1x</p></li>
 <li><p>Hypotheses:</p>
 <ul>
@@ -806,40 +768,38 @@ Adam Mazel, Digital Publishing Librarian
 </ul></li>
 </ul>
 </section>
-<section id="results-take-aways-4" class="slide level2">
+<section id="results-take-aways-4" class="slide level2 smaller">
 <h2>Results: Take Aways</h2>
 <ul>
 <li>“Re-Illume” in Context (Hardy and Field)
 <ul>
-<li><p>Extremely rare</p></li>
-<li><p>Chiefly poetic</p></li>
-<li><p>1758 – present</p></li>
-<li><p>Hardy: 2x</p>
-<ul>
-<li>“Two Rosalinds”: <em>Time’s Laughingstocks and Other Verses</em> (1909)</li>
-<li>“For Life I had never cared greatly”: <em>Moments of Vision and Miscellaneous Verses</em> (1917)</li>
+<li>Extremely rare</li>
+<li>Chiefly poetic</li>
+<li>1758 – present</li>
 </ul></li>
-<li><p>Field: 1x</p>
+<li>Field: 1x
 <ul>
 <li><a href="https://editions.covecollective.org/edition/whym-chow-flame-love/whym-chow-flame-love#chapter22">“XXII: Sleeping together: Sleep”</a>: <em>Whym Chow: Flame of Love</em> (1906, 1914)</li>
 </ul></li>
+<li>Hardy: 2x
+<ul>
+<li>“Two Rosalinds”: <em>Time’s Laughingstocks and Other Verses</em> (1909)</li>
+<li>“For Life I had never cared greatly”: <em>Moments of Vision and Miscellaneous Verses</em> (1917)</li>
 </ul></li>
 </ul>
 </section>
 <section id="section" class="slide level2" data-background-iframe="https://books.google.com/ngrams/graph?content=reillumed%2Breillume%2Breilluming%2Breillumes&amp;year_start=1779&amp;year_end=2019&amp;corpus=en-GB-2019&amp;smoothing=3" data-background-interactive="true">
 <h2></h2>
 </section>
-<section id="which-words-adjoin-re--words" class="slide level2">
-<h2>Which Words Adjoin “Re-” Words?</h2>
+<section id="which-words-accompany-re--words" class="slide level2">
+<h2>Which Words Accompany “Re-” Words?</h2>
 <ul>
 <li>J. R. Firth (Linguist): “You shall know a word by the company it keeps.” (1957)</li>
 <li>IDing (frequently) co-occuring terms can clarify their meaning</li>
 </ul>
 </section>
-<section id="which-words-adjoin-re--words-1" class="slide level2">
-<h2>Which Words Adjoin “Re-” Words?</h2>
-<ul>
-<li>Bigrams
+<section id="which-words-accompany-re--words-1" class="slide level2">
+<h2>Which Words Accompany “Re-” Words?</h2>
 <ul>
 <li>Bigrams: two consecutive words
 <ul>
@@ -847,7 +807,6 @@ Adam Mazel, Digital Publishing Librarian
 </ul></li>
 <li>Have computer ID / count bigrams of re- words: re- word + consecutive word</li>
 <li>remove stopwords (meaningless function words) to better reveal associated concepts</li>
-</ul></li>
 </ul>
 <div class="cell" data-execution_count="3">
 <details open="">
@@ -922,7 +881,7 @@ Adam Mazel, Digital Publishing Librarian
 </div>
 
 </section>
-<section id="which-words-adjoin-re--words-1-output" class="slide level2 output-location-slide"><h2>Which Words Adjoin “Re-” Words?</h2><div class="cell output-location-slide" data-execution_count="3">
+<section id="which-words-accompany-re--words-1-output" class="slide level2 output-location-slide"><h2>Which Words Accompany “Re-” Words?</h2><div class="cell output-location-slide" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>AC Swinburne:
 ('re-created', 'life'): 1
@@ -977,42 +936,11 @@ DG Rossetti:
 ('re-born', 'mid'): 1
 </code></pre>
 </div>
-</div></section><section id="results-take-aways-5" class="slide level2">
-<h2>Results: Take Aways</h2>
-<ul>
-<li>Swinburne
-<ul>
-<li>“re-”: “life”, “dead” (2x), “dust”, “mortal”
-<ul>
-<li>re- associated with life + death, mortality, etc.</li>
-</ul></li>
-<li>“re-risen” + “prison”: rhyme</li>
-</ul></li>
-<li>Hardy
-<ul>
-<li>“re-”: “time” (2x), “semipiternal” (everlasting), “killing”, “death”, “lives” “new”, “olden”
-<ul>
-<li>re- associated with time, eternity / mortality, etc.</li>
-</ul></li>
-</ul></li>
-<li>Field
-<ul>
-<li>“re-appear”: “fade”, “re-light”: “tarnished”
-<ul>
-<li>re- used with opposites</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
+</div></section>
 <section id="do-re--words-and-re-words-co-occur-in-hardys-poetry" class="slide level2">
-<h2>Do “re-” words and “re” words co-occur in Hardy’s poetry?</h2>
+<h2>Do “Re-” Words and “Re” Words Co-occur in Hardy’s Poetry?</h2>
 <ul>
 <li>Does Hardy juxtapose “re-” words and “re” words?</li>
-</ul>
-</section>
-<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry-1" class="slide level2">
-<h2>Do “re-” words and “re” words co-occur in Hardy’s poetry?</h2>
-<ul>
 <li>Have Python return Hardy’s sentences that contain both a word(s) that start with “re-” and a word(s) that start with “re”</li>
 </ul>
 <div class="cell" data-execution_count="4">
@@ -1062,7 +990,7 @@ DG Rossetti:
 </div>
 
 </section>
-<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry-1-output" class="slide level2 output-location-slide"><h2>Do “re-” words and “re” words co-occur in Hardy’s poetry?</h2><div class="cell output-location-slide" data-execution_count="4">
+<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry-output" class="slide level2 output-location-slide"><h2>Do “Re-” Words and “Re” Words Co-occur in Hardy’s Poetry?</h2><div class="cell output-location-slide" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Within there
    Too mocking to Love’s **re-expression**
@@ -1172,8 +1100,8 @@ THE **RE-ENACTMENT**
 </ul></li>
 </ul>
 </section>
-<section id="when-were-re--words-more-less-frequent" class="slide level2">
-<h2>When Were “Re-” Words More / Less Frequent</h2>
+<section id="when-are-re--words-more-less-frequent" class="slide level2">
+<h2>When Are “Re-” Words More / Less Frequent?</h2>
 <ul>
 <li>ID when (in poet’s career) “re-” words were used more / less often
 <ul>
@@ -1182,8 +1110,8 @@ THE **RE-ENACTMENT**
 <li>In which book(s) is re- frequent / infrequent? Why?</li>
 </ul>
 </section>
-<section id="when-were-re--words-more-less-frequent-1" class="slide level2">
-<h2>When Were “Re-” Words More / Less Frequent</h2>
+<section id="when-are-re--words-more-less-frequent-1" class="slide level2">
+<h2>When Are “Re-” Words More / Less Frequent?</h2>
 <ul>
 <li>Time Series / Term Frequency over Time
 <ul>
@@ -1311,7 +1239,7 @@ THE **RE-ENACTMENT**
 </div>
 
 </section>
-<section id="when-were-re--words-more-less-frequent-1-output" class="slide level2 output-location-slide"><h2>When Were “Re-” Words More / Less Frequent</h2><div class="cell output-location-slide" data-execution_count="5">
+<section id="when-are-re--words-more-less-frequent-1-output" class="slide level2 output-location-slide"><h2>When Are “Re-” Words More / Less Frequent?</h2><div class="cell output-location-slide" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-6-output-1.png" width="1429" height="757"></p>
 </div>
@@ -1337,19 +1265,10 @@ THE **RE-ENACTMENT**
 <section id="are-re--words-used-positively-or-negatively" class="slide level2">
 <h2>Are “Re-” Words Used Positively or Negatively?</h2>
 <ul>
-<li>Do “re-” words appear more often in contexts that are positive or negative?</li>
-<li>Thematics: what do “re-” words + repetition connote?</li>
-<li>Stylistics: poet’s emotional associations of “re-” words</li>
-</ul>
-</section>
-<section id="are-re--words-used-positively-or-negatively-1" class="slide level2">
-<h2>Are “Re-” Words Used Positively or Negatively?</h2>
-<ul>
+<li>Are “re-” words in positive or negative contexts?</li>
 <li>Sentiment Analysis
 <ul>
 <li>determines (part of) a text’s emotional tone (positive / negative / neutral)</li>
-<li>aggregate sentiment scores of all sentences with re- words</li>
-<li>compare to sentiment score of poet’s corpus (norm)</li>
 </ul></li>
 <li>Sentiment Analyzer: VADER (Valence Aware Dictionary and sEntiment Reasoner)
 <ul>
@@ -1538,7 +1457,7 @@ THE **RE-ENACTMENT**
 </div>
 
 </section>
-<section id="are-re--words-used-positively-or-negatively-1-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="7">
+<section id="are-re--words-used-positively-or-negatively-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>AC Swinburne
 Total Sentences Analyzed: 15
@@ -1569,7 +1488,7 @@ Average Neutral Score: 0.9
 Overall Sentiment: Positive
 </code></pre>
 </div>
-</div></section><section id="are-re--words-used-positively-or-negatively-1-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="6">
+</div></section><section id="are-re--words-used-positively-or-negatively-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-7-output-1.png" width="821" height="588"></p>
 </div>
@@ -1602,10 +1521,11 @@ Overall Sentiment: Positive
 </tbody>
 </table>
 </section>
-<section id="wrap-up-thank-you" class="slide level2">
-<h2>Wrap Up + Thank You!</h2>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
 <ul>
-<li>Contact Info
+<li><p>Thank You!</p></li>
+<li><p>Contact Info</p>
 <ul>
 <li>Adam Mazel</li>
 <li>Digital Publishing Librarian</li>
