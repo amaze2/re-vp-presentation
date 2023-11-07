@@ -22,6 +22,10 @@ institute: Scholarly Communication Department, IUB Libraries
 ![](images/navsa.png){fig-alt="2023 NAVSA Conference Banner" width="85%"}
 :::
 
+::: aside
+NAVSA 2023 Conference banner excerpted from [conference website](https://www.navsa2023.com/)
+:::
+
 ::::
 
 ## Methodology 
@@ -43,6 +47,10 @@ institute: Scholarly Communication Department, IUB Libraries
 ![](images/plot.png){fig-alt="python scatterplot of recipe ingredient frequency before / after 1900"}
 :::
 
+::: aside
+Python logo used with [permission](https://www.python.org/community/logos/)
+:::
+
 ::::
 
 ## Data: Dante Gabriel Rossetti
@@ -57,6 +65,10 @@ institute: Scholarly Communication Department, IUB Libraries
 
 ::: {.column width="40%"}
 ![Self Portrait, 1861](images/dgrossetti.png){fig-alt="self-portrait of DG Rossetti"}
+:::
+
+::: aside
+image in public domain in US; image taken from the [Rossetti Archive](http://www.rossettiarchive.org/docs/s438.rap.html)
 :::
 
 ::::
@@ -89,7 +101,7 @@ institute: Scholarly Communication Department, IUB Libraries
 
 ::::
 
-## Data: Michael Field
+## Data: Michael Field {.smaller}
 
 :::: {.columns}
 
@@ -105,6 +117,10 @@ institute: Scholarly Communication Department, IUB Libraries
 
 ::: {.column width="40%"}
 ![Katherine Bradley & Edith Cooper, aka Michael Field](images/field.jpg){fig-alt="photo of Katherine Bradley & Edith Cooper"}
+:::
+
+::: aside
+image in public domain in US; image taken from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Katherine_Harris_Bradley_%26_Edith_Emma_Cooper_(2).jpg)
 :::
 
 ::::
@@ -125,6 +141,10 @@ institute: Scholarly Communication Department, IUB Libraries
 
 ::: {.column width="40%"}
 ![](images/hardy.jpg){fig-alt="headshot of Thomas Hardy" width="63%"}
+:::
+
+::: aside
+image in public domain in US; image taken from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Thomashardy_restored.jpg)
 :::
 
 ::::
