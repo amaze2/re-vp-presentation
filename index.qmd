@@ -1,109 +1,146 @@
 ---
-title: Thirteen* Digital Ways of Looking at Re- in Victorian Poetry
+title: Text Mining "Re-" in Victorian Poetry
 date: 8 November 2023
 author: Adam Mazel, Digital Publishing Librarian
 institute: Scholarly Communication Department, IUB Libraries
 ---
 
-## Why "Re-" in VP?
+## Why "Re-" in VP? {.smaller}
 
-- NAVSA Conference 2023: "**Re**vision, **Re**turn, **Re**form"
+:::: {.columns}
+
+::: {.column}
+- NAVSA Conference 2023: "**<u>Re</u>**vision, **<u>Re</u>**turn, **<u>Re</u>**form"
     - Panel: "Re: Re: Victorian Poetry"
         - Adela Pinch, Professor of English, University of Michigan
         - Emily Harrington, Assoc. Prof. of English, UC Boulder
-        - (Naomi Levine, Asst. Prof. of English, Yale University)
+        - Naomi Levine, Asst. Prof. of English, Yale University
         - Me!
+:::
 
-## Methodology
+::: {.column}
+![](images/navsa.png){fig-alt="2023 NAVSA Conference Banner" width="85%"}
+:::
 
-- "Re-" :handshake: text mining 	
-    - small details: hard to notice with one's eyes, but easy to notice with computer
-    - play with focus of analytic lens
+::::
 
-## Methodology
+## Methodology 
 
-- **Tool:** Python
-- **Approach:** Exploratory Data Analysis (EDA)
-- **Methods:** count based, rather than machine learning 
+:::: {.columns}
 
-## Data: Which Poets / Poetry? {.smaller}
+::: {.column width="60%"}
+- "Re-" :handshake: Text Mining 	
+- Python
+    - Keyword Frequency
+    - Key Word in Context (KWIC)
+    - Term Frequency over Time
+    - Sentiment Analysis
+- Exploratory Data Analysis
+:::
 
-- DG Rossetti
-    - *Poems* (1870)
-    - *Poems: A New Edition* (1881)
-    - *Ballads and Sonnets* (1881)
+::: {.column width="40%"}
+![](images/python.png){fig-alt="python programming language icon"}
+![](images/plot.png){fig-alt="python scatterplot of recipe ingredient frequency before / after 1900"}
+:::
 
-- AC Swinburne
-    - *Atalanta in Calydon* (1865)
-    - *Poems and Ballads* (1866)
-    - *Songs Before Sunrise* (1871)
-    - *Songs of Two Nations* (1875)
-    - *Erechtheus* (1876)
-    - *Poems and Ballads, Second Series* (1878)
-    - *Songs of the Springtides* (1880)
-    - *Studies in Song* (1880)
-    - *The Heptalogia, or the Seven against Sense. A Cap with Seven Bells* (1880)
-    - *Tristram of Lyonesse* (1882)
-    - *A Century of Roundels* (1883)
-    - *A Midsummer Holiday and Other Poems* (1884)
-    - *Poems and Ballads, Third Series* (1889)
-    - *Astrophel and Other Poems* (1894)
-    - *The Tale of Balen* (1896)
-    - *A Channel Passage and Other Poems* (1904)
+::::
 
-- Michael Field
-    - *Long Ago* (1889)
-    - *Sight and Song* (1892)
-    - *Underneath the Bough* (1893)
-    - *Wild Honey from Various Thyme* (1908)
-    - *Poems of Adoration* (1912)
-    - *Mystic Trees* (1913)
-    - *Whym Chow: Flame of Love* (1914)
+## Data: Dante Gabriel Rossetti
 
-- Thomas Hardy
-    - *Wessex Poems and Other Verses* (1898)
-    - *Poems of the Past and the Present* (1901)
-    - *Time's Laughingstocks and Other Verses* (1909)
-    - *Satires of Circumstance* (1914)
-    - *Moments of Vision* (1917)
-    - *Late Lyrics and Earlier with Many Other Verses* (1922)
-    - *Human Shows, Far Phantasies, Songs and Trifles* (1925)
+:::: {.columns}
 
-- Where Acquired
-    - [Project Gutenberg](https://www.gutenberg.org/)
-    - [HathiTrust](https://www.hathitrust.org/)
-    - [COVE (Collaborative Organization for Virtual Education)](https://editions.covecollective.org/)
+::: {.column width="60%"}
+- *Poems* (1870)
+- *Poems: A New Edition* (1881)
+- *Ballads and Sonnets* (1881)
+:::
 
-## Data: Cleaning / Quality
+::: {.column width="40%"}
+![Self Portrait, 1861](images/dgrossetti.png){fig-alt="self-portrait of DG Rossetti"}
+:::
 
-- Data Cleaning
-    - Removed *most* noise
-- Data Quality
-    - Good, but not perfect
+::::
 
-## Who Uses "Re-" Words the Most / Least?
+## Data: Algernon Charles Swinburne {.smaller}
 
-- What percent of each poet’s corpus is composed of words that start with the prefix "re-"?
+:::: {.columns}
 
-- Compare Keyword Percentages
-    - Count "re-" words in each poet's corpus 
-    - Normalize counts to enable comparison
-        - Divide # of "re-" words by # of words of each poet's corpus
-    - Visualize each poet's percentage of "re-" words in bar chart
+::: {.column} 
+- *Atalanta in Calydon* (1865)
+- *Poems and Ballads* (1866)
+- *Songs Before Sunrise* (1871)
+- *Songs of Two Nations* (1875)
+- *Erechtheus* (1876)
+- *Poems and Ballads, Second Series* (1878)
+- *Songs of the Springtides* (1880)
+- *Studies in Song* (1880)
+:::
+
+::: {.column}
+- *The Heptalogia, or the Seven against Sense. A Cap with Seven Bells* (1880)
+- *Tristram of Lyonesse* (1882)
+- *A Century of Roundels* (1883)
+- *A Midsummer Holiday and Other Poems* (1884)
+- *Poems and Ballads, Third Series* (1889)
+- *Astrophel and Other Poems* (1894)
+- *The Tale of Balen* (1896)
+- *A Channel Passage and Other Poems* (1904)
+:::
+
+::::
+
+## Data: Michael Field
+
+:::: {.columns}
+
+::: {.column width="60%"}
+- *Long Ago* (1889)
+- *Sight and Song* (1892)
+- *Underneath the Bough* (1893)
+- *Wild Honey from Various Thyme* (1908)
+- *Poems of Adoration* (1912)
+- *Mystic Trees* (1913)
+- *Whym Chow: Flame of Love* (1914)
+:::
+
+::: {.column width="40%"}
+![Katherine Bradley & Edith Cooper, aka Michael Field](images/field.jpg){fig-alt="photo of Katherine Bradley & Edith Cooper"}
+:::
+
+::::
+
+## Data: Thomas Hardy {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+- *Wessex Poems and Other Verses* (1898)
+- *Poems of the Past and the Present* (1901)
+- *Time's Laughingstocks and Other Verses* (1909)
+- *Satires of Circumstance* (1914)
+- *Moments of Vision* (1917)
+- *Late Lyrics and Earlier with Many Other Verses* (1922)
+- *Human Shows, Far Phantasies, Songs and Trifles* (1925)
+:::
+
+::: {.column width="40%"}
+![](images/hardy.jpg){fig-alt="headshot of Thomas Hardy" width="63%"}
+:::
+
+::::
+
+## Who Uses "Re-" Words More / Less?
+
+- Keyword Frequency Analysis
+    - What percent of each poet’s corpus is composed of words with the prefix "re-"?
+    - Compare "Re-" Word Percentages
 
 ```{python}
 import nltk
 import os
-# import string
 import matplotlib.pyplot as plt
 
 nltk.download('punkt')  # Download NLTK tokenizer data
-
-
-# Define a function to remove all punctuation except hyphens
-# def remove_punctuation_except_hyphens(text):
-    # translator = str.maketrans('', '', string.punctuation.replace('-', ''))
-    # return text.translate(translator)
 
 # Define a function to count "re-" words in a given text
 def count_re_words(text):
@@ -116,7 +153,6 @@ corpus_directories = {
     'hardy': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP',
     'michael field': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP',
     'dg rossetti': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP',
-    # Add more directories here
 }
 
 # Initialize dictionaries to store the results
@@ -163,26 +199,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-## Results: Take Aways {visibility="hidden"}
-
-- Hardy: Uses "Re-" Words Most
-- Rossetti: Uses "Re-" Words Least
-
 ## Which "Re-" Words Are Most Frequent?
 
-- Which "re-" words are used and how often? 
-- ID trends in "re-" use: 
-    - Thematics: Which "re-" words are keywords? 
-    - Stylistics: One word many times? Many words one time?
-
-## Which "Re-" Words Are Most Frequent?
-
-- Count "re-" words
-- Stem "re-" words
-    - Remove inflected endings to condense different versions of same term to a common stem
-        - "re-enter: 1", "re-entering: 1", "re-entered: 1" --> "re-ent: 3"
-    - Improves IDing significant concepts
-- Visualize results in bar chart
+- Keyword Frequency Analysis
+    - Which "re-" words are used and how often?
 
 ```{python}
  
@@ -250,36 +270,9 @@ for directory in corpus_directories:
     process_directory(directory)
 ```
 
-## Results: Take Aways
+## Field's and Hardy's "Re-Illume" in Context {.smaller}
 
-|                    | Low Vocabulary | High Vocabulary |
-|------------------- | ---------------| ----------------|
-| **High Frequency** | Swinburne      |                 |
-| **Low Frequency**  | Rossetti       | Hardy, Field    |
-
-: Comparison of "Re-" Use
-
-## Results: Take Aways
-
-- Swinburne's "Re-Risen": 12x: 80% of "Re-" Words
-    - form: alliterative 
-    - content: ressurection
-
-## Results: Take Aways
-
-- DG Rossetti's "Re-Born"
-    - *Hapax Legomenon*
-    - Hyphenated prefixes and compound words are common in DGR's poetry
-        - “a-heap,” “cukoo-throb,” etc.
-    - "born": 48x and "birth": 46x | "ressurect-": 1x and "re-born": 1x 
- 
-    - Hypotheses:
-        - uninterested in signifying repetition through "re-"
-        - more interested in birth than rebirth?
-
-## Results: Take Aways {.smaller}
-
-- "Re-Illume" in Context (Hardy and Field)
+- Re-illume
     - Extremely rare
     - Chiefly poetic
     - 1758 &ndash; present
@@ -292,104 +285,10 @@ for directory in corpus_directories:
 
 ## {background-iframe="https://books.google.com/ngrams/graph?content=reillumed%2Breillume%2Breilluming%2Breillumes&year_start=1779&year_end=2019&corpus=en-GB-2019&smoothing=3" background-interactive="true"}
 
-## Which Words Accompany "Re-" Words?
-
-- J. R. Firth (Linguist): "You shall know a word by the company it keeps." (1957)
-- IDing (frequently) co-occuring terms can clarify their meaning
-
-## Which Words Accompany "Re-" Words?
-
-- Bigrams: two consecutive words
-    - e.g. "She used the olive oil.": "She used": 1, "used the": 1, "the olive": 1, "olive oil": 1
-- Have computer ID / count bigrams of re- words: re- word + consecutive word
-- remove stopwords (meaningless function words) to better reveal associated concepts
-
-```{python}
-# import software dependencies / libraries
-import nltk
-import os
-import re
-from nltk.corpus import stopwords
-from nltk.util import ngrams
-from collections import Counter
-import string
-from nltk.stem import SnowballStemmer
-
-nltk.download('stopwords')
-
-# Directories to process, Aliases 
-corpus_directories = {
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP': "AC Swinburne",
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP': "Thomas Hardy",
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP': "Michael Field",
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP': "DG Rossetti",
-}
-
-# RegEx to match words starting with "re-"
-re_word_pattern = r'\b(re-\w+)'
-
-# Dictionary to store directory/poet: bigram frequencies 
-bigram_frequencies = {alias: Counter() for alias in corpus_directories.values()}
-
-# Define the punctuation to remove (including curly quotation marks)
-punctuation_to_remove = string.punctuation.replace('-', '') + "‘’“”"
-
-# Preprocess and Process each directory
-for corpus_directory, alias in corpus_directories.items():
-    # Get the text from the text files in the corpus
-    for filename in os.listdir(corpus_directory):
-        if filename.endswith('.txt'):
-            with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
-                text = file.read()
-
-                # Tokenize the text
-                tokens = nltk.word_tokenize(text)
-
-                # Remove punctuation except hyphens and standardize case
-                translator = str.maketrans('', '', punctuation_to_remove)
-                preprocessed_text = ' '.join(tokens).translate(translator).lower()
-
-                # Remove stopwords
-                stop_words = set(stopwords.words("english"))
-                filtered_tokens = [word for word in preprocessed_text.split() if word not in stop_words]
-
-                # Find bigrams
-                bigrams = list(ngrams(filtered_tokens, 2))
-
-                # Filter bigrams to include only those starting with "re-"
-                re_bigrams = [bigram for bigram in bigrams if re.match(re_word_pattern, bigram[0])]
-
-                # Count the bigrams
-                bigram_frequency = Counter(re_bigrams)
-
-                # Add the bigram frequencies as values of the current directory/poet as keys
-                bigram_frequencies[alias].update(bigram_frequency)
-
-# Print the sorted bigram frequencies per directory/poet
-for alias, frequencies in bigram_frequencies.items():
-    print(f"{alias}:")
-    for bigram, frequency in sorted(frequencies.items(), key=lambda x: x[0]):  # Sort alphabetically
-        print(f"{bigram}: {frequency}")
-    print()
-```
-
-## Results: Take Aways {visibility="hidden"}
-
-- Swinburne
-    - "re-": "life", "dead" (2x), "dust", "mortal"
-        - re- associated with life + death, mortality, etc.
-    - "re-risen" + "prison": rhyme
-- Hardy
-    - "re-": "time" (2x), "semipiternal" (everlasting), "killing", "death", "lives" "new", "olden"
-        - re- associated with time, eternity / mortality, etc.
-- Field
-    - "re-appear": "fade", "re-light": "tarnished"
-        - re- used with opposites
-
 ## Do "Re-" Words and "Re" Words Co-occur in Hardy's Poetry?
 
-- Does Hardy juxtapose "re-" words and "re" words? 
-- Have Python return Hardy's sentences that contain both a word(s) that start with "re-" and a word(s) that start with "re"
+- Key (Re-) Word in Context (KWIC)
+- Have Python return Hardy's sentences that contain word(s) that start with "re-" and word(s) that start with "re"
 
 ```{python}
 import os
@@ -399,7 +298,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 # Define regular expressions
 re_pattern = r'\b(?:[Rr]e|[Rr]E)\w+\b'  # Matches "re" followed by one or more letters
-re_hyphen_pattern = r'\b(?:[Rr]e-|[Rr]E-)\w+\b'  # Matches "re-" followed by one or more word characters
+re_hyphen_pattern = r'\b(?:[Rr]e-|[Rr]E-)\w+\b'  # Matches "re-" followed by one or more letters
 
 # \b matches a word boundary.
 # (?:[Rr]e|[Rr]E) is a non-capturing group that matches either "re" or "RE," regardless of case.
@@ -433,21 +332,6 @@ for filename in os.listdir(text_directory):
                     print(sentence_with_bold)
                     print("\n" * 2)
 ```
-
-## Results: Take Aways
-
-- 30% (6 / 20) of sentences containing "re-" words in Hardy's poetry also contain "re" words
-- Hardy: "re-" words co-occur with "re" words
-
-- Hardy's style
-    - echo in form: visual and audial rhyme
-    - echo in content: re(-) returns
-
-## When Are "Re-" Words More / Less Frequent?
-
-- ID when (in poet's career) "re-" words were used more / less often
-    - Why did "re-" wax / wane then?
-- In which book(s) is re- frequent / infrequent? Why?
 
 ## When Are "Re-" Words More / Less Frequent?
 
@@ -483,7 +367,7 @@ all_directory_names = [
     'swinburne/swinburne_noBP',
     'hardy/hardy_noBP',
     'field/field_NoBP',
-    'rossetti_dg/rossetti_dg_NoBP',
+    # 'rossetti_dg/rossetti_dg_NoBP',
 ]
 
 # Initialize a dictionary to store year-wise percentages
@@ -540,7 +424,7 @@ for directory_name in all_directory_names:
         }
 
 # Step 2: Plot the keys (years) and values (percentages) in a line graph for each directory
-plt.figure(figsize=(15, 8))
+plt.figure(figsize=(10, 8))
 
 for directory_name, data in year_percentages.items():
     percentages = data['percentages']
@@ -561,7 +445,7 @@ for directory_name, data in year_percentages.items():
 plt.ylim(0, 0.0525)
 plt.xlabel('Year')
 plt.ylabel('Percentage of Words Starting with "Re-"')
-plt.title('When Were "Re-" Words Used in Field\'s, Hardy\'s, DG Rossetti\'s, and Swinburne\'s Poetry?')
+plt.title('When Are "Re-" Words Used in Field\'s, Hardy\'s, and Swinburne\'s Poetry?')
 plt.xticks(rotation=45)
 plt.grid(True)
 plt.legend()  # Show legend indicating directory names
@@ -571,122 +455,12 @@ plt.tight_layout()
 plt.show()
 ```
 
-## Results: Take Aways
-
-- Swinburne
-    - "Re-": of interest in mid career, especially in *A Century of Roundels* (1883)
-        - "Re-": prefix (repetition) apt for Roundel's repetitive form
-- Field
-    - "Re-": of interest in *Whym Chow: Flame of Love* (1914)
-        - "Re-": prefix ("again-ness," return, and memory) apt for an elegy 
-
 ## Are "Re-" Words Used Positively or Negatively?
 
-- Are "re-" words in positive or negative contexts?
 - Sentiment Analysis
-    - determines (part of) a text's emotional tone (positive / negative / neutral)
-
-- Sentiment Analyzer: VADER (Valence Aware Dictionary and sEntiment Reasoner)
-    - lexicon-based approach
-        - considers intensifiers, valence shifting, & punctuation
-        - struggles with sarcasm
-```{python}
-import nltk
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import os
-import re
-import matplotlib.pyplot as plt
-
-# Initialize the VADER sentiment analyzer
-sia = SentimentIntensityAnalyzer()
-
-# Function to calculate aggregate sentiment for a collection of sentences
-def calculate_aggregate_sentiment(sentences):
-    positive_score = 0
-    negative_score = 0
-    neutral_score = 0
-    total_sentences = 0
-
-    for sentence in sentences:
-        sentiment = sia.polarity_scores(sentence)
-        positive_score += sentiment['pos']
-        negative_score += sentiment['neg']
-        neutral_score += sentiment['neu']
-        total_sentences += 1
-
-    if total_sentences > 0:
-        avg_positive_score = positive_score / total_sentences
-        avg_negative_score = negative_score / total_sentences
-        avg_neutral_score = neutral_score / total_sentences
-
-        if avg_positive_score > avg_negative_score:
-            overall_sentiment = "Positive"
-        elif avg_positive_score < avg_negative_score:
-            overall_sentiment = "Negative"
-        else:
-            overall_sentiment = "Neutral"
-
-        return {
-            "Total Sentences Analyzed": total_sentences,
-            "Average Positive Score": avg_positive_score,
-            "Average Negative Score": avg_negative_score,
-            "Average Neutral Score": avg_neutral_score,
-            "Overall Sentiment": overall_sentiment,
-        }
-
-# Specify the directories you want to process with aliases
-corpus_directories = {
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP': "AC Swinburne",
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP': "Thomas Hardy",
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP': "Michael Field",
-    '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP': "DG Rossetti",
-    # Add more directories here
-}
-
-# Create lists to store poet names and their corresponding score differences
-poet_names = []
-score_differences = []
-
-# Process each directory
-for corpus_directory, alias in corpus_directories.items():
-    sentences = []
-
-    # Read and preprocess the text files in the corpus
-    for filename in os.listdir(corpus_directory):
-        if filename.endswith('.txt'):
-            with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
-                text = file.read()
-                sentences += nltk.sent_tokenize(text)
-
-    # Calculate aggregate sentiment
-    results = calculate_aggregate_sentiment(sentences)
-
-    # Calculate the difference between positive and negative scores
-    positive_score = results["Average Positive Score"]
-    negative_score = results["Average Negative Score"]
-    score_difference = positive_score - negative_score
-
-    poet_names.append(alias)
-    score_differences.append(score_difference)
-
-# Sort the poet names and score differences by score differences in descending order
-sorted_poet_names, sorted_score_differences = zip(*sorted(zip(poet_names, score_differences), key=lambda x: x[1], reverse=True))
-
-# Create a bar chart of the score differences with poet names on the x-axis
-plt.figure(figsize=(10, 6))
-plt.bar(sorted_poet_names, sorted_score_differences, color='skyblue')
-plt.xlabel("Poet")
-plt.ylabel('Difference between Positive and Negative Scores')
-plt.title('Whose Poetry Is Most Positive?')
-plt.xticks(rotation=45, ha='right')
-plt.grid(axis='y')
-plt.show()
-```
+    - determines a text's emotional tone (positive / negative / neutral)
 
 ```{python}
-#| echo: true
-#| output-location: slide
-
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
@@ -763,13 +537,6 @@ for corpus_directory, alias in corpus_directories.items():
         print(f"{key}: {value}")
     print()
 ```
-
-## Results: Take Aways
-
-|                          | Poetry: More Positive | Poetry: More Negative |
-|--------------------------| ----------------------| ----------------------|
-| **"Re-": More Positive** | Field                 | Rossetti              |
-| **"Re-": More Negative** | Swinburne             | Hardy                 |
 
 ## Conclusion
 

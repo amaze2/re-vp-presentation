@@ -13,7 +13,7 @@
   <meta name="author" content="Adam Mazel, Digital Publishing Librarian">
   <meta name="dcterms.date" content="2023-11-08">
   <meta name="keywords" content="Digital Humanities, Text Mining, Victorian Poetry, re">
-  <title>Thirteen* Digital Ways of Looking at Re- in Victorian Poetry</title>
+  <title>Text Mining “Re-” in Victorian Poetry</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -395,7 +395,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Thirteen* Digital Ways of Looking at Re- in Victorian Poetry</h1>
+  <h1 class="title">Text Mining “Re-” in Victorian Poetry</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -410,49 +410,71 @@ Adam Mazel, Digital Publishing Librarian
 
   <p class="date">2023-11-08</p>
 </section>
-<section id="why-re--in-vp" class="slide level2">
+<section id="why-re--in-vp" class="slide level2 smaller">
 <h2>Why “Re-” in VP?</h2>
+<div class="columns">
+<div class="column">
 <ul>
-<li>NAVSA Conference 2023: “<strong>Re</strong>vision, <strong>Re</strong>turn, <strong>Re</strong>form”
+<li>NAVSA Conference 2023: “<strong><u>Re</u></strong>vision, <strong><u>Re</u></strong>turn, <strong><u>Re</u></strong>form”
 <ul>
 <li>Panel: “Re: Re: Victorian Poetry”
 <ul>
 <li>Adela Pinch, Professor of English, University of Michigan</li>
 <li>Emily Harrington, Assoc. Prof.&nbsp;of English, UC Boulder</li>
-<li>(Naomi Levine, Asst. Prof.&nbsp;of English, Yale University)</li>
+<li>Naomi Levine, Asst. Prof.&nbsp;of English, Yale University</li>
 <li>Me!</li>
 </ul></li>
 </ul></li>
 </ul>
+</div><div class="column">
+<p><img data-src="images/navsa.png" class="img-fluid" style="width:85.0%" alt="2023 NAVSA Conference Banner"></p>
+</div>
+</div>
 </section>
 <section id="methodology" class="slide level2">
 <h2>Methodology</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
-<li>“Re-” <span class="emoji" data-emoji="handshake">🤝</span> text mining
+<li>“Re-” <span class="emoji" data-emoji="handshake">🤝</span> Text Mining<br>
+</li>
+<li>Python
 <ul>
-<li>small details: hard to notice with one’s eyes, but easy to notice with computer</li>
-<li>play with focus of analytic lens</li>
+<li>Keyword Frequency</li>
+<li>Key Word in Context (KWIC)</li>
+<li>Term Frequency over Time</li>
+<li>Sentiment Analysis</li>
 </ul></li>
+<li>Exploratory Data Analysis</li>
 </ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/python.png" class="img-fluid" alt="python programming language icon"> <img data-src="images/plot.png" class="img-fluid" alt="python scatterplot of recipe ingredient frequency before / after 1900"></p>
+</div>
+</div>
 </section>
-<section id="methodology-1" class="slide level2">
-<h2>Methodology</h2>
-<ul>
-<li><strong>Tool:</strong> Python</li>
-<li><strong>Approach:</strong> Exploratory Data Analysis (EDA)</li>
-<li><strong>Methods:</strong> count based, rather than machine learning</li>
-</ul>
-</section>
-<section id="data-which-poets-poetry" class="slide level2 smaller">
-<h2>Data: Which Poets / Poetry?</h2>
-<ul>
-<li>DG Rossetti
+<section id="data-dante-gabriel-rossetti" class="slide level2">
+<h2>Data: Dante Gabriel Rossetti</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li><em>Poems</em> (1870)</li>
 <li><em>Poems: A New Edition</em> (1881)</li>
 <li><em>Ballads and Sonnets</em> (1881)</li>
-</ul></li>
-<li>AC Swinburne
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dgrossetti.png" class="img-fluid" alt="self-portrait of DG Rossetti"></p>
+<figcaption>Self Portrait, 1861</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-algernon-charles-swinburne" class="slide level2 smaller">
+<h2>Data: Algernon Charles Swinburne</h2>
+<div class="columns">
+<div class="column">
 <ul>
 <li><em>Atalanta in Calydon</em> (1865)</li>
 <li><em>Poems and Ballads</em> (1866)</li>
@@ -462,6 +484,9 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Poems and Ballads, Second Series</em> (1878)</li>
 <li><em>Songs of the Springtides</em> (1880)</li>
 <li><em>Studies in Song</em> (1880)</li>
+</ul>
+</div><div class="column">
+<ul>
 <li><em>The Heptalogia, or the Seven against Sense. A Cap with Seven Bells</em> (1880)</li>
 <li><em>Tristram of Lyonesse</em> (1882)</li>
 <li><em>A Century of Roundels</em> (1883)</li>
@@ -470,8 +495,14 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Astrophel and Other Poems</em> (1894)</li>
 <li><em>The Tale of Balen</em> (1896)</li>
 <li><em>A Channel Passage and Other Poems</em> (1904)</li>
-</ul></li>
-<li>Michael Field
+</ul>
+</div>
+</div>
+</section>
+<section id="data-michael-field" class="slide level2">
+<h2>Data: Michael Field</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li><em>Long Ago</em> (1889)</li>
 <li><em>Sight and Song</em> (1892)</li>
@@ -480,8 +511,21 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Poems of Adoration</em> (1912)</li>
 <li><em>Mystic Trees</em> (1913)</li>
 <li><em>Whym Chow: Flame of Love</em> (1914)</li>
-</ul></li>
-<li>Thomas Hardy
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/field.jpg" class="img-fluid" alt="photo of Katherine Bradley &amp; Edith Cooper"></p>
+<figcaption>Katherine Bradley &amp; Edith Cooper, aka Michael Field</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-thomas-hardy" class="slide level2 smaller">
+<h2>Data: Thomas Hardy</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li><em>Wessex Poems and Other Verses</em> (1898)</li>
 <li><em>Poems of the Past and the Present</em> (1901)</li>
@@ -490,40 +534,19 @@ Adam Mazel, Digital Publishing Librarian
 <li><em>Moments of Vision</em> (1917)</li>
 <li><em>Late Lyrics and Earlier with Many Other Verses</em> (1922)</li>
 <li><em>Human Shows, Far Phantasies, Songs and Trifles</em> (1925)</li>
-</ul></li>
-<li>Where Acquired
-<ul>
-<li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
-<li><a href="https://www.hathitrust.org/">HathiTrust</a></li>
-<li><a href="https://editions.covecollective.org/">COVE (Collaborative Organization for Virtual Education)</a></li>
-</ul></li>
 </ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/hardy.jpg" class="img-fluid" style="width:63.0%" alt="headshot of Thomas Hardy"></p>
+</div>
+</div>
 </section>
-<section id="data-cleaning-quality" class="slide level2">
-<h2>Data: Cleaning / Quality</h2>
+<section id="who-uses-re--words-more-less" class="slide level2">
+<h2>Who Uses “Re-” Words More / Less?</h2>
 <ul>
-<li>Data Cleaning
+<li>Keyword Frequency Analysis
 <ul>
-<li>Removed <em>most</em> noise</li>
-</ul></li>
-<li>Data Quality
-<ul>
-<li>Good, but not perfect</li>
-</ul></li>
-</ul>
-</section>
-<section id="who-uses-re--words-the-most-least" class="slide level2">
-<h2>Who Uses “Re-” Words the Most / Least?</h2>
-<ul>
-<li><p>What percent of each poet’s corpus is composed of words that start with the prefix “re-”?</p></li>
-<li><p>Compare Keyword Percentages</p>
-<ul>
-<li>Count “re-” words in each poet’s corpus</li>
-<li>Normalize counts to enable comparison
-<ul>
-<li>Divide # of “re-” words by # of words of each poet’s corpus</li>
-</ul></li>
-<li>Visualize each poet’s percentage of “re-” words in bar chart</li>
+<li>What percent of each poet’s corpus is composed of words with the prefix “re-”?</li>
+<li>Compare “Re-” Word Percentages</li>
 </ul></li>
 </ul>
 <div class="cell" data-execution_count="1">
@@ -531,106 +554,80 @@ Adam Mazel, Digital Publishing Librarian
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> nltk</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># import string</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>nltk.download(<span class="st">'punkt'</span>)  <span class="co"># Download NLTK tokenizer data</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># Define a function to remove all punctuation except hyphens</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># def remove_punctuation_except_hyphens(text):</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>    <span class="co"># translator = str.maketrans('', '', string.punctuation.replace('-', ''))</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="co"># return text.translate(translator)</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="co"># Define a function to count "re-" words in a given text</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="kw">def</span> count_re_words(text):</span>
-<span id="cb1-16"><a href="#cb1-16"></a>    words <span class="op">=</span> nltk.word_tokenize(text)</span>
-<span id="cb1-17"><a href="#cb1-17"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> word <span class="kw">in</span> words <span class="cf">if</span> word.lower().startswith(<span class="st">"re-"</span>))</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="co"># Specify the directory paths for the two poets' corpora</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a>corpus_directories <span class="op">=</span> {</span>
-<span id="cb1-21"><a href="#cb1-21"></a>    <span class="st">'swinburne'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP'</span>,</span>
-<span id="cb1-22"><a href="#cb1-22"></a>    <span class="st">'hardy'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP'</span>,</span>
-<span id="cb1-23"><a href="#cb1-23"></a>    <span class="st">'michael field'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP'</span>,</span>
-<span id="cb1-24"><a href="#cb1-24"></a>    <span class="st">'dg rossetti'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP'</span>,</span>
-<span id="cb1-25"><a href="#cb1-25"></a>    <span class="co"># Add more directories here</span></span>
-<span id="cb1-26"><a href="#cb1-26"></a>}</span>
-<span id="cb1-27"><a href="#cb1-27"></a></span>
-<span id="cb1-28"><a href="#cb1-28"></a><span class="co"># Initialize dictionaries to store the results</span></span>
-<span id="cb1-29"><a href="#cb1-29"></a>percentage_re_words <span class="op">=</span> {}</span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="co"># Read, tokenize, and calculate for each poet's corpus</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="cf">for</span> poet, corpus_directory <span class="kw">in</span> corpus_directories.items():</span>
-<span id="cb1-33"><a href="#cb1-33"></a>    corpus <span class="op">=</span> []</span>
-<span id="cb1-34"><a href="#cb1-34"></a>    </span>
-<span id="cb1-35"><a href="#cb1-35"></a>    <span class="co"># Read and tokenize the text files in the poet's corpus</span></span>
-<span id="cb1-36"><a href="#cb1-36"></a>    <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(corpus_directory):</span>
-<span id="cb1-37"><a href="#cb1-37"></a>        <span class="cf">with</span> <span class="bu">open</span>(os.path.join(corpus_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb1-38"><a href="#cb1-38"></a>            text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb1-39"><a href="#cb1-39"></a>            <span class="co"># text = remove_punctuation_except_hyphens(text)</span></span>
-<span id="cb1-40"><a href="#cb1-40"></a>            corpus.append(text)</span>
-<span id="cb1-41"><a href="#cb1-41"></a></span>
-<span id="cb1-42"><a href="#cb1-42"></a>    <span class="co"># Count the "re-" words in the poet's corpus</span></span>
-<span id="cb1-43"><a href="#cb1-43"></a>    re_word_count <span class="op">=</span> <span class="bu">sum</span>(count_re_words(text) <span class="cf">for</span> text <span class="kw">in</span> corpus)</span>
-<span id="cb1-44"><a href="#cb1-44"></a></span>
-<span id="cb1-45"><a href="#cb1-45"></a>    <span class="co"># Calculate the percentage of "re-" words in the poet's corpus</span></span>
-<span id="cb1-46"><a href="#cb1-46"></a>    total_words <span class="op">=</span> <span class="bu">sum</span>(<span class="bu">len</span>(nltk.word_tokenize(text)) <span class="cf">for</span> text <span class="kw">in</span> corpus)</span>
-<span id="cb1-47"><a href="#cb1-47"></a>    percentage_re_words[poet] <span class="op">=</span> (re_word_count <span class="op">/</span> total_words) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb1-48"><a href="#cb1-48"></a></span>
-<span id="cb1-49"><a href="#cb1-49"></a><span class="co"># Sort the results from largest to smallest</span></span>
-<span id="cb1-50"><a href="#cb1-50"></a>sorted_results <span class="op">=</span> <span class="bu">sorted</span>(percentage_re_words.items(), key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-51"><a href="#cb1-51"></a></span>
-<span id="cb1-52"><a href="#cb1-52"></a><span class="co"># Extract poets and percentages for plotting</span></span>
-<span id="cb1-53"><a href="#cb1-53"></a>poets, percentages <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>sorted_results)</span>
-<span id="cb1-54"><a href="#cb1-54"></a></span>
-<span id="cb1-55"><a href="#cb1-55"></a><span class="co"># Step 4: Create a bar chart to visualize the results with dynamic y-axis limit and sorted labels</span></span>
-<span id="cb1-56"><a href="#cb1-56"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb1-57"><a href="#cb1-57"></a>plt.bar(poets, percentages, color<span class="op">=</span>[<span class="st">'blue'</span>, <span class="st">'orange'</span>])</span>
-<span id="cb1-58"><a href="#cb1-58"></a>plt.ylabel(<span class="st">'Percentage (%)'</span>)</span>
-<span id="cb1-59"><a href="#cb1-59"></a>plt.title(<span class="st">'Whose Poetry is More Composed of Words that Start with "Re-"?'</span>)</span>
-<span id="cb1-60"><a href="#cb1-60"></a></span>
-<span id="cb1-61"><a href="#cb1-61"></a><span class="co"># Set the y-axis limit based on the largest percentage</span></span>
-<span id="cb1-62"><a href="#cb1-62"></a>ylim_percentage <span class="op">=</span> <span class="bu">max</span>(percentages) <span class="op">*</span> <span class="dv">2</span>  <span class="co"># Adjusted for better visualization</span></span>
-<span id="cb1-63"><a href="#cb1-63"></a>plt.ylim(<span class="dv">0</span>, ylim_percentage)</span>
-<span id="cb1-64"><a href="#cb1-64"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb1-65"><a href="#cb1-65"></a></span>
-<span id="cb1-66"><a href="#cb1-66"></a><span class="co"># Display the bar chart</span></span>
-<span id="cb1-67"><a href="#cb1-67"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb1-68"><a href="#cb1-68"></a>plt.tight_layout()</span>
-<span id="cb1-69"><a href="#cb1-69"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>nltk.download(<span class="st">'punkt'</span>)  <span class="co"># Download NLTK tokenizer data</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Define a function to count "re-" words in a given text</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="kw">def</span> count_re_words(text):</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    words <span class="op">=</span> nltk.word_tokenize(text)</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> word <span class="kw">in</span> words <span class="cf">if</span> word.lower().startswith(<span class="st">"re-"</span>))</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># Specify the directory paths for the two poets' corpora</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>corpus_directories <span class="op">=</span> {</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="st">'swinburne'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP'</span>,</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="st">'hardy'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP'</span>,</span>
+<span id="cb1-16"><a href="#cb1-16"></a>    <span class="st">'michael field'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP'</span>,</span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="st">'dg rossetti'</span>: <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP'</span>,</span>
+<span id="cb1-18"><a href="#cb1-18"></a>}</span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># Initialize dictionaries to store the results</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>percentage_re_words <span class="op">=</span> {}</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Read, tokenize, and calculate for each poet's corpus</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="cf">for</span> poet, corpus_directory <span class="kw">in</span> corpus_directories.items():</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    corpus <span class="op">=</span> []</span>
+<span id="cb1-26"><a href="#cb1-26"></a>    </span>
+<span id="cb1-27"><a href="#cb1-27"></a>    <span class="co"># Read and tokenize the text files in the poet's corpus</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>    <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(corpus_directory):</span>
+<span id="cb1-29"><a href="#cb1-29"></a>        <span class="cf">with</span> <span class="bu">open</span>(os.path.join(corpus_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb1-30"><a href="#cb1-30"></a>            text <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb1-31"><a href="#cb1-31"></a>            <span class="co"># text = remove_punctuation_except_hyphens(text)</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a>            corpus.append(text)</span>
+<span id="cb1-33"><a href="#cb1-33"></a></span>
+<span id="cb1-34"><a href="#cb1-34"></a>    <span class="co"># Count the "re-" words in the poet's corpus</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a>    re_word_count <span class="op">=</span> <span class="bu">sum</span>(count_re_words(text) <span class="cf">for</span> text <span class="kw">in</span> corpus)</span>
+<span id="cb1-36"><a href="#cb1-36"></a></span>
+<span id="cb1-37"><a href="#cb1-37"></a>    <span class="co"># Calculate the percentage of "re-" words in the poet's corpus</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a>    total_words <span class="op">=</span> <span class="bu">sum</span>(<span class="bu">len</span>(nltk.word_tokenize(text)) <span class="cf">for</span> text <span class="kw">in</span> corpus)</span>
+<span id="cb1-39"><a href="#cb1-39"></a>    percentage_re_words[poet] <span class="op">=</span> (re_word_count <span class="op">/</span> total_words) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a></span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="co"># Sort the results from largest to smallest</span></span>
+<span id="cb1-42"><a href="#cb1-42"></a>sorted_results <span class="op">=</span> <span class="bu">sorted</span>(percentage_re_words.items(), key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-43"><a href="#cb1-43"></a></span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="co"># Extract poets and percentages for plotting</span></span>
+<span id="cb1-45"><a href="#cb1-45"></a>poets, percentages <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>sorted_results)</span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="co"># Step 4: Create a bar chart to visualize the results with dynamic y-axis limit and sorted labels</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb1-49"><a href="#cb1-49"></a>plt.bar(poets, percentages, color<span class="op">=</span>[<span class="st">'blue'</span>, <span class="st">'orange'</span>])</span>
+<span id="cb1-50"><a href="#cb1-50"></a>plt.ylabel(<span class="st">'Percentage (%)'</span>)</span>
+<span id="cb1-51"><a href="#cb1-51"></a>plt.title(<span class="st">'Whose Poetry is More Composed of Words that Start with "Re-"?'</span>)</span>
+<span id="cb1-52"><a href="#cb1-52"></a></span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="co"># Set the y-axis limit based on the largest percentage</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a>ylim_percentage <span class="op">=</span> <span class="bu">max</span>(percentages) <span class="op">*</span> <span class="dv">2</span>  <span class="co"># Adjusted for better visualization</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a>plt.ylim(<span class="dv">0</span>, ylim_percentage)</span>
+<span id="cb1-56"><a href="#cb1-56"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb1-57"><a href="#cb1-57"></a></span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="co"># Display the bar chart</span></span>
+<span id="cb1-59"><a href="#cb1-59"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb1-60"><a href="#cb1-60"></a>plt.tight_layout()</span>
+<span id="cb1-61"><a href="#cb1-61"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
 </section>
-<section id="who-uses-re--words-the-most-least-output" class="slide level2 output-location-slide"><h2>Who Uses “Re-” Words the Most / Least?</h2><div class="cell output-location-slide" data-execution_count="1">
+<section id="who-uses-re--words-more-less-output" class="slide level2 output-location-slide"><h2>Who Uses “Re-” Words More / Less?</h2><div class="cell output-location-slide" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-2-output-1.png" width="757" height="565"></p>
 </div>
-</div></section>
-<section id="which-re--words-are-most-frequent" class="slide level2">
+</div></section><section id="which-re--words-are-most-frequent" class="slide level2">
 <h2>Which “Re-” Words Are Most Frequent?</h2>
+<ul>
+<li>Keyword Frequency Analysis
 <ul>
 <li>Which “re-” words are used and how often?</li>
-<li>ID trends in “re-” use:
-<ul>
-<li>Thematics: Which “re-” words are keywords?</li>
-<li>Stylistics: One word many times? Many words one time?</li>
 </ul></li>
-</ul>
-</section>
-<section id="which-re--words-are-most-frequent-1" class="slide level2">
-<h2>Which “Re-” Words Are Most Frequent?</h2>
-<ul>
-<li>Count “re-” words</li>
-<li>Stem “re-” words
-<ul>
-<li>Remove inflected endings to condense different versions of same term to a common stem
-<ul>
-<li>“re-enter: 1”, “re-entering: 1”, “re-entered: 1” –&gt; “re-ent: 3”</li>
-</ul></li>
-<li>Improves IDing significant concepts</li>
-</ul></li>
-<li>Visualize results in bar chart</li>
 </ul>
 <div class="cell" data-execution_count="2">
 <details open="">
@@ -701,7 +698,7 @@ Adam Mazel, Digital Publishing Librarian
 </div>
 
 </section>
-<section id="which-re--words-are-most-frequent-1-output" class="slide level2 output-location-slide"><h2>Which “Re-” Words Are Most Frequent?</h2><div class="cell output-location-slide" data-execution_count="2">
+<section id="which-re--words-are-most-frequent-output" class="slide level2 output-location-slide"><h2>Which “Re-” Words Are Most Frequent?</h2><div class="cell output-location-slide" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-3-output-1.png" width="790" height="473"></p>
 </div>
@@ -714,64 +711,10 @@ Adam Mazel, Digital Publishing Librarian
 <div class="cell-output cell-output-display">
 <p><img data-src="index_files/figure-revealjs/cell-3-output-4.png" width="794" height="468"></p>
 </div>
-</div></section><section id="results-take-aways-1" class="slide level2">
-<h2>Results: Take Aways</h2>
-<table>
-<caption>Comparison of “Re-” Use</caption>
-<thead>
-<tr class="header">
-<th></th>
-<th>Low Vocabulary</th>
-<th>High Vocabulary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>High Frequency</strong></td>
-<td>Swinburne</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Low Frequency</strong></td>
-<td>Rossetti</td>
-<td>Hardy, Field</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="results-take-aways-2" class="slide level2">
-<h2>Results: Take Aways</h2>
+</div></section><section id="fields-and-hardys-re-illume-in-context" class="slide level2 smaller">
+<h2>Field’s and Hardy’s “Re-Illume” in Context</h2>
 <ul>
-<li>Swinburne’s “Re-Risen”: 12x: 80% of “Re-” Words
-<ul>
-<li>form: alliterative</li>
-<li>content: ressurection</li>
-</ul></li>
-</ul>
-</section>
-<section id="results-take-aways-3" class="slide level2">
-<h2>Results: Take Aways</h2>
-<ul>
-<li>DG Rossetti’s “Re-Born”
-<ul>
-<li><p><em>Hapax Legomenon</em></p></li>
-<li><p>Hyphenated prefixes and compound words are common in DGR’s poetry</p>
-<ul>
-<li>“a-heap,” “cukoo-throb,” etc.</li>
-</ul></li>
-<li><p>“born”: 48x and “birth”: 46x | “ressurect-”: 1x and “re-born”: 1x</p></li>
-<li><p>Hypotheses:</p>
-<ul>
-<li>uninterested in signifying repetition through “re-”</li>
-<li>more interested in birth than rebirth?</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="results-take-aways-4" class="slide level2 smaller">
-<h2>Results: Take Aways</h2>
-<ul>
-<li>“Re-Illume” in Context (Hardy and Field)
+<li>Re-illume
 <ul>
 <li>Extremely rare</li>
 <li>Chiefly poetic</li>
@@ -791,206 +734,60 @@ Adam Mazel, Digital Publishing Librarian
 <section id="section" class="slide level2" data-background-iframe="https://books.google.com/ngrams/graph?content=reillumed%2Breillume%2Breilluming%2Breillumes&amp;year_start=1779&amp;year_end=2019&amp;corpus=en-GB-2019&amp;smoothing=3" data-background-interactive="true">
 <h2></h2>
 </section>
-<section id="which-words-accompany-re--words" class="slide level2">
-<h2>Which Words Accompany “Re-” Words?</h2>
+<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry" class="slide level2">
+<h2>Do “Re-” Words and “Re” Words Co-occur in Hardy’s Poetry?</h2>
 <ul>
-<li>J. R. Firth (Linguist): “You shall know a word by the company it keeps.” (1957)</li>
-<li>IDing (frequently) co-occuring terms can clarify their meaning</li>
-</ul>
-</section>
-<section id="which-words-accompany-re--words-1" class="slide level2">
-<h2>Which Words Accompany “Re-” Words?</h2>
-<ul>
-<li>Bigrams: two consecutive words
-<ul>
-<li>e.g.&nbsp;“She used the olive oil.”: “She used”: 1, “used the”: 1, “the olive”: 1, “olive oil”: 1</li>
-</ul></li>
-<li>Have computer ID / count bigrams of re- words: re- word + consecutive word</li>
-<li>remove stopwords (meaningless function words) to better reveal associated concepts</li>
+<li>Key (Re-) Word in Context (KWIC)</li>
+<li>Have Python return Hardy’s sentences that contain word(s) that start with “re-” and word(s) that start with “re”</li>
 </ul>
 <div class="cell" data-execution_count="3">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># import software dependencies / libraries</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> os</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> nltk</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="im">import</span> os</span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="im">import</span> re</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="im">from</span> nltk.util <span class="im">import</span> ngrams</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="im">import</span> string</span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="im">from</span> nltk.stem <span class="im">import</span> SnowballStemmer</span>
-<span id="cb3-10"><a href="#cb3-10"></a></span>
-<span id="cb3-11"><a href="#cb3-11"></a>nltk.download(<span class="st">'stopwords'</span>)</span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="co"># Directories to process, Aliases </span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>corpus_directories <span class="op">=</span> {</span>
-<span id="cb3-15"><a href="#cb3-15"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP'</span>: <span class="st">"AC Swinburne"</span>,</span>
-<span id="cb3-16"><a href="#cb3-16"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP'</span>: <span class="st">"Thomas Hardy"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP'</span>: <span class="st">"Michael Field"</span>,</span>
-<span id="cb3-18"><a href="#cb3-18"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP'</span>: <span class="st">"DG Rossetti"</span>,</span>
-<span id="cb3-19"><a href="#cb3-19"></a>}</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="im">import</span> re</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="im">from</span> nltk.tokenize <span class="im">import</span> sent_tokenize, word_tokenize</span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># Define regular expressions</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>re_pattern <span class="op">=</span> <span class="vs">r'\b(?:[Rr]e|[Rr]E)\w+\b'</span>  <span class="co"># Matches "re" followed by one or more letters</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>re_hyphen_pattern <span class="op">=</span> <span class="vs">r'\b(?:[Rr]e-|[Rr]E-)\w+\b'</span>  <span class="co"># Matches "re-" followed by one or more letters</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># \b matches a word boundary.</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="co"># (?:[Rr]e|[Rr]E) is a non-capturing group that matches either "re" or "RE," regardless of case.</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co"># \w+ matches one or more word characters following "re-" or "RE-."</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="kw">def</span> matches_pattern(word, pattern):</span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="cf">return</span> re.search(pattern, word, re.IGNORECASE) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="co"># Function to replace matched words with bolded HTML tags</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="kw">def</span> bold_matched_words(match, pattern):</span>
+<span id="cb3-19"><a href="#cb3-19"></a>    <span class="cf">return</span> <span class="ss">f'**</span><span class="sc">{</span>match<span class="sc">.</span>group()<span class="sc">}</span><span class="ss">**'</span></span>
 <span id="cb3-20"><a href="#cb3-20"></a></span>
-<span id="cb3-21"><a href="#cb3-21"></a><span class="co"># RegEx to match words starting with "re-"</span></span>
-<span id="cb3-22"><a href="#cb3-22"></a>re_word_pattern <span class="op">=</span> <span class="vs">r'\b(re-\w+)'</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="co"># Directory containing text files</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a>text_directory <span class="op">=</span> <span class="st">"/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP"</span></span>
 <span id="cb3-23"><a href="#cb3-23"></a></span>
-<span id="cb3-24"><a href="#cb3-24"></a><span class="co"># Dictionary to store directory/poet: bigram frequencies </span></span>
-<span id="cb3-25"><a href="#cb3-25"></a>bigram_frequencies <span class="op">=</span> {alias: Counter() <span class="cf">for</span> alias <span class="kw">in</span> corpus_directories.values()}</span>
-<span id="cb3-26"><a href="#cb3-26"></a></span>
-<span id="cb3-27"><a href="#cb3-27"></a><span class="co"># Define the punctuation to remove (including curly quotation marks)</span></span>
-<span id="cb3-28"><a href="#cb3-28"></a>punctuation_to_remove <span class="op">=</span> string.punctuation.replace(<span class="st">'-'</span>, <span class="st">''</span>) <span class="op">+</span> <span class="st">"‘’“”"</span></span>
-<span id="cb3-29"><a href="#cb3-29"></a></span>
-<span id="cb3-30"><a href="#cb3-30"></a><span class="co"># Preprocess and Process each directory</span></span>
-<span id="cb3-31"><a href="#cb3-31"></a><span class="cf">for</span> corpus_directory, alias <span class="kw">in</span> corpus_directories.items():</span>
-<span id="cb3-32"><a href="#cb3-32"></a>    <span class="co"># Get the text from the text files in the corpus</span></span>
-<span id="cb3-33"><a href="#cb3-33"></a>    <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(corpus_directory):</span>
-<span id="cb3-34"><a href="#cb3-34"></a>        <span class="cf">if</span> filename.endswith(<span class="st">'.txt'</span>):</span>
-<span id="cb3-35"><a href="#cb3-35"></a>            <span class="cf">with</span> <span class="bu">open</span>(os.path.join(corpus_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb3-36"><a href="#cb3-36"></a>                text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb3-37"><a href="#cb3-37"></a></span>
-<span id="cb3-38"><a href="#cb3-38"></a>                <span class="co"># Tokenize the text</span></span>
-<span id="cb3-39"><a href="#cb3-39"></a>                tokens <span class="op">=</span> nltk.word_tokenize(text)</span>
-<span id="cb3-40"><a href="#cb3-40"></a></span>
-<span id="cb3-41"><a href="#cb3-41"></a>                <span class="co"># Remove punctuation except hyphens and standardize case</span></span>
-<span id="cb3-42"><a href="#cb3-42"></a>                translator <span class="op">=</span> <span class="bu">str</span>.maketrans(<span class="st">''</span>, <span class="st">''</span>, punctuation_to_remove)</span>
-<span id="cb3-43"><a href="#cb3-43"></a>                preprocessed_text <span class="op">=</span> <span class="st">' '</span>.join(tokens).translate(translator).lower()</span>
-<span id="cb3-44"><a href="#cb3-44"></a></span>
-<span id="cb3-45"><a href="#cb3-45"></a>                <span class="co"># Remove stopwords</span></span>
-<span id="cb3-46"><a href="#cb3-46"></a>                stop_words <span class="op">=</span> <span class="bu">set</span>(stopwords.words(<span class="st">"english"</span>))</span>
-<span id="cb3-47"><a href="#cb3-47"></a>                filtered_tokens <span class="op">=</span> [word <span class="cf">for</span> word <span class="kw">in</span> preprocessed_text.split() <span class="cf">if</span> word <span class="kw">not</span> <span class="kw">in</span> stop_words]</span>
-<span id="cb3-48"><a href="#cb3-48"></a></span>
-<span id="cb3-49"><a href="#cb3-49"></a>                <span class="co"># Find bigrams</span></span>
-<span id="cb3-50"><a href="#cb3-50"></a>                bigrams <span class="op">=</span> <span class="bu">list</span>(ngrams(filtered_tokens, <span class="dv">2</span>))</span>
-<span id="cb3-51"><a href="#cb3-51"></a></span>
-<span id="cb3-52"><a href="#cb3-52"></a>                <span class="co"># Filter bigrams to include only those starting with "re-"</span></span>
-<span id="cb3-53"><a href="#cb3-53"></a>                re_bigrams <span class="op">=</span> [bigram <span class="cf">for</span> bigram <span class="kw">in</span> bigrams <span class="cf">if</span> re.match(re_word_pattern, bigram[<span class="dv">0</span>])]</span>
-<span id="cb3-54"><a href="#cb3-54"></a></span>
-<span id="cb3-55"><a href="#cb3-55"></a>                <span class="co"># Count the bigrams</span></span>
-<span id="cb3-56"><a href="#cb3-56"></a>                bigram_frequency <span class="op">=</span> Counter(re_bigrams)</span>
-<span id="cb3-57"><a href="#cb3-57"></a></span>
-<span id="cb3-58"><a href="#cb3-58"></a>                <span class="co"># Add the bigram frequencies as values of the current directory/poet as keys</span></span>
-<span id="cb3-59"><a href="#cb3-59"></a>                bigram_frequencies[alias].update(bigram_frequency)</span>
-<span id="cb3-60"><a href="#cb3-60"></a></span>
-<span id="cb3-61"><a href="#cb3-61"></a><span class="co"># Print the sorted bigram frequencies per directory/poet</span></span>
-<span id="cb3-62"><a href="#cb3-62"></a><span class="cf">for</span> alias, frequencies <span class="kw">in</span> bigram_frequencies.items():</span>
-<span id="cb3-63"><a href="#cb3-63"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>alias<span class="sc">}</span><span class="ss">:"</span>)</span>
-<span id="cb3-64"><a href="#cb3-64"></a>    <span class="cf">for</span> bigram, frequency <span class="kw">in</span> <span class="bu">sorted</span>(frequencies.items(), key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">0</span>]):  <span class="co"># Sort alphabetically</span></span>
-<span id="cb3-65"><a href="#cb3-65"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>bigram<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>frequency<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-66"><a href="#cb3-66"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-24"><a href="#cb3-24"></a><span class="co"># Iterate through text files in the directory</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="cf">for</span> filename <span class="kw">in</span> os.listdir(text_directory):</span>
+<span id="cb3-26"><a href="#cb3-26"></a>    <span class="cf">if</span> filename.endswith(<span class="st">".txt"</span>):</span>
+<span id="cb3-27"><a href="#cb3-27"></a>        <span class="cf">with</span> <span class="bu">open</span>(os.path.join(text_directory, filename), <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb3-28"><a href="#cb3-28"></a>            text <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb3-29"><a href="#cb3-29"></a>            sentences <span class="op">=</span> sent_tokenize(text)</span>
+<span id="cb3-30"><a href="#cb3-30"></a>            </span>
+<span id="cb3-31"><a href="#cb3-31"></a>            <span class="cf">for</span> sentence <span class="kw">in</span> sentences:</span>
+<span id="cb3-32"><a href="#cb3-32"></a>                words <span class="op">=</span> word_tokenize(sentence)</span>
+<span id="cb3-33"><a href="#cb3-33"></a>                has_re <span class="op">=</span> <span class="bu">any</span>(matches_pattern(word, re_pattern) <span class="cf">for</span> word <span class="kw">in</span> words)</span>
+<span id="cb3-34"><a href="#cb3-34"></a>                has_re_hyphen <span class="op">=</span> <span class="bu">any</span>(matches_pattern(word, re_hyphen_pattern) <span class="cf">for</span> word <span class="kw">in</span> words)</span>
+<span id="cb3-35"><a href="#cb3-35"></a>                </span>
+<span id="cb3-36"><a href="#cb3-36"></a>                <span class="cf">if</span> has_re <span class="kw">and</span> has_re_hyphen:</span>
+<span id="cb3-37"><a href="#cb3-37"></a>                    sentence_with_bold <span class="op">=</span> re.sub(re_pattern, <span class="kw">lambda</span> x: bold_matched_words(x, re_pattern), sentence)</span>
+<span id="cb3-38"><a href="#cb3-38"></a>                    sentence_with_bold <span class="op">=</span> re.sub(re_hyphen_pattern, <span class="kw">lambda</span> x: bold_matched_words(x, re_hyphen_pattern), sentence_with_bold)</span>
+<span id="cb3-39"><a href="#cb3-39"></a>                    <span class="bu">print</span>(sentence_with_bold)</span>
+<span id="cb3-40"><a href="#cb3-40"></a>                    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">*</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
 </section>
-<section id="which-words-accompany-re--words-1-output" class="slide level2 output-location-slide"><h2>Which Words Accompany “Re-” Words?</h2><div class="cell output-location-slide" data-execution_count="3">
-<div class="cell-output cell-output-stdout">
-<pre><code>AC Swinburne:
-('re-created', 'life'): 1
-('re-creating', 'word'): 1
-('re-inspire', 'dead'): 1
-('re-risen', 'dead'): 1
-('re-risen', 'dust'): 1
-('re-risen', 'mightier'): 1
-('re-risen', 'mortal'): 1
-('re-risen', 'prison'): 1
-('re-risen', 'refluent'): 1
-('re-risen', 'swift'): 1
-('re-risen', 'thalassian'): 1
-('re-risen', 'took'): 1
-('re-risen', 'unbar'): 1
-('re-risen', 'upon'): 1
-('re-risen', 'white'): 1
-
-Thomas Hardy:
-('re-acceptance', 'striven'): 1
-('re-adorning', 'time'): 1
-('re-awaken', 'sempiternal'): 1
-('re-cast', 'weakly'): 1
-('re-creations', 'killing'): 1
-('re-decked', 'dwelling'): 1
-('re-emerge', 'stayed'): 1
-('re-enact', 'dyed'): 1
-('re-enact', 'vestry-glass'): 1
-('re-enactment', 'folding'): 1
-('re-enactment', 'scene'): 1
-('re-entered', 'new'): 1
-('re-entered', 'olden'): 1
-('re-expression', 'time'): 1
-('re-form', 'death'): 1
-('re-greeting', 'quiet'): 1
-('re-illume', 'x'): 1
-('re-illumed', 'humour'): 1
-('re-mated', 'lives'): 1
-('re-ponder', 'first'): 1
-
-Michael Field:
-('re-adjusts', 'voice'): 1
-('re-appear', 'fade'): 1
-('re-curled', 'sigh'): 1
-('re-embody', 'thy'): 1
-('re-illumed', 'gleams'): 1
-('re-invite', 'features'): 1
-('re-light', 'tarnished'): 1
-('re-take-', 'thou'): 1
-
-DG Rossetti:
-('re-born', 'mid'): 1
-</code></pre>
-</div>
-</div></section>
-<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry" class="slide level2">
-<h2>Do “Re-” Words and “Re” Words Co-occur in Hardy’s Poetry?</h2>
-<ul>
-<li>Does Hardy juxtapose “re-” words and “re” words?</li>
-<li>Have Python return Hardy’s sentences that contain both a word(s) that start with “re-” and a word(s) that start with “re”</li>
-</ul>
-<div class="cell" data-execution_count="4">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> os</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> nltk</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="im">import</span> re</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="im">from</span> nltk.tokenize <span class="im">import</span> sent_tokenize, word_tokenize</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># Define regular expressions</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>re_pattern <span class="op">=</span> <span class="vs">r'\b(?:[Rr]e|[Rr]E)\w+\b'</span>  <span class="co"># Matches "re" followed by one or more letters</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>re_hyphen_pattern <span class="op">=</span> <span class="vs">r'\b(?:[Rr]e-|[Rr]E-)\w+\b'</span>  <span class="co"># Matches "re-" followed by one or more word characters</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="co"># \b matches a word boundary.</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="co"># (?:[Rr]e|[Rr]E) is a non-capturing group that matches either "re" or "RE," regardless of case.</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="co"># \w+ matches one or more word characters following "re-" or "RE-."</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="kw">def</span> matches_pattern(word, pattern):</span>
-<span id="cb5-15"><a href="#cb5-15"></a>    <span class="cf">return</span> re.search(pattern, word, re.IGNORECASE) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="co"># Function to replace matched words with bolded HTML tags</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="kw">def</span> bold_matched_words(match, pattern):</span>
-<span id="cb5-19"><a href="#cb5-19"></a>    <span class="cf">return</span> <span class="ss">f'**</span><span class="sc">{</span>match<span class="sc">.</span>group()<span class="sc">}</span><span class="ss">**'</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="co"># Directory containing text files</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a>text_directory <span class="op">=</span> <span class="st">"/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP"</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a></span>
-<span id="cb5-24"><a href="#cb5-24"></a><span class="co"># Iterate through text files in the directory</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a><span class="cf">for</span> filename <span class="kw">in</span> os.listdir(text_directory):</span>
-<span id="cb5-26"><a href="#cb5-26"></a>    <span class="cf">if</span> filename.endswith(<span class="st">".txt"</span>):</span>
-<span id="cb5-27"><a href="#cb5-27"></a>        <span class="cf">with</span> <span class="bu">open</span>(os.path.join(text_directory, filename), <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb5-28"><a href="#cb5-28"></a>            text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb5-29"><a href="#cb5-29"></a>            sentences <span class="op">=</span> sent_tokenize(text)</span>
-<span id="cb5-30"><a href="#cb5-30"></a>            </span>
-<span id="cb5-31"><a href="#cb5-31"></a>            <span class="cf">for</span> sentence <span class="kw">in</span> sentences:</span>
-<span id="cb5-32"><a href="#cb5-32"></a>                words <span class="op">=</span> word_tokenize(sentence)</span>
-<span id="cb5-33"><a href="#cb5-33"></a>                has_re <span class="op">=</span> <span class="bu">any</span>(matches_pattern(word, re_pattern) <span class="cf">for</span> word <span class="kw">in</span> words)</span>
-<span id="cb5-34"><a href="#cb5-34"></a>                has_re_hyphen <span class="op">=</span> <span class="bu">any</span>(matches_pattern(word, re_hyphen_pattern) <span class="cf">for</span> word <span class="kw">in</span> words)</span>
-<span id="cb5-35"><a href="#cb5-35"></a>                </span>
-<span id="cb5-36"><a href="#cb5-36"></a>                <span class="cf">if</span> has_re <span class="kw">and</span> has_re_hyphen:</span>
-<span id="cb5-37"><a href="#cb5-37"></a>                    sentence_with_bold <span class="op">=</span> re.sub(re_pattern, <span class="kw">lambda</span> x: bold_matched_words(x, re_pattern), sentence)</span>
-<span id="cb5-38"><a href="#cb5-38"></a>                    sentence_with_bold <span class="op">=</span> re.sub(re_hyphen_pattern, <span class="kw">lambda</span> x: bold_matched_words(x, re_hyphen_pattern), sentence_with_bold)</span>
-<span id="cb5-39"><a href="#cb5-39"></a>                    <span class="bu">print</span>(sentence_with_bold)</span>
-<span id="cb5-40"><a href="#cb5-40"></a>                    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">*</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-
-</section>
-<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry-output" class="slide level2 output-location-slide"><h2>Do “Re-” Words and “Re” Words Co-occur in Hardy’s Poetry?</h2><div class="cell output-location-slide" data-execution_count="4">
+<section id="do-re--words-and-re-words-co-occur-in-hardys-poetry-output" class="slide level2 output-location-slide"><h2>Do “Re-” Words and “Re” Words Co-occur in Hardy’s Poetry?</h2><div class="cell output-location-slide" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>Within there
    Too mocking to Love’s **re-expression**
@@ -1088,29 +885,7 @@ THE **RE-ENACTMENT**
 
 </code></pre>
 </div>
-</div></section><section id="results-take-aways-6" class="slide level2">
-<h2>Results: Take Aways</h2>
-<ul>
-<li><p>30% (6 / 20) of sentences containing “re-” words in Hardy’s poetry also contain “re” words</p></li>
-<li><p>Hardy: “re-” words co-occur with “re” words</p></li>
-<li><p>Hardy’s style</p>
-<ul>
-<li>echo in form: visual and audial rhyme</li>
-<li>echo in content: re(-) returns</li>
-</ul></li>
-</ul>
-</section>
-<section id="when-are-re--words-more-less-frequent" class="slide level2">
-<h2>When Are “Re-” Words More / Less Frequent?</h2>
-<ul>
-<li>ID when (in poet’s career) “re-” words were used more / less often
-<ul>
-<li>Why did “re-” wax / wane then?</li>
-</ul></li>
-<li>In which book(s) is re- frequent / infrequent? Why?</li>
-</ul>
-</section>
-<section id="when-are-re--words-more-less-frequent-1" class="slide level2">
+</div></section><section id="when-are-re--words-more-less-frequent" class="slide level2">
 <h2>When Are “Re-” Words More / Less Frequent?</h2>
 <ul>
 <li>Time Series / Term Frequency over Time
@@ -1119,345 +894,221 @@ THE **RE-ENACTMENT**
 <li>X axis: publication year of book</li>
 </ul></li>
 </ul>
+<div class="cell" data-execution_count="4">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Import software libraries / dependencies</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> nltk</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="im">import</span> os</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="im">import</span> re</span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="im">import</span> string</span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a>nltk.download(<span class="st">'punkt'</span>)  <span class="co"># Download NLTK tokenizer data</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co"># Define a function to count words that start with "re-"</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="kw">def</span> count_re_words(text):</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    words <span class="op">=</span> nltk.word_tokenize(text)</span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> word <span class="kw">in</span> words <span class="cf">if</span> word.lower().startswith(<span class="st">"re-"</span>))</span>
+<span id="cb5-14"><a href="#cb5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co"># Define a function to remove all punctuation except hyphens</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="kw">def</span> remove_punctuation_except_hyphens(text):</span>
+<span id="cb5-17"><a href="#cb5-17"></a>    translator <span class="op">=</span> <span class="bu">str</span>.maketrans(<span class="st">''</span>, <span class="st">''</span>, string.punctuation.replace(<span class="st">'-'</span>, <span class="st">''</span>))</span>
+<span id="cb5-18"><a href="#cb5-18"></a>    <span class="cf">return</span> text.translate(translator)</span>
+<span id="cb5-19"><a href="#cb5-19"></a></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="co"># Specify the parent directory containing multiple text file directories</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a>parent_directory <span class="op">=</span> <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/'</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="co"># Soecific irectories to process</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a>all_directory_names <span class="op">=</span> [</span>
+<span id="cb5-25"><a href="#cb5-25"></a>    <span class="st">'swinburne/swinburne_noBP'</span>,</span>
+<span id="cb5-26"><a href="#cb5-26"></a>    <span class="st">'hardy/hardy_noBP'</span>,</span>
+<span id="cb5-27"><a href="#cb5-27"></a>    <span class="st">'field/field_NoBP'</span>,</span>
+<span id="cb5-28"><a href="#cb5-28"></a>    <span class="co"># 'rossetti_dg/rossetti_dg_NoBP',</span></span>
+<span id="cb5-29"><a href="#cb5-29"></a>]</span>
+<span id="cb5-30"><a href="#cb5-30"></a></span>
+<span id="cb5-31"><a href="#cb5-31"></a><span class="co"># Initialize a dictionary to store year-wise percentages</span></span>
+<span id="cb5-32"><a href="#cb5-32"></a>year_percentages <span class="op">=</span> {}</span>
+<span id="cb5-33"><a href="#cb5-33"></a></span>
+<span id="cb5-34"><a href="#cb5-34"></a><span class="co"># Process each directory</span></span>
+<span id="cb5-35"><a href="#cb5-35"></a><span class="cf">for</span> directory_name <span class="kw">in</span> all_directory_names:</span>
+<span id="cb5-36"><a href="#cb5-36"></a>    <span class="co"># Construct the full path to the current directory</span></span>
+<span id="cb5-37"><a href="#cb5-37"></a>    text_files_directory <span class="op">=</span> os.path.join(parent_directory, directory_name)</span>
+<span id="cb5-38"><a href="#cb5-38"></a></span>
+<span id="cb5-39"><a href="#cb5-39"></a>    <span class="cf">if</span> os.path.isdir(text_files_directory):</span>
+<span id="cb5-40"><a href="#cb5-40"></a>        <span class="co"># Initialize a dictionary to store year-wise percentages for the current directory</span></span>
+<span id="cb5-41"><a href="#cb5-41"></a>        directory_percentages <span class="op">=</span> {}</span>
+<span id="cb5-42"><a href="#cb5-42"></a></span>
+<span id="cb5-43"><a href="#cb5-43"></a>        <span class="co"># Initialize a dictionary to store file names for the current directory</span></span>
+<span id="cb5-44"><a href="#cb5-44"></a>        file_names <span class="op">=</span> {}</span>
+<span id="cb5-45"><a href="#cb5-45"></a></span>
+<span id="cb5-46"><a href="#cb5-46"></a>        <span class="co"># Process each text file in the current directory</span></span>
+<span id="cb5-47"><a href="#cb5-47"></a>        <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(text_files_directory):</span>
+<span id="cb5-48"><a href="#cb5-48"></a>            <span class="cf">if</span> filename.endswith(<span class="st">'.txt'</span>):</span>
+<span id="cb5-49"><a href="#cb5-49"></a>                <span class="co"># Extract the year from the filename using a regular expression</span></span>
+<span id="cb5-50"><a href="#cb5-50"></a>                year_match <span class="op">=</span> re.match(<span class="vs">r'(\d</span><span class="sc">{4}</span><span class="vs">)_'</span>, filename)</span>
+<span id="cb5-51"><a href="#cb5-51"></a>                <span class="cf">if</span> year_match:</span>
+<span id="cb5-52"><a href="#cb5-52"></a>                    year <span class="op">=</span> <span class="bu">int</span>(year_match.group(<span class="dv">1</span>))</span>
+<span id="cb5-53"><a href="#cb5-53"></a>                    <span class="cf">with</span> <span class="bu">open</span>(os.path.join(text_files_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb5-54"><a href="#cb5-54"></a>                        text <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb5-55"><a href="#cb5-55"></a>                        <span class="co"># Remove punctuation except hyphens</span></span>
+<span id="cb5-56"><a href="#cb5-56"></a>                        text <span class="op">=</span> remove_punctuation_except_hyphens(text)</span>
+<span id="cb5-57"><a href="#cb5-57"></a>                        <span class="co"># normalize counts</span></span>
+<span id="cb5-58"><a href="#cb5-58"></a>                        total_words <span class="op">=</span> <span class="bu">len</span>(nltk.word_tokenize(text))</span>
+<span id="cb5-59"><a href="#cb5-59"></a>                        re_word_count <span class="op">=</span> count_re_words(text)</span>
+<span id="cb5-60"><a href="#cb5-60"></a>                        percentage_re_words <span class="op">=</span> (re_word_count <span class="op">/</span> total_words) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb5-61"><a href="#cb5-61"></a>                        </span>
+<span id="cb5-62"><a href="#cb5-62"></a>                        <span class="co">#add to dictionary: values: counts to keys: years</span></span>
+<span id="cb5-63"><a href="#cb5-63"></a>                        directory_percentages[year] <span class="op">=</span> percentage_re_words</span>
+<span id="cb5-64"><a href="#cb5-64"></a>                        </span>
+<span id="cb5-65"><a href="#cb5-65"></a>                        <span class="co"># Extract the text between underscores in the filename</span></span>
+<span id="cb5-66"><a href="#cb5-66"></a>                        file_name_parts <span class="op">=</span> filename.split(<span class="st">'_'</span>)</span>
+<span id="cb5-67"><a href="#cb5-67"></a>                        <span class="cf">if</span> <span class="bu">len</span>(file_name_parts) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb5-68"><a href="#cb5-68"></a>                            file_name <span class="op">=</span> <span class="st">'_'</span>.join(file_name_parts[<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-69"><a href="#cb5-69"></a>                        <span class="cf">else</span>:</span>
+<span id="cb5-70"><a href="#cb5-70"></a>                            file_name <span class="op">=</span> file_name_parts[<span class="dv">1</span>]</span>
+<span id="cb5-71"><a href="#cb5-71"></a>                        </span>
+<span id="cb5-72"><a href="#cb5-72"></a>                        <span class="co">#add to dictionary: values: filenames to keys: years </span></span>
+<span id="cb5-73"><a href="#cb5-73"></a>                        file_names[year] <span class="op">=</span> file_name  <span class="co"># Store the extracted file name</span></span>
+<span id="cb5-74"><a href="#cb5-74"></a></span>
+<span id="cb5-75"><a href="#cb5-75"></a>        <span class="co"># Sort the dictionary by keys (years) for the current directory</span></span>
+<span id="cb5-76"><a href="#cb5-76"></a>        sorted_directory_percentages <span class="op">=</span> {year: directory_percentages[year] <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">sorted</span>(directory_percentages)}</span>
+<span id="cb5-77"><a href="#cb5-77"></a></span>
+<span id="cb5-78"><a href="#cb5-78"></a>        <span class="co"># Store the results for the current directory</span></span>
+<span id="cb5-79"><a href="#cb5-79"></a>        year_percentages[directory_name] <span class="op">=</span> {</span>
+<span id="cb5-80"><a href="#cb5-80"></a>            <span class="st">'percentages'</span>: sorted_directory_percentages,</span>
+<span id="cb5-81"><a href="#cb5-81"></a>            <span class="st">'file_names'</span>: file_names  <span class="co"># Store file names for this directory</span></span>
+<span id="cb5-82"><a href="#cb5-82"></a>        }</span>
+<span id="cb5-83"><a href="#cb5-83"></a></span>
+<span id="cb5-84"><a href="#cb5-84"></a><span class="co"># Step 2: Plot the keys (years) and values (percentages) in a line graph for each directory</span></span>
+<span id="cb5-85"><a href="#cb5-85"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb5-86"><a href="#cb5-86"></a></span>
+<span id="cb5-87"><a href="#cb5-87"></a><span class="cf">for</span> directory_name, data <span class="kw">in</span> year_percentages.items():</span>
+<span id="cb5-88"><a href="#cb5-88"></a>    percentages <span class="op">=</span> data[<span class="st">'percentages'</span>]</span>
+<span id="cb5-89"><a href="#cb5-89"></a>    file_names <span class="op">=</span> data[<span class="st">'file_names'</span>]</span>
+<span id="cb5-90"><a href="#cb5-90"></a>    years <span class="op">=</span> <span class="bu">list</span>(percentages.keys())</span>
+<span id="cb5-91"><a href="#cb5-91"></a>    percentages <span class="op">=</span> <span class="bu">list</span>(percentages.values())</span>
+<span id="cb5-92"><a href="#cb5-92"></a>    </span>
+<span id="cb5-93"><a href="#cb5-93"></a>    <span class="co"># Plot the data points</span></span>
+<span id="cb5-94"><a href="#cb5-94"></a>    plt.plot(years, percentages, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, label<span class="op">=</span>directory_name[:<span class="op">-</span><span class="dv">5</span>])</span>
+<span id="cb5-95"><a href="#cb5-95"></a>    </span>
+<span id="cb5-96"><a href="#cb5-96"></a>    <span class="co"># Add annotations for each data point if the value is greater than 0</span></span>
+<span id="cb5-97"><a href="#cb5-97"></a>    <span class="cf">for</span> year, percentage <span class="kw">in</span> <span class="bu">zip</span>(years, percentages):</span>
+<span id="cb5-98"><a href="#cb5-98"></a>        <span class="cf">if</span> percentage <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb5-99"><a href="#cb5-99"></a>            file_name <span class="op">=</span> file_names[year]</span>
+<span id="cb5-100"><a href="#cb5-100"></a>            annotation <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>file_name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb5-101"><a href="#cb5-101"></a>            plt.annotate(annotation, (year, percentage), textcoords<span class="op">=</span><span class="st">"offset points"</span>, xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>), ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb5-102"><a href="#cb5-102"></a></span>
+<span id="cb5-103"><a href="#cb5-103"></a>plt.ylim(<span class="dv">0</span>, <span class="fl">0.0525</span>)</span>
+<span id="cb5-104"><a href="#cb5-104"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb5-105"><a href="#cb5-105"></a>plt.ylabel(<span class="st">'Percentage of Words Starting with "Re-"'</span>)</span>
+<span id="cb5-106"><a href="#cb5-106"></a>plt.title(<span class="st">'When Are "Re-" Words Used in Field</span><span class="ch">\'</span><span class="st">s, Hardy</span><span class="ch">\'</span><span class="st">s, and Swinburne</span><span class="ch">\'</span><span class="st">s Poetry?'</span>)</span>
+<span id="cb5-107"><a href="#cb5-107"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb5-108"><a href="#cb5-108"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb5-109"><a href="#cb5-109"></a>plt.legend()  <span class="co"># Show legend indicating directory names</span></span>
+<span id="cb5-110"><a href="#cb5-110"></a></span>
+<span id="cb5-111"><a href="#cb5-111"></a><span class="co"># Display the line graph</span></span>
+<span id="cb5-112"><a href="#cb5-112"></a>plt.tight_layout()</span>
+<span id="cb5-113"><a href="#cb5-113"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+
+</section>
+<section id="when-are-re--words-more-less-frequent-output" class="slide level2 output-location-slide"><h2>When Are “Re-” Words More / Less Frequent?</h2><div class="cell output-location-slide" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<p><img data-src="index_files/figure-revealjs/cell-5-output-1.png" width="944" height="757"></p>
+</div>
+</div></section><section id="are-re--words-used-positively-or-negatively" class="slide level2">
+<h2>Are “Re-” Words Used Positively or Negatively?</h2>
+<ul>
+<li>Sentiment Analysis
+<ul>
+<li>determines a text’s emotional tone (positive / negative / neutral)</li>
+</ul></li>
+</ul>
 <div class="cell" data-execution_count="5">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Import software libraries / dependencies</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> nltk</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="im">import</span> os</span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="im">import</span> re</span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="im">import</span> string</span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a>nltk.download(<span class="st">'punkt'</span>)  <span class="co"># Download NLTK tokenizer data</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="co"># Define a function to count words that start with "re-"</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="kw">def</span> count_re_words(text):</span>
-<span id="cb7-12"><a href="#cb7-12"></a>    words <span class="op">=</span> nltk.word_tokenize(text)</span>
-<span id="cb7-13"><a href="#cb7-13"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> word <span class="kw">in</span> words <span class="cf">if</span> word.lower().startswith(<span class="st">"re-"</span>))</span>
-<span id="cb7-14"><a href="#cb7-14"></a></span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="co"># Define a function to remove all punctuation except hyphens</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a><span class="kw">def</span> remove_punctuation_except_hyphens(text):</span>
-<span id="cb7-17"><a href="#cb7-17"></a>    translator <span class="op">=</span> <span class="bu">str</span>.maketrans(<span class="st">''</span>, <span class="st">''</span>, string.punctuation.replace(<span class="st">'-'</span>, <span class="st">''</span>))</span>
-<span id="cb7-18"><a href="#cb7-18"></a>    <span class="cf">return</span> text.translate(translator)</span>
-<span id="cb7-19"><a href="#cb7-19"></a></span>
-<span id="cb7-20"><a href="#cb7-20"></a><span class="co"># Specify the parent directory containing multiple text file directories</span></span>
-<span id="cb7-21"><a href="#cb7-21"></a>parent_directory <span class="op">=</span> <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/'</span></span>
-<span id="cb7-22"><a href="#cb7-22"></a></span>
-<span id="cb7-23"><a href="#cb7-23"></a><span class="co"># Soecific irectories to process</span></span>
-<span id="cb7-24"><a href="#cb7-24"></a>all_directory_names <span class="op">=</span> [</span>
-<span id="cb7-25"><a href="#cb7-25"></a>    <span class="st">'swinburne/swinburne_noBP'</span>,</span>
-<span id="cb7-26"><a href="#cb7-26"></a>    <span class="st">'hardy/hardy_noBP'</span>,</span>
-<span id="cb7-27"><a href="#cb7-27"></a>    <span class="st">'field/field_NoBP'</span>,</span>
-<span id="cb7-28"><a href="#cb7-28"></a>    <span class="st">'rossetti_dg/rossetti_dg_NoBP'</span>,</span>
-<span id="cb7-29"><a href="#cb7-29"></a>]</span>
-<span id="cb7-30"><a href="#cb7-30"></a></span>
-<span id="cb7-31"><a href="#cb7-31"></a><span class="co"># Initialize a dictionary to store year-wise percentages</span></span>
-<span id="cb7-32"><a href="#cb7-32"></a>year_percentages <span class="op">=</span> {}</span>
-<span id="cb7-33"><a href="#cb7-33"></a></span>
-<span id="cb7-34"><a href="#cb7-34"></a><span class="co"># Process each directory</span></span>
-<span id="cb7-35"><a href="#cb7-35"></a><span class="cf">for</span> directory_name <span class="kw">in</span> all_directory_names:</span>
-<span id="cb7-36"><a href="#cb7-36"></a>    <span class="co"># Construct the full path to the current directory</span></span>
-<span id="cb7-37"><a href="#cb7-37"></a>    text_files_directory <span class="op">=</span> os.path.join(parent_directory, directory_name)</span>
-<span id="cb7-38"><a href="#cb7-38"></a></span>
-<span id="cb7-39"><a href="#cb7-39"></a>    <span class="cf">if</span> os.path.isdir(text_files_directory):</span>
-<span id="cb7-40"><a href="#cb7-40"></a>        <span class="co"># Initialize a dictionary to store year-wise percentages for the current directory</span></span>
-<span id="cb7-41"><a href="#cb7-41"></a>        directory_percentages <span class="op">=</span> {}</span>
-<span id="cb7-42"><a href="#cb7-42"></a></span>
-<span id="cb7-43"><a href="#cb7-43"></a>        <span class="co"># Initialize a dictionary to store file names for the current directory</span></span>
-<span id="cb7-44"><a href="#cb7-44"></a>        file_names <span class="op">=</span> {}</span>
-<span id="cb7-45"><a href="#cb7-45"></a></span>
-<span id="cb7-46"><a href="#cb7-46"></a>        <span class="co"># Process each text file in the current directory</span></span>
-<span id="cb7-47"><a href="#cb7-47"></a>        <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(text_files_directory):</span>
-<span id="cb7-48"><a href="#cb7-48"></a>            <span class="cf">if</span> filename.endswith(<span class="st">'.txt'</span>):</span>
-<span id="cb7-49"><a href="#cb7-49"></a>                <span class="co"># Extract the year from the filename using a regular expression</span></span>
-<span id="cb7-50"><a href="#cb7-50"></a>                year_match <span class="op">=</span> re.match(<span class="vs">r'(\d</span><span class="sc">{4}</span><span class="vs">)_'</span>, filename)</span>
-<span id="cb7-51"><a href="#cb7-51"></a>                <span class="cf">if</span> year_match:</span>
-<span id="cb7-52"><a href="#cb7-52"></a>                    year <span class="op">=</span> <span class="bu">int</span>(year_match.group(<span class="dv">1</span>))</span>
-<span id="cb7-53"><a href="#cb7-53"></a>                    <span class="cf">with</span> <span class="bu">open</span>(os.path.join(text_files_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb7-54"><a href="#cb7-54"></a>                        text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb7-55"><a href="#cb7-55"></a>                        <span class="co"># Remove punctuation except hyphens</span></span>
-<span id="cb7-56"><a href="#cb7-56"></a>                        text <span class="op">=</span> remove_punctuation_except_hyphens(text)</span>
-<span id="cb7-57"><a href="#cb7-57"></a>                        <span class="co"># normalize counts</span></span>
-<span id="cb7-58"><a href="#cb7-58"></a>                        total_words <span class="op">=</span> <span class="bu">len</span>(nltk.word_tokenize(text))</span>
-<span id="cb7-59"><a href="#cb7-59"></a>                        re_word_count <span class="op">=</span> count_re_words(text)</span>
-<span id="cb7-60"><a href="#cb7-60"></a>                        percentage_re_words <span class="op">=</span> (re_word_count <span class="op">/</span> total_words) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb7-61"><a href="#cb7-61"></a>                        </span>
-<span id="cb7-62"><a href="#cb7-62"></a>                        <span class="co">#add to dictionary: values: counts to keys: years</span></span>
-<span id="cb7-63"><a href="#cb7-63"></a>                        directory_percentages[year] <span class="op">=</span> percentage_re_words</span>
-<span id="cb7-64"><a href="#cb7-64"></a>                        </span>
-<span id="cb7-65"><a href="#cb7-65"></a>                        <span class="co"># Extract the text between underscores in the filename</span></span>
-<span id="cb7-66"><a href="#cb7-66"></a>                        file_name_parts <span class="op">=</span> filename.split(<span class="st">'_'</span>)</span>
-<span id="cb7-67"><a href="#cb7-67"></a>                        <span class="cf">if</span> <span class="bu">len</span>(file_name_parts) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
-<span id="cb7-68"><a href="#cb7-68"></a>                            file_name <span class="op">=</span> <span class="st">'_'</span>.join(file_name_parts[<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb7-69"><a href="#cb7-69"></a>                        <span class="cf">else</span>:</span>
-<span id="cb7-70"><a href="#cb7-70"></a>                            file_name <span class="op">=</span> file_name_parts[<span class="dv">1</span>]</span>
-<span id="cb7-71"><a href="#cb7-71"></a>                        </span>
-<span id="cb7-72"><a href="#cb7-72"></a>                        <span class="co">#add to dictionary: values: filenames to keys: years </span></span>
-<span id="cb7-73"><a href="#cb7-73"></a>                        file_names[year] <span class="op">=</span> file_name  <span class="co"># Store the extracted file name</span></span>
-<span id="cb7-74"><a href="#cb7-74"></a></span>
-<span id="cb7-75"><a href="#cb7-75"></a>        <span class="co"># Sort the dictionary by keys (years) for the current directory</span></span>
-<span id="cb7-76"><a href="#cb7-76"></a>        sorted_directory_percentages <span class="op">=</span> {year: directory_percentages[year] <span class="cf">for</span> year <span class="kw">in</span> <span class="bu">sorted</span>(directory_percentages)}</span>
-<span id="cb7-77"><a href="#cb7-77"></a></span>
-<span id="cb7-78"><a href="#cb7-78"></a>        <span class="co"># Store the results for the current directory</span></span>
-<span id="cb7-79"><a href="#cb7-79"></a>        year_percentages[directory_name] <span class="op">=</span> {</span>
-<span id="cb7-80"><a href="#cb7-80"></a>            <span class="st">'percentages'</span>: sorted_directory_percentages,</span>
-<span id="cb7-81"><a href="#cb7-81"></a>            <span class="st">'file_names'</span>: file_names  <span class="co"># Store file names for this directory</span></span>
-<span id="cb7-82"><a href="#cb7-82"></a>        }</span>
-<span id="cb7-83"><a href="#cb7-83"></a></span>
-<span id="cb7-84"><a href="#cb7-84"></a><span class="co"># Step 2: Plot the keys (years) and values (percentages) in a line graph for each directory</span></span>
-<span id="cb7-85"><a href="#cb7-85"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">8</span>))</span>
-<span id="cb7-86"><a href="#cb7-86"></a></span>
-<span id="cb7-87"><a href="#cb7-87"></a><span class="cf">for</span> directory_name, data <span class="kw">in</span> year_percentages.items():</span>
-<span id="cb7-88"><a href="#cb7-88"></a>    percentages <span class="op">=</span> data[<span class="st">'percentages'</span>]</span>
-<span id="cb7-89"><a href="#cb7-89"></a>    file_names <span class="op">=</span> data[<span class="st">'file_names'</span>]</span>
-<span id="cb7-90"><a href="#cb7-90"></a>    years <span class="op">=</span> <span class="bu">list</span>(percentages.keys())</span>
-<span id="cb7-91"><a href="#cb7-91"></a>    percentages <span class="op">=</span> <span class="bu">list</span>(percentages.values())</span>
-<span id="cb7-92"><a href="#cb7-92"></a>    </span>
-<span id="cb7-93"><a href="#cb7-93"></a>    <span class="co"># Plot the data points</span></span>
-<span id="cb7-94"><a href="#cb7-94"></a>    plt.plot(years, percentages, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, label<span class="op">=</span>directory_name[:<span class="op">-</span><span class="dv">5</span>])</span>
-<span id="cb7-95"><a href="#cb7-95"></a>    </span>
-<span id="cb7-96"><a href="#cb7-96"></a>    <span class="co"># Add annotations for each data point if the value is greater than 0</span></span>
-<span id="cb7-97"><a href="#cb7-97"></a>    <span class="cf">for</span> year, percentage <span class="kw">in</span> <span class="bu">zip</span>(years, percentages):</span>
-<span id="cb7-98"><a href="#cb7-98"></a>        <span class="cf">if</span> percentage <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb7-99"><a href="#cb7-99"></a>            file_name <span class="op">=</span> file_names[year]</span>
-<span id="cb7-100"><a href="#cb7-100"></a>            annotation <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>file_name<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb7-101"><a href="#cb7-101"></a>            plt.annotate(annotation, (year, percentage), textcoords<span class="op">=</span><span class="st">"offset points"</span>, xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>), ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb7-102"><a href="#cb7-102"></a></span>
-<span id="cb7-103"><a href="#cb7-103"></a>plt.ylim(<span class="dv">0</span>, <span class="fl">0.0525</span>)</span>
-<span id="cb7-104"><a href="#cb7-104"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
-<span id="cb7-105"><a href="#cb7-105"></a>plt.ylabel(<span class="st">'Percentage of Words Starting with "Re-"'</span>)</span>
-<span id="cb7-106"><a href="#cb7-106"></a>plt.title(<span class="st">'When Were "Re-" Words Used in Field</span><span class="ch">\'</span><span class="st">s, Hardy</span><span class="ch">\'</span><span class="st">s, DG Rossetti</span><span class="ch">\'</span><span class="st">s, and Swinburne</span><span class="ch">\'</span><span class="st">s Poetry?'</span>)</span>
-<span id="cb7-107"><a href="#cb7-107"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb7-108"><a href="#cb7-108"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb7-109"><a href="#cb7-109"></a>plt.legend()  <span class="co"># Show legend indicating directory names</span></span>
-<span id="cb7-110"><a href="#cb7-110"></a></span>
-<span id="cb7-111"><a href="#cb7-111"></a><span class="co"># Display the line graph</span></span>
-<span id="cb7-112"><a href="#cb7-112"></a>plt.tight_layout()</span>
-<span id="cb7-113"><a href="#cb7-113"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> nltk</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="im">from</span> nltk.sentiment.vader <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="im">import</span> os</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co"># Initialize the VADER sentiment analyzer</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co"># Function to calculate aggregate sentiment for a collection of sentences</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="kw">def</span> calculate_aggregate_sentiment(sentences):</span>
+<span id="cb6-10"><a href="#cb6-10"></a>    positive_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a>    negative_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a>    neutral_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>    total_sentences <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a></span>
+<span id="cb6-15"><a href="#cb6-15"></a>    <span class="cf">for</span> sentence <span class="kw">in</span> sentences:</span>
+<span id="cb6-16"><a href="#cb6-16"></a>        sentiment <span class="op">=</span> sia.polarity_scores(sentence)</span>
+<span id="cb6-17"><a href="#cb6-17"></a>        positive_score <span class="op">+=</span> sentiment[<span class="st">'pos'</span>]</span>
+<span id="cb6-18"><a href="#cb6-18"></a>        negative_score <span class="op">+=</span> sentiment[<span class="st">'neg'</span>]</span>
+<span id="cb6-19"><a href="#cb6-19"></a>        neutral_score <span class="op">+=</span> sentiment[<span class="st">'neu'</span>]</span>
+<span id="cb6-20"><a href="#cb6-20"></a>        total_sentences <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a></span>
+<span id="cb6-22"><a href="#cb6-22"></a>    <span class="cf">if</span> total_sentences <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb6-23"><a href="#cb6-23"></a>        avg_positive_score <span class="op">=</span> positive_score <span class="op">/</span> total_sentences</span>
+<span id="cb6-24"><a href="#cb6-24"></a>        avg_negative_score <span class="op">=</span> negative_score <span class="op">/</span> total_sentences</span>
+<span id="cb6-25"><a href="#cb6-25"></a>        avg_neutral_score <span class="op">=</span> neutral_score <span class="op">/</span> total_sentences</span>
+<span id="cb6-26"><a href="#cb6-26"></a></span>
+<span id="cb6-27"><a href="#cb6-27"></a>        <span class="cf">if</span> avg_positive_score <span class="op">&gt;</span> avg_negative_score:</span>
+<span id="cb6-28"><a href="#cb6-28"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Positive"</span></span>
+<span id="cb6-29"><a href="#cb6-29"></a>        <span class="cf">elif</span> avg_positive_score <span class="op">&lt;</span> avg_negative_score:</span>
+<span id="cb6-30"><a href="#cb6-30"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Negative"</span></span>
+<span id="cb6-31"><a href="#cb6-31"></a>        <span class="cf">else</span>:</span>
+<span id="cb6-32"><a href="#cb6-32"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Neutral"</span></span>
+<span id="cb6-33"><a href="#cb6-33"></a></span>
+<span id="cb6-34"><a href="#cb6-34"></a>        <span class="cf">return</span> {</span>
+<span id="cb6-35"><a href="#cb6-35"></a>            <span class="st">"Total Sentences Analyzed"</span>: total_sentences,</span>
+<span id="cb6-36"><a href="#cb6-36"></a>            <span class="st">"Average Positive Score"</span>: avg_positive_score,</span>
+<span id="cb6-37"><a href="#cb6-37"></a>            <span class="st">"Average Negative Score"</span>: avg_negative_score,</span>
+<span id="cb6-38"><a href="#cb6-38"></a>            <span class="st">"Average Neutral Score"</span>: avg_neutral_score,</span>
+<span id="cb6-39"><a href="#cb6-39"></a>            <span class="st">"Overall Sentiment"</span>: overall_sentiment,</span>
+<span id="cb6-40"><a href="#cb6-40"></a>        }</span>
+<span id="cb6-41"><a href="#cb6-41"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-42"><a href="#cb6-42"></a>        <span class="cf">return</span> {<span class="st">"No sentences with 're-' words found for analysis."</span>}</span>
+<span id="cb6-43"><a href="#cb6-43"></a></span>
+<span id="cb6-44"><a href="#cb6-44"></a><span class="co"># Specify the directories you want to process with aliases</span></span>
+<span id="cb6-45"><a href="#cb6-45"></a>corpus_directories <span class="op">=</span> {</span>
+<span id="cb6-46"><a href="#cb6-46"></a> </span>
+<span id="cb6-47"><a href="#cb6-47"></a>        <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP'</span>: <span class="st">"AC Swinburne"</span>,</span>
+<span id="cb6-48"><a href="#cb6-48"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP'</span>: <span class="st">"Thomas Hardy"</span>,</span>
+<span id="cb6-49"><a href="#cb6-49"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP'</span>: <span class="st">"Michael Field"</span>,</span>
+<span id="cb6-50"><a href="#cb6-50"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP'</span>: <span class="st">"DG Rossetti"</span>,</span>
+<span id="cb6-51"><a href="#cb6-51"></a>       <span class="co"># Add more directories here</span></span>
+<span id="cb6-52"><a href="#cb6-52"></a>}</span>
+<span id="cb6-53"><a href="#cb6-53"></a></span>
+<span id="cb6-54"><a href="#cb6-54"></a><span class="co"># Process each directory</span></span>
+<span id="cb6-55"><a href="#cb6-55"></a><span class="cf">for</span> corpus_directory, alias <span class="kw">in</span> corpus_directories.items():</span>
+<span id="cb6-56"><a href="#cb6-56"></a>    sentences <span class="op">=</span> []</span>
+<span id="cb6-57"><a href="#cb6-57"></a></span>
+<span id="cb6-58"><a href="#cb6-58"></a>    <span class="co"># Read and preprocess the text files in the corpus</span></span>
+<span id="cb6-59"><a href="#cb6-59"></a>    <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(corpus_directory):</span>
+<span id="cb6-60"><a href="#cb6-60"></a>        <span class="cf">if</span> filename.endswith(<span class="st">'.txt'</span>):</span>
+<span id="cb6-61"><a href="#cb6-61"></a>            <span class="cf">with</span> <span class="bu">open</span>(os.path.join(corpus_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb6-62"><a href="#cb6-62"></a>                text <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb6-63"><a href="#cb6-63"></a>                sentences <span class="op">+=</span> nltk.sent_tokenize(text)</span>
+<span id="cb6-64"><a href="#cb6-64"></a></span>
+<span id="cb6-65"><a href="#cb6-65"></a>    <span class="co"># Filter sentences with words starting with "re-"</span></span>
+<span id="cb6-66"><a href="#cb6-66"></a>    sentences_with_re <span class="op">=</span> [sentence <span class="cf">for</span> sentence <span class="kw">in</span> sentences <span class="cf">if</span> <span class="bu">any</span>(word.lower().startswith(<span class="st">"re-"</span>) <span class="cf">for</span> word <span class="kw">in</span> nltk.word_tokenize(sentence))]</span>
+<span id="cb6-67"><a href="#cb6-67"></a></span>
+<span id="cb6-68"><a href="#cb6-68"></a>    <span class="co"># Calculate aggregate sentiment for the filtered sentences</span></span>
+<span id="cb6-69"><a href="#cb6-69"></a>    results <span class="op">=</span> calculate_aggregate_sentiment(sentences_with_re)</span>
+<span id="cb6-70"><a href="#cb6-70"></a></span>
+<span id="cb6-71"><a href="#cb6-71"></a>    <span class="co"># Print results for the current directory</span></span>
+<span id="cb6-72"><a href="#cb6-72"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>alias<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-73"><a href="#cb6-73"></a>    <span class="cf">for</span> key, value <span class="kw">in</span> results.items():</span>
+<span id="cb6-74"><a href="#cb6-74"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-75"><a href="#cb6-75"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
 </section>
-<section id="when-are-re--words-more-less-frequent-1-output" class="slide level2 output-location-slide"><h2>When Are “Re-” Words More / Less Frequent?</h2><div class="cell output-location-slide" data-execution_count="5">
-<div class="cell-output cell-output-display">
-<p><img data-src="index_files/figure-revealjs/cell-6-output-1.png" width="1429" height="757"></p>
-</div>
-</div></section><section id="results-take-aways-7" class="slide level2">
-<h2>Results: Take Aways</h2>
-<ul>
-<li>Swinburne
-<ul>
-<li>“Re-”: of interest in mid career, especially in <em>A Century of Roundels</em> (1883)
-<ul>
-<li>“Re-”: prefix (repetition) apt for Roundel’s repetitive form</li>
-</ul></li>
-</ul></li>
-<li>Field
-<ul>
-<li>“Re-”: of interest in <em>Whym Chow: Flame of Love</em> (1914)
-<ul>
-<li>“Re-”: prefix (“again-ness,” return, and memory) apt for an elegy</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="are-re--words-used-positively-or-negatively" class="slide level2">
-<h2>Are “Re-” Words Used Positively or Negatively?</h2>
-<ul>
-<li>Are “re-” words in positive or negative contexts?</li>
-<li>Sentiment Analysis
-<ul>
-<li>determines (part of) a text’s emotional tone (positive / negative / neutral)</li>
-</ul></li>
-<li>Sentiment Analyzer: VADER (Valence Aware Dictionary and sEntiment Reasoner)
-<ul>
-<li>lexicon-based approach
-<ul>
-<li>considers intensifiers, valence shifting, &amp; punctuation</li>
-<li>struggles with sarcasm</li>
-</ul></li>
-</ul></li>
-</ul>
-<div class="cell" data-execution_count="6">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> nltk</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="im">from</span> nltk.sentiment.vader <span class="im">import</span> SentimentIntensityAnalyzer</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="im">import</span> os</span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="im">import</span> re</span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># Initialize the VADER sentiment analyzer</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
-<span id="cb8-9"><a href="#cb8-9"></a></span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="co"># Function to calculate aggregate sentiment for a collection of sentences</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="kw">def</span> calculate_aggregate_sentiment(sentences):</span>
-<span id="cb8-12"><a href="#cb8-12"></a>    positive_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a>    negative_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>    neutral_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a>    total_sentences <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a></span>
-<span id="cb8-17"><a href="#cb8-17"></a>    <span class="cf">for</span> sentence <span class="kw">in</span> sentences:</span>
-<span id="cb8-18"><a href="#cb8-18"></a>        sentiment <span class="op">=</span> sia.polarity_scores(sentence)</span>
-<span id="cb8-19"><a href="#cb8-19"></a>        positive_score <span class="op">+=</span> sentiment[<span class="st">'pos'</span>]</span>
-<span id="cb8-20"><a href="#cb8-20"></a>        negative_score <span class="op">+=</span> sentiment[<span class="st">'neg'</span>]</span>
-<span id="cb8-21"><a href="#cb8-21"></a>        neutral_score <span class="op">+=</span> sentiment[<span class="st">'neu'</span>]</span>
-<span id="cb8-22"><a href="#cb8-22"></a>        total_sentences <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb8-23"><a href="#cb8-23"></a></span>
-<span id="cb8-24"><a href="#cb8-24"></a>    <span class="cf">if</span> total_sentences <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb8-25"><a href="#cb8-25"></a>        avg_positive_score <span class="op">=</span> positive_score <span class="op">/</span> total_sentences</span>
-<span id="cb8-26"><a href="#cb8-26"></a>        avg_negative_score <span class="op">=</span> negative_score <span class="op">/</span> total_sentences</span>
-<span id="cb8-27"><a href="#cb8-27"></a>        avg_neutral_score <span class="op">=</span> neutral_score <span class="op">/</span> total_sentences</span>
-<span id="cb8-28"><a href="#cb8-28"></a></span>
-<span id="cb8-29"><a href="#cb8-29"></a>        <span class="cf">if</span> avg_positive_score <span class="op">&gt;</span> avg_negative_score:</span>
-<span id="cb8-30"><a href="#cb8-30"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Positive"</span></span>
-<span id="cb8-31"><a href="#cb8-31"></a>        <span class="cf">elif</span> avg_positive_score <span class="op">&lt;</span> avg_negative_score:</span>
-<span id="cb8-32"><a href="#cb8-32"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Negative"</span></span>
-<span id="cb8-33"><a href="#cb8-33"></a>        <span class="cf">else</span>:</span>
-<span id="cb8-34"><a href="#cb8-34"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Neutral"</span></span>
-<span id="cb8-35"><a href="#cb8-35"></a></span>
-<span id="cb8-36"><a href="#cb8-36"></a>        <span class="cf">return</span> {</span>
-<span id="cb8-37"><a href="#cb8-37"></a>            <span class="st">"Total Sentences Analyzed"</span>: total_sentences,</span>
-<span id="cb8-38"><a href="#cb8-38"></a>            <span class="st">"Average Positive Score"</span>: avg_positive_score,</span>
-<span id="cb8-39"><a href="#cb8-39"></a>            <span class="st">"Average Negative Score"</span>: avg_negative_score,</span>
-<span id="cb8-40"><a href="#cb8-40"></a>            <span class="st">"Average Neutral Score"</span>: avg_neutral_score,</span>
-<span id="cb8-41"><a href="#cb8-41"></a>            <span class="st">"Overall Sentiment"</span>: overall_sentiment,</span>
-<span id="cb8-42"><a href="#cb8-42"></a>        }</span>
-<span id="cb8-43"><a href="#cb8-43"></a></span>
-<span id="cb8-44"><a href="#cb8-44"></a><span class="co"># Specify the directories you want to process with aliases</span></span>
-<span id="cb8-45"><a href="#cb8-45"></a>corpus_directories <span class="op">=</span> {</span>
-<span id="cb8-46"><a href="#cb8-46"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP'</span>: <span class="st">"AC Swinburne"</span>,</span>
-<span id="cb8-47"><a href="#cb8-47"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP'</span>: <span class="st">"Thomas Hardy"</span>,</span>
-<span id="cb8-48"><a href="#cb8-48"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP'</span>: <span class="st">"Michael Field"</span>,</span>
-<span id="cb8-49"><a href="#cb8-49"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP'</span>: <span class="st">"DG Rossetti"</span>,</span>
-<span id="cb8-50"><a href="#cb8-50"></a>    <span class="co"># Add more directories here</span></span>
-<span id="cb8-51"><a href="#cb8-51"></a>}</span>
-<span id="cb8-52"><a href="#cb8-52"></a></span>
-<span id="cb8-53"><a href="#cb8-53"></a><span class="co"># Create lists to store poet names and their corresponding score differences</span></span>
-<span id="cb8-54"><a href="#cb8-54"></a>poet_names <span class="op">=</span> []</span>
-<span id="cb8-55"><a href="#cb8-55"></a>score_differences <span class="op">=</span> []</span>
-<span id="cb8-56"><a href="#cb8-56"></a></span>
-<span id="cb8-57"><a href="#cb8-57"></a><span class="co"># Process each directory</span></span>
-<span id="cb8-58"><a href="#cb8-58"></a><span class="cf">for</span> corpus_directory, alias <span class="kw">in</span> corpus_directories.items():</span>
-<span id="cb8-59"><a href="#cb8-59"></a>    sentences <span class="op">=</span> []</span>
-<span id="cb8-60"><a href="#cb8-60"></a></span>
-<span id="cb8-61"><a href="#cb8-61"></a>    <span class="co"># Read and preprocess the text files in the corpus</span></span>
-<span id="cb8-62"><a href="#cb8-62"></a>    <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(corpus_directory):</span>
-<span id="cb8-63"><a href="#cb8-63"></a>        <span class="cf">if</span> filename.endswith(<span class="st">'.txt'</span>):</span>
-<span id="cb8-64"><a href="#cb8-64"></a>            <span class="cf">with</span> <span class="bu">open</span>(os.path.join(corpus_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb8-65"><a href="#cb8-65"></a>                text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb8-66"><a href="#cb8-66"></a>                sentences <span class="op">+=</span> nltk.sent_tokenize(text)</span>
-<span id="cb8-67"><a href="#cb8-67"></a></span>
-<span id="cb8-68"><a href="#cb8-68"></a>    <span class="co"># Calculate aggregate sentiment</span></span>
-<span id="cb8-69"><a href="#cb8-69"></a>    results <span class="op">=</span> calculate_aggregate_sentiment(sentences)</span>
-<span id="cb8-70"><a href="#cb8-70"></a></span>
-<span id="cb8-71"><a href="#cb8-71"></a>    <span class="co"># Calculate the difference between positive and negative scores</span></span>
-<span id="cb8-72"><a href="#cb8-72"></a>    positive_score <span class="op">=</span> results[<span class="st">"Average Positive Score"</span>]</span>
-<span id="cb8-73"><a href="#cb8-73"></a>    negative_score <span class="op">=</span> results[<span class="st">"Average Negative Score"</span>]</span>
-<span id="cb8-74"><a href="#cb8-74"></a>    score_difference <span class="op">=</span> positive_score <span class="op">-</span> negative_score</span>
-<span id="cb8-75"><a href="#cb8-75"></a></span>
-<span id="cb8-76"><a href="#cb8-76"></a>    poet_names.append(alias)</span>
-<span id="cb8-77"><a href="#cb8-77"></a>    score_differences.append(score_difference)</span>
-<span id="cb8-78"><a href="#cb8-78"></a></span>
-<span id="cb8-79"><a href="#cb8-79"></a><span class="co"># Sort the poet names and score differences by score differences in descending order</span></span>
-<span id="cb8-80"><a href="#cb8-80"></a>sorted_poet_names, sorted_score_differences <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span><span class="bu">sorted</span>(<span class="bu">zip</span>(poet_names, score_differences), key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>))</span>
-<span id="cb8-81"><a href="#cb8-81"></a></span>
-<span id="cb8-82"><a href="#cb8-82"></a><span class="co"># Create a bar chart of the score differences with poet names on the x-axis</span></span>
-<span id="cb8-83"><a href="#cb8-83"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb8-84"><a href="#cb8-84"></a>plt.bar(sorted_poet_names, sorted_score_differences, color<span class="op">=</span><span class="st">'skyblue'</span>)</span>
-<span id="cb8-85"><a href="#cb8-85"></a>plt.xlabel(<span class="st">"Poet"</span>)</span>
-<span id="cb8-86"><a href="#cb8-86"></a>plt.ylabel(<span class="st">'Difference between Positive and Negative Scores'</span>)</span>
-<span id="cb8-87"><a href="#cb8-87"></a>plt.title(<span class="st">'Whose Poetry Is Most Positive?'</span>)</span>
-<span id="cb8-88"><a href="#cb8-88"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
-<span id="cb8-89"><a href="#cb8-89"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>)</span>
-<span id="cb8-90"><a href="#cb8-90"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-
-<div class="cell" data-execution_count="7">
-<details open="">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> nltk</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="im">from</span> nltk.sentiment.vader <span class="im">import</span> SentimentIntensityAnalyzer</span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="im">import</span> os</span>
-<span id="cb9-4"><a href="#cb9-4"></a></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="co"># Initialize the VADER sentiment analyzer</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
-<span id="cb9-7"><a href="#cb9-7"></a></span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="co"># Function to calculate aggregate sentiment for a collection of sentences</span></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="kw">def</span> calculate_aggregate_sentiment(sentences):</span>
-<span id="cb9-10"><a href="#cb9-10"></a>    positive_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a>    negative_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a>    neutral_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a>    total_sentences <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a></span>
-<span id="cb9-15"><a href="#cb9-15"></a>    <span class="cf">for</span> sentence <span class="kw">in</span> sentences:</span>
-<span id="cb9-16"><a href="#cb9-16"></a>        sentiment <span class="op">=</span> sia.polarity_scores(sentence)</span>
-<span id="cb9-17"><a href="#cb9-17"></a>        positive_score <span class="op">+=</span> sentiment[<span class="st">'pos'</span>]</span>
-<span id="cb9-18"><a href="#cb9-18"></a>        negative_score <span class="op">+=</span> sentiment[<span class="st">'neg'</span>]</span>
-<span id="cb9-19"><a href="#cb9-19"></a>        neutral_score <span class="op">+=</span> sentiment[<span class="st">'neu'</span>]</span>
-<span id="cb9-20"><a href="#cb9-20"></a>        total_sentences <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a></span>
-<span id="cb9-22"><a href="#cb9-22"></a>    <span class="cf">if</span> total_sentences <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb9-23"><a href="#cb9-23"></a>        avg_positive_score <span class="op">=</span> positive_score <span class="op">/</span> total_sentences</span>
-<span id="cb9-24"><a href="#cb9-24"></a>        avg_negative_score <span class="op">=</span> negative_score <span class="op">/</span> total_sentences</span>
-<span id="cb9-25"><a href="#cb9-25"></a>        avg_neutral_score <span class="op">=</span> neutral_score <span class="op">/</span> total_sentences</span>
-<span id="cb9-26"><a href="#cb9-26"></a></span>
-<span id="cb9-27"><a href="#cb9-27"></a>        <span class="cf">if</span> avg_positive_score <span class="op">&gt;</span> avg_negative_score:</span>
-<span id="cb9-28"><a href="#cb9-28"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Positive"</span></span>
-<span id="cb9-29"><a href="#cb9-29"></a>        <span class="cf">elif</span> avg_positive_score <span class="op">&lt;</span> avg_negative_score:</span>
-<span id="cb9-30"><a href="#cb9-30"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Negative"</span></span>
-<span id="cb9-31"><a href="#cb9-31"></a>        <span class="cf">else</span>:</span>
-<span id="cb9-32"><a href="#cb9-32"></a>            overall_sentiment <span class="op">=</span> <span class="st">"Neutral"</span></span>
-<span id="cb9-33"><a href="#cb9-33"></a></span>
-<span id="cb9-34"><a href="#cb9-34"></a>        <span class="cf">return</span> {</span>
-<span id="cb9-35"><a href="#cb9-35"></a>            <span class="st">"Total Sentences Analyzed"</span>: total_sentences,</span>
-<span id="cb9-36"><a href="#cb9-36"></a>            <span class="st">"Average Positive Score"</span>: avg_positive_score,</span>
-<span id="cb9-37"><a href="#cb9-37"></a>            <span class="st">"Average Negative Score"</span>: avg_negative_score,</span>
-<span id="cb9-38"><a href="#cb9-38"></a>            <span class="st">"Average Neutral Score"</span>: avg_neutral_score,</span>
-<span id="cb9-39"><a href="#cb9-39"></a>            <span class="st">"Overall Sentiment"</span>: overall_sentiment,</span>
-<span id="cb9-40"><a href="#cb9-40"></a>        }</span>
-<span id="cb9-41"><a href="#cb9-41"></a>    <span class="cf">else</span>:</span>
-<span id="cb9-42"><a href="#cb9-42"></a>        <span class="cf">return</span> {<span class="st">"No sentences with 're-' words found for analysis."</span>}</span>
-<span id="cb9-43"><a href="#cb9-43"></a></span>
-<span id="cb9-44"><a href="#cb9-44"></a><span class="co"># Specify the directories you want to process with aliases</span></span>
-<span id="cb9-45"><a href="#cb9-45"></a>corpus_directories <span class="op">=</span> {</span>
-<span id="cb9-46"><a href="#cb9-46"></a> </span>
-<span id="cb9-47"><a href="#cb9-47"></a>        <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/swinburne/swinburne_noBP'</span>: <span class="st">"AC Swinburne"</span>,</span>
-<span id="cb9-48"><a href="#cb9-48"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP'</span>: <span class="st">"Thomas Hardy"</span>,</span>
-<span id="cb9-49"><a href="#cb9-49"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/field/field_NoBP'</span>: <span class="st">"Michael Field"</span>,</span>
-<span id="cb9-50"><a href="#cb9-50"></a>    <span class="st">'/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP'</span>: <span class="st">"DG Rossetti"</span>,</span>
-<span id="cb9-51"><a href="#cb9-51"></a>       <span class="co"># Add more directories here</span></span>
-<span id="cb9-52"><a href="#cb9-52"></a>}</span>
-<span id="cb9-53"><a href="#cb9-53"></a></span>
-<span id="cb9-54"><a href="#cb9-54"></a><span class="co"># Process each directory</span></span>
-<span id="cb9-55"><a href="#cb9-55"></a><span class="cf">for</span> corpus_directory, alias <span class="kw">in</span> corpus_directories.items():</span>
-<span id="cb9-56"><a href="#cb9-56"></a>    sentences <span class="op">=</span> []</span>
-<span id="cb9-57"><a href="#cb9-57"></a></span>
-<span id="cb9-58"><a href="#cb9-58"></a>    <span class="co"># Read and preprocess the text files in the corpus</span></span>
-<span id="cb9-59"><a href="#cb9-59"></a>    <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(corpus_directory):</span>
-<span id="cb9-60"><a href="#cb9-60"></a>        <span class="cf">if</span> filename.endswith(<span class="st">'.txt'</span>):</span>
-<span id="cb9-61"><a href="#cb9-61"></a>            <span class="cf">with</span> <span class="bu">open</span>(os.path.join(corpus_directory, filename), <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb9-62"><a href="#cb9-62"></a>                text <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb9-63"><a href="#cb9-63"></a>                sentences <span class="op">+=</span> nltk.sent_tokenize(text)</span>
-<span id="cb9-64"><a href="#cb9-64"></a></span>
-<span id="cb9-65"><a href="#cb9-65"></a>    <span class="co"># Filter sentences with words starting with "re-"</span></span>
-<span id="cb9-66"><a href="#cb9-66"></a>    sentences_with_re <span class="op">=</span> [sentence <span class="cf">for</span> sentence <span class="kw">in</span> sentences <span class="cf">if</span> <span class="bu">any</span>(word.lower().startswith(<span class="st">"re-"</span>) <span class="cf">for</span> word <span class="kw">in</span> nltk.word_tokenize(sentence))]</span>
-<span id="cb9-67"><a href="#cb9-67"></a></span>
-<span id="cb9-68"><a href="#cb9-68"></a>    <span class="co"># Calculate aggregate sentiment for the filtered sentences</span></span>
-<span id="cb9-69"><a href="#cb9-69"></a>    results <span class="op">=</span> calculate_aggregate_sentiment(sentences_with_re)</span>
-<span id="cb9-70"><a href="#cb9-70"></a></span>
-<span id="cb9-71"><a href="#cb9-71"></a>    <span class="co"># Print results for the current directory</span></span>
-<span id="cb9-72"><a href="#cb9-72"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>alias<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb9-73"><a href="#cb9-73"></a>    <span class="cf">for</span> key, value <span class="kw">in</span> results.items():</span>
-<span id="cb9-74"><a href="#cb9-74"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb9-75"><a href="#cb9-75"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-
-</section>
-<section id="are-re--words-used-positively-or-negatively-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="7">
+<section id="are-re--words-used-positively-or-negatively-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>AC Swinburne
 Total Sentences Analyzed: 15
@@ -1488,40 +1139,7 @@ Average Neutral Score: 0.9
 Overall Sentiment: Positive
 </code></pre>
 </div>
-</div></section><section id="are-re--words-used-positively-or-negatively-output" class="slide level2 output-location-slide"><h2>Are “Re-” Words Used Positively or Negatively?</h2><div class="cell output-location-slide" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<p><img data-src="index_files/figure-revealjs/cell-7-output-1.png" width="821" height="588"></p>
-</div>
-</div></section><section id="results-take-aways-8" class="slide level2">
-<h2>Results: Take Aways</h2>
-<table>
-<colgroup>
-<col style="width: 37%">
-<col style="width: 31%">
-<col style="width: 31%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Poetry: More Positive</th>
-<th>Poetry: More Negative</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>“Re-”: More Positive</strong></td>
-<td>Field</td>
-<td>Rossetti</td>
-</tr>
-<tr class="even">
-<td><strong>“Re-”: More Negative</strong></td>
-<td>Swinburne</td>
-<td>Hardy</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="conclusion" class="slide level2">
+</div></section><section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
 <ul>
 <li><p>Thank You!</p></li>
