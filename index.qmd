@@ -566,7 +566,7 @@ for corpus_directory, alias in corpus_directories.items():
 
 ## Conclusion {.smaller}
 
-- Text mining textual details can:
+- Text mining morphemes can:
     - illuminate significant micro-elements of poetic style
     - show how seeminly trivial features contribute to poetic meaning
 - Distant Reading :handshake: Close Reading  
