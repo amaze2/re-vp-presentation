@@ -68,7 +68,7 @@ Python logo used with [permission](https://www.python.org/community/logos/)
 :::
 
 ::: aside
-image in public domain in US; image taken from the [Rossetti Archive](http://www.rossettiarchive.org/docs/s438.rap.html)
+Image from the [Rossetti Archive](http://www.rossettiarchive.org/docs/s438.rap.html) in public domain in US
 :::
 
 ::::
@@ -120,7 +120,7 @@ image in public domain in US; image taken from the [Rossetti Archive](http://www
 :::
 
 ::: aside
-image in public domain in US; image taken from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Katherine_Harris_Bradley_%26_Edith_Emma_Cooper_(2).jpg)
+Image from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Katherine_Harris_Bradley_%26_Edith_Emma_Cooper_(2).jpg) in public domain in US
 :::
 
 ::::
@@ -144,7 +144,7 @@ image in public domain in US; image taken from [Wikimedia Commons](https://commo
 :::
 
 ::: aside
-image in public domain in US; image taken from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Thomashardy_restored.jpg)
+Image from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Thomashardy_restored.jpg) in public domain in US
 :::
 
 ::::
@@ -156,13 +156,15 @@ image in public domain in US; image taken from [Wikimedia Commons](https://commo
     - Compare "Re-" Word Percentages
 
 ```{python}
+# import software libraries
 import nltk
 import os
 import matplotlib.pyplot as plt
 
-nltk.download('punkt')  # Download NLTK tokenizer data
+# Download NLTK tokenizer data
+nltk.download('punkt') 
 
-# Define a function to count "re-" words in a given text
+# Define a function that tokenizes a text and then counts how many of its words start with "re-"
 def count_re_words(text):
     words = nltk.word_tokenize(text)
     return sum(1 for word in words if word.lower().startswith("re-"))
@@ -175,25 +177,25 @@ corpus_directories = {
     'dg rossetti': '/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/rossetti_dg/rossetti_dg_NoBP',
 }
 
-# Initialize dictionaries to store the results
+# Initialize dictionary to store the results
 percentage_re_words = {}
 
-# Read, tokenize, and calculate for each poet's corpus
+# create an empty list for each poet/directory
 for poet, corpus_directory in corpus_directories.items():
     corpus = []
     
-    # Read and tokenize the text files in the poet's corpus
+    # Read the text files in the poet's corpus and add them to the apt list above
     for filename in os.listdir(corpus_directory):
         with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
             text = file.read()
-            # text = remove_punctuation_except_hyphens(text)
             corpus.append(text)
 
-    # Count the "re-" words in the poet's corpus
+    # Apply fuction above to tokenize + count the "re-" words in each text of the poet's corpus and store count
     re_word_count = sum(count_re_words(text) for text in corpus)
 
-    # Calculate the percentage of "re-" words in the poet's corpus
+    # Calculate the corpus word count by taking each text, tokenizing it, counting the number of tokens, and then adding them to create a total word count 
     total_words = sum(len(nltk.word_tokenize(text)) for text in corpus)
+    # Calculate the percentage of "re-" words in the poet's corpus by dividing the re- word count by the total word count and multiply by 100
     percentage_re_words[poet] = (re_word_count / total_words) * 100
 
 # Sort the results from largest to smallest
@@ -202,7 +204,7 @@ sorted_results = sorted(percentage_re_words.items(), key=lambda x: x[1], reverse
 # Extract poets and percentages for plotting
 poets, percentages = zip(*sorted_results)
 
-# Step 4: Create a bar chart to visualize the results with dynamic y-axis limit and sorted labels
+# Step 4: visualize the results in a bar chart 
 plt.figure(figsize=(8, 6))
 plt.bar(poets, percentages, color=['blue', 'orange'])
 plt.ylabel('Percentage (%)')
@@ -213,7 +215,7 @@ ylim_percentage = max(percentages) * 2  # Adjusted for better visualization
 plt.ylim(0, ylim_percentage)
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 
-# Display the bar chart
+# Display the bar chart with the poet's names angled to avoid overlap
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
@@ -225,7 +227,6 @@ plt.show()
     - Which "re-" words are used and how often?
 
 ```{python}
- 
 # import software libraries / dependencies
 import nltk
 import os
@@ -234,27 +235,29 @@ import matplotlib.pyplot as plt
 from collections import Counter
 from nltk.stem import SnowballStemmer
 
-nltk.download('punkt')  # Download NLTK tokenizer data
+# Download NLTK tokenizer data
+nltk.download('punkt')  
 
-stemmer = SnowballStemmer("english")  # Initialize SnowballStemmer for English
+# Initialize Stemmer for English
+stemmer = SnowballStemmer("english")  
 
-# create function to preprocess and process files of each directory
+# create function to preprocess and process files of each directory: create an empty list for each directory/poet
 def process_directory(corpus_directory):   
     corpus = []
 
-    # Get the directory name as the label
+    # Get the directory (poet's) name to use as the label
     label = os.path.basename(corpus_directory)
 
-    # Step 1: Get the text of corpus from files
+    # Step 1: Read the text of corpus from files and add it to apt (poet's) list, created above
     for filename in os.listdir(corpus_directory):
         with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
             text = file.read()
             corpus.append(text)
 
-    # Step 2: Tokenize the text blob into individual words
+    # Step 2: Tokenize each text into individual words
     tokenized_corpus = [nltk.word_tokenize(text) for text in corpus]
 
-    # Step 3: Standardize (lower) case, find words that start with re-, stem those words, retain them
+    # Step 3: find words that when lower cased start with re-, standardize (lower) their case, stem them, retain them
     stemmed_corpus = []
     for tokens in tokenized_corpus:
         stemmed_tokens = [stemmer.stem(word.lower()) for word in tokens if re.match(r'\b(re-)\w+', word.lower())]
@@ -268,7 +271,7 @@ def process_directory(corpus_directory):
     # for word, count in most_common_re_words:
     #    print(f'The poetry of {label[:-5]} uses {word}: {count} times')
 
-    # Step 8: Plot words and counts in a bar chart
+    # Step 8: Plot top 20 most frequent words and counts in a bar chart, use lable to title plot
     plt.figure(figsize=(10, 5))
     top_words, top_counts = zip(*word_counts.most_common(20))
     plt.bar(top_words, top_counts)
@@ -311,30 +314,30 @@ for directory in corpus_directories:
 - Have Python return Hardy's sentences that contain word(s) that start with "re-" and word(s) that start with "re"
 
 ```{python}
-import os
-import nltk
-import re
-from nltk.tokenize import sent_tokenize, word_tokenize
+# import libraries
+import os # open directories on local machine
+import nltk # nlp
+import re # reg ex
+from nltk.tokenize import sent_tokenize, word_tokenize # break text blob into individual sentences and words
 
 # Define regular expressions
-re_pattern = r'\b(?:[Rr]e|[Rr]E)\w+\b'  # Matches "re" followed by one or more letters
-re_hyphen_pattern = r'\b(?:[Rr]e-|[Rr]E-)\w+\b'  # Matches "re-" followed by one or more letters
-
+re_pattern = r'\b(?:[Rr]e|[Rr]E)\w+\b'  # Matches "re" or "Re" or "rE" or "RE" followed by one or more letters (not hyphen)
+re_hyphen_pattern = r'\b(?:[Rr]e-|[Rr]E-)\w+\b'  # Matches "re-" or "Re-" or "rE-" or "RE-" followed by one or more letters
 # \b matches a word boundary.
-# (?:[Rr]e|[Rr]E) is a non-capturing group that matches either "re" or "RE," regardless of case.
-# \w+ matches one or more word characters following "re-" or "RE-."
+# (?:[Rr]e|[Rr]E) is a non-capturing group that matches either "re" or "Re" or "rE" or "RE" 
+# \w+ matches one or more word characters following "re" or "Re" or "rE" or "RE" 
 
 def matches_pattern(word, pattern):
     return re.search(pattern, word, re.IGNORECASE) is not None
 
-# Function to replace matched words with bolded HTML tags
+# Define function to surround matched words with asterisks
 def bold_matched_words(match, pattern):
     return f'**{match.group()}**'
 
 # Directory containing text files
 text_directory = "/home/adammazel/Documents/Digital_Scholarship/re-victorian-poetry/cta/hardy/hardy_noBP"
 
-# Iterate through text files in the directory
+# Iterate through text files in the directory, open text files, read in text, break up text into sentences, break up sentences into words, id those sentences with re/re- words, if sentence has re/re-, add asterisks around re-/re words and print sentence
 for filename in os.listdir(text_directory):
     if filename.endswith(".txt"):
         with open(os.path.join(text_directory, filename), "r", encoding="utf-8") as file:
@@ -360,16 +363,17 @@ for filename in os.listdir(text_directory):
     - X axis: publication year of book
 
 ```{python}
-# Import software libraries / dependencies
-import nltk
-import os
-import re
-import matplotlib.pyplot as plt
-import string
+# Import software libraries
+import nltk # nlp
+import os # interact with directories on local machine
+import re # reg ex
+import matplotlib.pyplot as plt # data visualization
+import string # punctuation removal
 
-nltk.download('punkt')  # Download NLTK tokenizer data
+# Download NLTK tokenizer data
+nltk.download('punkt')  
 
-# Define a function to count words that start with "re-"
+# Define a function that takes each text, tokenizes it into individual words, and count words that when lowercased start with "re-"
 def count_re_words(text):
     words = nltk.word_tokenize(text)
     return sum(1 for word in words if word.lower().startswith("re-"))
@@ -398,11 +402,9 @@ for directory_name in all_directory_names:
     # Construct the full path to the current directory
     text_files_directory = os.path.join(parent_directory, directory_name)
 
+    # Initialize two dictionaries: one to store year-wise percentages for the current directory and one to store file names for the current directory
     if os.path.isdir(text_files_directory):
-        # Initialize a dictionary to store year-wise percentages for the current directory
         directory_percentages = {}
-
-        # Initialize a dictionary to store file names for the current directory
         file_names = {}
 
         # Process each text file in the current directory
@@ -412,16 +414,17 @@ for directory_name in all_directory_names:
                 year_match = re.match(r'(\d{4})_', filename)
                 if year_match:
                     year = int(year_match.group(1))
+                    # read in text of each book of poetry
                     with open(os.path.join(text_files_directory, filename), 'r', encoding='utf-8') as file:
                         text = file.read()
                         # Remove punctuation except hyphens
                         text = remove_punctuation_except_hyphens(text)
-                        # normalize counts
+                        # tokenize text, count the total number of words, count the number of re- words, normalize counts
                         total_words = len(nltk.word_tokenize(text))
                         re_word_count = count_re_words(text)
                         percentage_re_words = (re_word_count / total_words) * 100
                         
-                        #add to dictionary: values: counts to keys: years
+                        #add to dictionary: value: count, key: publication year
                         directory_percentages[year] = percentage_re_words
                         
                         # Extract the text between underscores in the filename
@@ -431,7 +434,7 @@ for directory_name in all_directory_names:
                         else:
                             file_name = file_name_parts[1]
                         
-                        #add to dictionary: values: filenames to keys: years 
+                        #add to dictionary: value: filename, key: years
                         file_names[year] = file_name  # Store the extracted file name
 
         # Sort the dictionary by keys (years) for the current directory
@@ -481,32 +484,35 @@ plt.show()
     - determines a text's emotional tone (positive / negative / neutral)
 
 ```{python}
-import nltk
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import os
+# import software libraries
+import nltk #nlp
+from nltk.sentiment.vader import SentimentIntensityAnalyzer # VADER sentiment analyzer
+import os # enable engagement with directories and files on local machine
 
 # Initialize the VADER sentiment analyzer
 sia = SentimentIntensityAnalyzer()
 
-# Function to calculate aggregate sentiment for a collection of sentences
+# Function to calculate aggregate sentiment (positive / neutral / negative) for a collection of sentences
+# start counts at zero
 def calculate_aggregate_sentiment(sentences):
     positive_score = 0
     negative_score = 0
     neutral_score = 0
     total_sentences = 0
 
+# for each sentence, calculate sentiment polarity score: if score is positive, add positive score to positive score count; lastly keep a running count of the number of sentences analyzed
     for sentence in sentences:
         sentiment = sia.polarity_scores(sentence)
         positive_score += sentiment['pos']
         negative_score += sentiment['neg']
         neutral_score += sentiment['neu']
         total_sentences += 1
-
+# normalize scores by dividing polarity score by number of sentences
     if total_sentences > 0:
         avg_positive_score = positive_score / total_sentences
         avg_negative_score = negative_score / total_sentences
         avg_neutral_score = neutral_score / total_sentences
-
+# determine aggregate sentiment
         if avg_positive_score > avg_negative_score:
             overall_sentiment = "Positive"
         elif avg_positive_score < avg_negative_score:
@@ -534,11 +540,11 @@ corpus_directories = {
        # Add more directories here
 }
 
-# Process each directory
+# Process each directory; start by creating an empty list to contain sentences for each directory / corpus
 for corpus_directory, alias in corpus_directories.items():
     sentences = []
 
-    # Read and preprocess the text files in the corpus
+    # Read in the text files in the corpus and tokenize them into sentences
     for filename in os.listdir(corpus_directory):
         if filename.endswith('.txt'):
             with open(os.path.join(corpus_directory, filename), 'r', encoding='utf-8') as file:
@@ -558,10 +564,18 @@ for corpus_directory, alias in corpus_directories.items():
     print()
 ```
 
-## Conclusion
+## Conclusion {.smaller}
 
-- Thank You!
+- Text mining textual details can:
+    - illuminate significant micro-elements of poetic style
+    - show how seeminly trivial features contribute to poetic meaning
+- Distant Reading :handshake: Close Reading  
 
+<br />
+
+
+
+- **Thank You!**  
 - Contact Info
     - Adam Mazel
     - Digital Publishing Librarian
