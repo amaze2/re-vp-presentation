@@ -1,11 +1,11 @@
 ---
 title: Text Mining "Re-" in Victorian Poetry
-date: 8 November 2023
+date: 11 November 2023
 author: Adam Mazel, Digital Publishing Librarian
 institute: Scholarly Communication Department, IUB Libraries
 ---
 
-## Why "Re-" in VP? {.smaller}
+## Why "Re-" in VP? {.smaller visibility="hidden"}
 
 :::: {.columns}
 
@@ -577,7 +577,4 @@ for corpus_directory, alias in corpus_directories.items():
 
 - **Thank You!**  
 - Contact Info
-    - Adam Mazel
-    - Digital Publishing Librarian
-    - Indiana University Bloomington
-    - [amazel@iu.edu](mailto:amazel@iu.edu)
+    - Adam Mazel: [amazel@iu.edu](mailto:amazel@iu.edu)
