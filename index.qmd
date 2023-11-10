@@ -566,9 +566,10 @@ for corpus_directory, alias in corpus_directories.items():
 
 ## Conclusion {.smaller}
 
-- Text mining morphemes can:
-    - illuminate significant micro-elements of poetic style
-    - show how seeminly trivial features contribute to poetic meaning
+- Text mining can show:
+    - morphemes are significant micro-elements of poetic style
+    - how a poem's language is shaped by form and genre
+    - word's history can shape its meaning
 - Distant Reading :handshake: Close Reading  
 
 <br />
